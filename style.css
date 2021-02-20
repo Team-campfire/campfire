@@ -1,0 +1,86 @@
+.bg-blue {
+    background-color: #067BC2;
+    color: white;
+}
+
+.topHomePage{
+    background-color: #ECEEEF;
+    padding: 25px;
+    font-family: 'Alata', sans-serif;
+}
+
+#heading{
+    font-size: 100px;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+#tagline{
+    font-size: 50px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+}
+
+.column2 {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    color: #373A3C;
+    margin: auto;
+    width: 50%; 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.peopleMeeting{
+    margin: 40px;
+}
+
+.centerButton{
+    margin: auto;
+}
+
+.btn{
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: x-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.bottomHomePage{
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 100px;
+    padding-left: 100px;
+    font-family: 'Alata', sans-serif;
+}
+
+.column3 {
+    text-align: left;
+    width: 50%;
+    padding: 10px;
+    color: #373A3C;
+    margin: auto;
+    width: 50%; 
+}
+
+.column4 {
+    text-align: right;
+    width: 50%;
+    padding: 10px;
+    color: #373A3C;
+    margin: auto;
+    width: 50%; 
+}
