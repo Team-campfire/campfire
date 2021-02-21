@@ -4,6 +4,7 @@ const app = express()
 const port = 3000
 const path = require('path')
 app.use(express.static(path.resolve('public/css')))
+app.use(express.static(path.resolve('public/assets')))
 app.get('/', (req, res) => { //basic get request, should serve index.html
     res.sendFile(__dirname+'/index.html')
 }) 
