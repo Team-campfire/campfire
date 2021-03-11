@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>weMeet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-orange">
+        <img src="campfire_logo.png" height="60">
+    </nav>
+    <div class="form">
+        <form>
+            <h2 class="form-title">Event Basics</h2>
+            <br>
+            <label>Public or Private</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioButton" id="publicButton" value="public">
+                <label class="form-check-label" for="publicButton">
+                    Public
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioButton" id="privateButton" value="private">
+                <label class="form-check-label" for="privateButton">
+                    Private
+                </label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="event" class="form-control" id="date" aria-describedby="dateHelp"
+                    placeholder="Enter Date">
+            </div>
+            <br>
+            <label>Held online or offline</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioButton" id="onlineRadio" value="online">
+                <label class="form-check-label" for="online">
+                    Online
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioButton" id="offlineRadio" value="offline">
+                <label class="form-check-label" for="offlineRadio">
+                    Offline
+                </label>
+            </div>
+        </form>
+        <div class="centerButton">
+            <a type="button" class="bg-orange btn-step prev" href="createNewEvent.html"> &#60; Back </a>
+            <!-- <h6 class="stepCompleted"> Step 1 of 4 </h6> -->
+            <a type="button" class="bg-orange btn-step next" href="eventActivities.html">Next &#62;</a>
+        </div>
+    </div>
+</body>
+
+</html>
