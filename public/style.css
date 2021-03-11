@@ -2,7 +2,7 @@
     background-color: #C32E09;
     color: white;
 }
-
+/* Lanfing Page and General Styling */
 .topHomePage{
     background-color: #ECEEEF;
     padding: 25px;
@@ -86,13 +86,8 @@
     margin: auto;
     width: 50%; 
 }
-/* .bottom{
-    margin: auto;
-}
-.stepCompleted{
-    margin: auto;
-} */
 
+/* Start Event Form Pages */
 .form{
     padding: 20px;
     border-color: rgba(68, 67, 67, 0.459);
@@ -124,4 +119,53 @@
 .prev{
     position: absolute; 
     left: 0;
+}
+/* Finish start event page */
+.peopleCelebrate{
+    margin: 20px;
+}
+.eventD{
+    /* margin-top: 4%; */
+    /* margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom:5%; */
+    font-size: large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 130px;
+    text-align: center;
+    border-radius: 5px;
+    width: 180px;
+}
+.column5 {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+}
+
+.column6 {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    color: #373A3C;
+    width: 50%; 
+}
+.row{
+    margin:0px
+}
+#subtext{
+    font-size: large;
+}
+#link{
+    font-size: xx-large;
+}
+#eventCode{
+    font-size: x-large;
+    font-weight: bold;
+    background-color: rgba(202, 202, 202, 0.781);
+    margin-left:30%;
+    margin-right:30%;
+
 }
