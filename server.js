@@ -3,11 +3,17 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path')
-app.use(express.static(path.resolve('public/css')))
-app.use(express.static(path.resolve('public/assets')))
-app.get('/', (req, res) => { //basic get request, should serve index.html
-    res.sendFile(__dirname+'/index.html')
-}) 
+// app.use(express.static(path.resolve('public/css')))
+// app.use(express.static(path.resolve('public/assets')))
+// app.use(express.static(path.resolve('public/createNewEvent.html')))
+// app.use(express.static("public"));
+app.use('/', express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+	res.send('Hello world!')
+	// console.log(req)
+
+})
 
 app.listen(port, () => { 
   console.log('listening :))')
