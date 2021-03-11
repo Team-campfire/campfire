@@ -26,42 +26,45 @@
     <nav class="navbar navbar-dark bg-orange">
         <img src="campfire_logo.png" height="60">
     </nav>
+    <!-- <button class="js-click">Click me!</button> -->
     <div class="form">
         <form>
             <h2 class="form-title">Event Activities</h2>
             <br>
             <label>Event Categories:</label>
             <div class="categories">
-                <span class="badge badge-pill badge-danger">General Body Meeting (GBM)</span>
-                <span class="badge badge-pill badge-danger">Casual</span>
-                <span class="badge badge-pill badge-danger">Movie Showing</span>
-                <span class="badge badge-pill badge-danger">Games/Trivia</span>
-                <span class="badge badge-pill badge-danger">Informational</span>
-                <span class="badge badge-pill badge-danger">Danger</span>
-                <span class="badge badge-pill badge-danger">Elections</span>
-                <span class="badge badge-pill badge-danger">Workshop</span>
-                <span class="badge badge-pill badge-danger">Recruiting (Company)</span>
-                <span class="badge badge-pill badge-danger">Professional Development</span>
+                <button type="button" class="btns btn-orange">General Body Meeting (GBM)</button>
+                <button type="button" class="btns btn-orange">Casual</button>
+                <button type="button" class="btns btn-orange">Movie Showing</button>
+                <button type="button" class="btns btn-orange">Games/Trivia</button>
+                <button type="button" class="btns btn-orange">Informational</button>
+                <button type="button" class="btns btn-orange">Danger</button>
+                <button type="button" class="btns btn-orange">Elections</button>
+                <button type="button" class="btns btn-orange">Workshop</button>
+                <button type="button" class="btns btn-orange">Recruiting (Company)</button>
+                <button type="button" class="btns btn-orange">Professional Development</button>
             </div>
             <br>
             <div class="form-group">
                 <label for="comment">Event Description:</label>
-                <textarea class="form-control" rows="5" id="description"placeholder="Please enter an event description."></textarea>
+                <textarea class="form-control" rows="5" id="description"
+                    placeholder="Please enter an event description."></textarea>
             </div>
             <br>
             <label>Club/Organization Categories:</label>
             <div class="categories">
-                <span class="badge badge-pill badge-danger">Academic & Professional</span>
-                <span class="badge badge-pill badge-danger">Identity Based</span>
-                <span class="badge badge-pill badge-danger">Hobby & Special Interest</span>
-                <span class="badge badge-pill badge-danger">Community Service</span>
-                <span class="badge badge-pill badge-danger">Sports & Recreation</span>
-                <span class="badge badge-pill badge-danger">Student Government & Event Planning</span>
+                <button type="button" class="btns btn-orange">Academic & Professional</button>
+                <button type="button" class="btns btn-orange">Identity Based</button>
+                <button type="button" class="btns btn-orange">Hobby & Special Interest</button>
+                <button type="button" class="btns btn-orange">Community Service</button>
+                <button type="button" class="btns btn-orange">Sports & Recreation</button>
+                <button type="button" class="btns btn-orange">Student Government & Event Planning</button>
             </div>
             <br>
             <div class="form-group">
                 <label for="comment">Club/Organization Description:</label>
-                <textarea class="form-control" rows="5" id="club-org"></textarea>
+                <textarea class="form-control" rows="5" id="club-org"
+                    placeholder="Please enter an club/organization description."></textarea></textarea>
             </div>
         </form>
         <div class="centerButton">
@@ -71,5 +74,11 @@
         </div>
     </div>
 </body>
+<script>
+    $("button").click(function () {
+        $("button").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
 
 </html>

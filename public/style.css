@@ -2,6 +2,10 @@
     background-color: #C32E09;
     color: white;
 }
+a.bg-orange:hover{
+    color: #EFD595;
+    text-decoration: none;
+}
 /* Lanfing Page and General Styling */
 .topHomePage{
     background-color: #ECEEEF;
@@ -171,7 +175,7 @@
 }
 /* Dropdown Menu */
 .dropbtn {
-    background-color: #3498DB;
+    background-color:#C32E09;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -180,7 +184,7 @@
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+    background-color: #C32E09;
   }
   
   .dropdown {
@@ -259,4 +263,22 @@
     /* background-color: #F19041; doesnt look that good lol */
     text-decoration: none;
     color: white;  /* how to chnage font color?? */
+}
+.active {
+    background-color: #C32E09 !important;
+    color:white !important;
+    border: 1px solid #C32E09 !important;    
+
+  }
+.btns{
+    margin: 2px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #C32E09;    
+    color: #C32E09;
+    font-size: small;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
