@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>weMeet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-orange">
+        <img src="campfire_logo.png" height="60">
+    </nav>
+    <div class="form">
+        <form>
+            <h2 class="form-title">Event Activities</h2>
+            <br>
+            <label>Event Categories:</label>
+            <div class="categories">
+                <span class="badge badge-pill badge-danger">General Body Meeting (GBM)</span>
+                <span class="badge badge-pill badge-danger">Casual</span>
+                <span class="badge badge-pill badge-danger">Movie Showing</span>
+                <span class="badge badge-pill badge-danger">Games/Trivia</span>
+                <span class="badge badge-pill badge-danger">Informational</span>
+                <span class="badge badge-pill badge-danger">Danger</span>
+                <span class="badge badge-pill badge-danger">Elections</span>
+                <span class="badge badge-pill badge-danger">Workshop</span>
+                <span class="badge badge-pill badge-danger">Recruiting (Company)</span>
+                <span class="badge badge-pill badge-danger">Professional Development</span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="description">Event Description:</label>
+                <input type="event" class="form-control" id="description" aria-describedby="description" placeholder="Please enter an event description.">
+            </div>
+            <br>
+            <label>Club/Organization Categories:</label>
+            <div class="categories">
+                <span class="badge badge-pill badge-danger">Academic & Professional</span>
+                <span class="badge badge-pill badge-danger">Identity Based</span>
+                <span class="badge badge-pill badge-danger">Hobby & Special Interest</span>
+                <span class="badge badge-pill badge-danger">Community Service</span>
+                <span class="badge badge-pill badge-danger">Sports & Recreation</span>
+                <span class="badge badge-pill badge-danger">Student Government & Event Planning</span>
+             </div>
+             <br>
+            <div class="form-group">
+                <label for="club-org">Club/Organization Description:</label>
+                <input type="event" class="form-control" id="club-org" aria-describedby="club-org" placeholder="Please enter a description of the club/organization hosting the event.">
+            </div>
+        </form>
+        <div class="centerButton">
+            <a type="button" class="bg-orange btn-step prev" href="eventBasics.html"> &#60; Back </a>
+            <!-- <h6 class="stepCompleted"> Step 3 of 4 </h6> -->
+            <a type="button" class="bg-orange btn-step next" href="eventTransportation.html">Next &#62;</a>
+        </div>
+    </div>
+</body>
+
+</html>
