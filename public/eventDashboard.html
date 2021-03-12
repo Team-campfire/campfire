@@ -19,24 +19,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/brandon-grotesque-medium" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-orange">
-        <img src="campfire_logo.png" height="60">
+        <a href="index.html"><img alt="campfire logo" src="campfire_logo.png" height="60"></a>
         <!-- <a class="navbar-brand" href="#">weMeet logo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button> -->
     </nav>
-
+    
     <div class="form-dashboard">
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn bg-orange">View Mode </button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="eventDashboard.html">Editing (Current)</a>
-                <a href="approveSuggestions.html">Approve Suggestion</a>
+            <button onclick="myFunction()" class="btn-secondary dropdown-toggle bg-orange">View Mode <b class="caret"></b></button>
+            <div id="myDropdown" class="dropdown-menu">
+                <a class="dropdown-item" href="eventDashboard.html">Editing (Current)</a>
+                <a class="dropdown-item" href="approveSuggestions.html">Approve Suggestion</a>
             </div>
         </div>
         <h1 class="form-center">Create New Event</h1>
@@ -163,15 +167,41 @@
                                     placeholder="Please enter any additional notes for event attendees."></textarea></textarea>
                             </div>
                             <!-- <p id="eventCode">zvshkj8!</p> -->
-                            <a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
-                                Changes</a>
+                            <!--<a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
+                                Changes</a>-->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                            aria-expanded="true" aria-controls="collapseTwo">
+                            Join Information
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <p id="subtext">Share the below code to invite others to your event at: </p>
+                                <p id="link"> campfire.com/join</p>
+                                 <p id ="subtext">Code: zvshkj8!</p>
+                            </div>
+                            <!-- <p id="eventCode">zvshkj8!</p> -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>  
+        <a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
+            Changes</a> 
     </div>
-    </div>
+    
 </body>
 
 </html>
