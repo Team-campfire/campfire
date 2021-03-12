@@ -17,4 +17,15 @@ function myFunction() {
       }
     }
   }
-  
+  // jQuery datepicker
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+
+  // change direction of dropdown arrow depending on if menu is expandd: https://stackoverflow.com/questions/31677222/bootstrap-dropdown-make-dropdown-arrow-change-direction
+  $(function(){
+    $(".dropdown").on("show.bs.dropdown hide.bs.dropdown", function(){
+      $(this).find(".caret").toggleClass("caretup");
+    });
+  });

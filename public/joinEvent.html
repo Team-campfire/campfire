@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Event Activities</title>
+    <title>Join Event</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -20,21 +20,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/brandon-grotesque-medium" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-orange">
-        <a href="index.html"><img alt="campfire logo" src="campfire_logo.png" height="60"></a>
-    </nav>
-    <!-- <button class="js-click">Click me!</button> -->
-    <div class="form">
-        <form>
-            <h2 class="form-title">Event Activities</h2>
-            <br>
-            <label>Event Categories:</label>
+  <nav class="navbar navbar-dark bg-orange">
+    <a href="index.html"><img alt="campfire logo" src="campfire_logo.png" height="60"></a>
+  </nav>
+  <div class="form">
+    <form>
+        <h2 class="form-title">Join Event</h2>
+        <div class="form-group">
+          <label for="emailAddress">Event Code:</label>
+          <input type="email" class="form-control" id="code" aria-describedby="enterCode"
+            placeholder="Enter event code">
+
+            <a type="button" class="bg-add btn-add" href="eventDashboard.html">Join Event </a>
+
+        </div>
+    
+      
+        <h4>Just browsing? Select the categories that interest you, and we'll find events that match!</h4>
+        <br>
+        <label>Event Categories:</label>
             <div class="categories">
                 <button type="button" class="btns btn-orange">General Body Meeting (GBM)</button>
                 <button type="button" class="btns btn-orange">Casual</button>
@@ -47,41 +58,28 @@
                 <button type="button" class="btns btn-orange">Recruiting (Company)</button>
                 <button type="button" class="btns btn-orange">Professional Development</button>
             </div>
-            <br>
-            <div class="form-group">
-                <label for="comment">Event Description:</label>
-                <textarea class="form-control" rows="5" id="description"
-                    placeholder="Please enter an event description."></textarea>
-            </div>
-            <br>
-            <label>Club/Organization Categories:</label>
-            <div class="categories">
-                <button type="button" class="btns btn-orange">Academic & Professional</button>
-                <button type="button" class="btns btn-orange">Identity Based</button>
-                <button type="button" class="btns btn-orange">Hobby & Special Interest</button>
-                <button type="button" class="btns btn-orange">Community Service</button>
-                <button type="button" class="btns btn-orange">Sports & Recreation</button>
-                <button type="button" class="btns btn-orange">Student Government & Event Planning</button>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="comment">Club/Organization Description:</label>
-                <textarea class="form-control" rows="5" id="club-org"
-                    placeholder="Please enter an club/organization description."></textarea></textarea>
-            </div>
-        </form>
-        <div class="centerButton">
-            <a type="button" class="bg-orange btn-step prev" href="eventBasics.html"> &#60; Back </a>
-            <!-- <h6 class="stepCompleted"> Step 3 of 4 </h6> -->
-            <a type="button" class="bg-orange btn-step next" href="eventTransportation.html">Next &#62;</a>
+        <br>
+        <label>Club/Organization Categories:</label>
+        <div class="categories">
+            <button type="button" class="btns btn-orange">Academic & Professional</button>
+            <button type="button" class="btns btn-orange">Identity Based</button>
+            <button type="button" class="btns btn-orange">Hobby & Special Interest</button>
+            <button type="button" class="btns btn-orange">Community Service</button>
+            <button type="button" class="btns btn-orange">Sports & Recreation</button>
+            <button type="button" class="btns btn-orange">Student Government & Event Planning</button>
         </div>
+         <br>
+
+            <a type="button" class="bg-add btn-add" href="eventDashboard.html">Find Events</a>
+       
+     </form>
     </div>
+   
+
+   <!-- <div class="centerButton">
+      <a type="button" class="bg-orange btn-step next" href="eventBasics.html">Next &#62;</a>
+    </div>
+  </div>-->
 </body>
-<script>
-    $("button").click(function () {
-        $("button").removeClass("active");
-        $(this).addClass("active");
-    });
-</script>
 
 </html>

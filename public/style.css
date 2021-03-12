@@ -1,3 +1,53 @@
+
+/*
+Fonts: font-family: 'Brandon Grotesque Medium', sans-serif;
+font-family: 'Brandon Grotesque Thin', sans-serif;
+font-family: 'Brandon Grotesque Bold', sans-serif;
+
+*/
+/*Font-face declarations for Frutura*/
+@font-face {
+    font-family: "Futura";
+    src: url("futura/Futura-Medium.ttf") format("truetype");
+    font-weight: medium;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Futura";
+    src: url("futura/Futura-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Futura";
+    src: url("futura/Futura-Book.ttf") format("truetype");
+    font-weight: book;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Futura";
+    src: url("futura/Futura-Heavy.ttf") format("truetype");
+    font-weight: heavy;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Futura";
+    src: url("futura/Futura-Light.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: 'Brandon Grotesque Medium', sans-serif;
+}
+
 .bg-orange {
     background-color: #C32E09;
     color: white;
@@ -5,6 +55,21 @@
 a.bg-orange:hover{
     color: #EFD595;
     text-decoration: none;
+    transform: scale(1.05);
+}
+
+#join-event {
+    background-color: white;
+    border-color: #C32E09;
+    border-width: 2px;
+    color: #C32E09;
+}
+
+#join-event:hover{
+    color: #EFD595;
+    text-decoration: none;
+    transform: scale(1.05);
+    
 }
 /* Lanfing Page and General Styling */
 .topHomePage{
@@ -22,6 +87,17 @@ a.bg-orange:hover{
     font-size: 50px;
 }
 
+.featureImg1 {
+    margin-left: 10px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.featureImg2 {
+    margin-left: -50px;
+    margin-right: 100px;
+    margin-top: -120px;
+}
 /* Create two equal columns that floats next to each other */
 .column1 {
     text-align: center;
@@ -62,6 +138,7 @@ a.bg-orange:hover{
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
+    /*font-family: Futura;*/
 }
 
 .bottomHomePage{
@@ -95,7 +172,10 @@ a.bg-orange:hover{
 .form{
     padding: 20px;
     border-color: rgba(68, 67, 67, 0.459);
+    box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #d1d9e6;
+    border-radius: 12px;
     border-style: solid;
+    border-width: 2px;
     border-radius: 10px;
     margin-right: 20%;
     margin-left: 20%;
@@ -115,6 +195,8 @@ a.bg-orange:hover{
     width: 130px;
     text-align: center;
     border-radius: 5px;
+   /* font-family: Futura;*/
+    font-size: 24px;
 }
 .next{
     position: absolute; 
@@ -173,6 +255,11 @@ a.bg-orange:hover{
     margin-right:30%;
 
 }
+
+/*h2.form-title {
+    font-family: Futura;
+   
+}*/
 /* Dropdown Menu */
 .dropbtn {
     background-color:#C32E09;
@@ -215,6 +302,7 @@ a.bg-orange:hover{
 
   .form-dashboard{
     padding: 20px;
+    box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #d1d9e6;
     border-color: rgba(68, 67, 67, 0.459);
     border-style: solid;
     border-radius: 10px;
@@ -234,7 +322,7 @@ a.bg-orange:hover{
     border-radius: 5px;
     width: 180px;
     float: right;
-    margin-top: 2%;
+    margin-top: 4%;
     margin-bottom: 2%;
 }
 .column7 {
@@ -268,7 +356,12 @@ a.bg-orange:hover{
     background-color: #C32E09 !important;
     color:white !important;
     border: 1px solid #C32E09 !important;    
+  }
 
+.btns.active {
+    background-color: #C32E09 !important;
+    color:white !important;
+    border: 1px solid #C32E09 !important;    
   }
 .btns{
     margin: 2px;
@@ -311,4 +404,19 @@ a.bg-orange:hover{
 a.bg-add:hover{
     color: #EFD595;
     text-decoration: none;
+    transform: scale(1.05);
+}
+
+/*placeholder {
+    font-family: 'Brandon Grotesque Thin', sans-serif;
+    color: #999999;
+}*/
+
+.caretup {
+    transform: rotate(180deg);
+  }
+
+
+.btn-secondary{
+    border: none;
 }

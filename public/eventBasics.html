@@ -18,18 +18,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/brandon-grotesque-medium" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-orange">
-        <img src="campfire_logo.png" height="60">
+        <a href="index.html"><img alt="campfire logo" src="campfire_logo.png" height="60"></a>
     </nav>
     <div class="form">
         <form>
             <h2 class="form-title">Event Basics</h2>
             <br>
-            <label>Public or Private</label>
+            <label>Public or Private?</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="radioButton" id="publicButton" value="public">
                 <label class="form-check-label" for="publicButton">
@@ -45,10 +50,10 @@
             <br>
             <div class="form-group">
                 <label for="date">Date:</label>
-                <input type="event" class="form-control" id="date" aria-describedby="dateHelp" placeholder="Enter Date">
+                <input type="text" class="form-control" id="datepicker" aria-label="date" placeholder="Enter Date">
             </div>
             <br>
-            <label>Held online or offline</label>
+            <label>Held online or offline?</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online">
                 <label class="form-check-label" for="online">
