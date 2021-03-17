@@ -3,11 +3,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path')
-// app.use(express.static(path.resolve('public/css')))
-// app.use(express.static(path.resolve('public/assets')))
-// app.use(express.static(path.resolve('public/createNewEvent.html')))
-// app.use(express.static("public"));
-app.use('/', express.static(path.join(__dirname, 'public')));
+
+// app.use(express.static(path.join(__dirname, './lab4/dist/lab4')));
+app.use(express.static(path.join(__dirname, './campfire/dist/campfire')));
 
 app.get('/', (req, res) => {
 	res.send('Hello world!')
