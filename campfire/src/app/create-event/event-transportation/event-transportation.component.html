@@ -1,0 +1,32 @@
+<div class="form">
+    <form>
+        <h2 class="form-title">Event Transportation</h2>
+        <br>
+        <label>Does your event require transportation?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButton" id="yesButton" value="yes">
+            <label class="form-check-label" for="yesButton">
+                Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButton" id="noButton" value="no">
+            <label class="form-check-label" for="noButton">
+                No
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="addCar">If so, add cars:</label>
+            <input type="car" class="form-control" id="addCar" aria-describedby="carHelp"
+                placeholder="Enter name of driver">
+                <a type="button" class="bg-add btn-add" href=""> + Add Car </a>
+
+        </div>
+    </form>
+    <div class="centerButton">
+        <a type="button" class="bg-orange btn-step prev" routerLink='/eventActivities'> &#60; Back </a>
+        <!-- <h6 class="stepCompleted"> Step 2 of 4 </h6> -->
+        <a type="button" class="bg-orange btn-step next" routerLink='/finish'>Next &#62;</a>
+    </div>
+</div>

@@ -1,0 +1,169 @@
+<div class="form-dashboard">
+    <div class="dropdown">
+        <button onclick="myFunction()" class="btn-secondary dropdown-toggle bg-orange">View Mode <b
+                class="caret"></b></button>
+        <div id="myDropdown" class="dropdown-menu">
+            <a class="dropdown-item" href="eventDashboard.html">Editing (Current)</a>
+            <a class="dropdown-item" href="approveSuggestions.html">Approve Suggestion</a>
+        </div>
+    </div>
+    <h1 class="form-center">Web Science Demo</h1>
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        Basics
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="column7">
+                            <h4>Public or Private Event?</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioButton" id="publicButton"
+                                    value="public" checked>
+                                <label class="form-check-label" for="publicButton">
+                                    Public
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioButton" id="privateButton"
+                                    value="private">
+                                <label class="form-check-label" for="privateButton">
+                                    Private
+                                </label>
+                            </div><br>
+                            <div class="form-group">
+                                <h5 for="date">Date:</h5>
+                                <input type="event" class="form-control" id="datepicker" aria-describedby="dateHelp"
+                                    placeholder="03/12/2021">
+                            </div>
+                            <div class="calander">
+                                <iframe
+                                    src="https://calendar.google.com/calendar/embed?src=teamcampfire21%40gmail.com&ctz=America%2FNew_York"
+                                    style="border: 0" width="100%" height="400px" frameborder="0"
+                                    scrolling="no"></iframe>
+                            </div>
+                        </div>
+                        <div class="column8">
+                            <h4>Location:</h4>
+                            <div class="form-group">
+                                <h5 for="date">In-Person:</h5>
+                                <input type="event" class="form-control" id="In-Person" aria-describedby="dateHelp"
+                                    placeholder="Enter Event Address">
+                                <br>
+                                <h5 for="date">Virtual:</h5>
+                                <input type="event" class="form-control" id="virtual" aria-describedby="dateHelp"
+                                    placeholder="https://rensselaer.webex.com/meet/tralsa">
+                                <br>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.7698036395595!2d-73.68107708522975!3d42.72976277916387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0f9eebfa097d%3A0xa5592b13db1f5302!2sRensselaer%20Polytechnic%20Institute!5e0!3m2!1sen!2sus!4v1615488659473!5m2!1sen!2sus"
+                                    width="100%" height="385px" style="border:0;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    Activities
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <h4>Planned Activities:</h4>
+                <!-- add chart -->
+                <a type="button" class="bg-add btn-add" href=""> + Add Activity </a>
+                <br>
+                <h4>Delagate Tasks:</h4>
+                <!-- add chart -->
+                <a type="button" class="bg-add btn-add" href=""> + Add Tasks </a>
+                <br>
+                <h4>Spotify Playlist:</h4>
+                <!-- <iframe src="https://open.spotify.com/embed/playlist/7qV4iT5K3Ivk8FlokZEBR9" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+                <iframe src="https://open.spotify.com/embed/playlist/6gXbIpaokqIdRKJtYlp7HO" width="100%" height="380"
+                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
+                    Transportation
+                </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <h4>Ride Arrangements:</h4>
+                <!-- add chart -->
+                <a type="button" class="bg-add btn-add" href=""> + Add Car </a>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        Notes
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <h4 for="comment">Event Description:</h4>
+                            <textarea class="form-control" rows="5" id="description"
+                                placeholder="Please enter any additional notes for event attendees."></textarea>
+                        </div>
+                        <!-- <p id="eventCode">zvshkj8!</p> -->
+                        <!--<a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
+                            Changes</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        Join Information
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <p id="subtext">Share the below code to invite others to your event at: </p>
+                            <p id="link"> campfire.com/join</p>
+                            <p id="subtext">Code: zvshkj8!</p>
+                        </div>
+                        <!-- <p id="eventCode">zvshkj8!</p> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a type="button" class="bg-orange saveChanges"  routerLink='/ownerDashboard'>Save
+        Changes</a>
+</div>
