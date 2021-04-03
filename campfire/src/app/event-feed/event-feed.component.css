@@ -1,0 +1,65 @@
+/*Event feed*/
+div.card-header{
+    display: inline;
+}
+p.num-attendees{
+    font-family: Brandon Grotesque;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #373A3C;
+    display: inline;
+
+}
+h5.event-name{
+    font-family: Futura;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 19px;
+    /* identical to box height, or 106% */
+
+    display: flex;
+    align-items: flex-end;
+    color: #373A3C;
+
+}
+p.event-organizer{
+    font-family: Brandon Grotesque;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #373A3C;
+}
+p.event-short-desc {
+    font-family: Brandon Grotesque Medium;
+    font-family: Brandon Grotesque Medium;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+
+    color: #373A3C;
+}
+p.event-date{
+    font-family: Futura;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 150% */
+    color: #E45C3A;
+
+}
+.event-card {
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+div.align-items-center{
+    margin-top: 25%;
+}

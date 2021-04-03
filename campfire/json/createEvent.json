@@ -1,0 +1,24 @@
+[
+    {
+        "eventName": "",
+        "yourEmailAddress": "",
+        "yourName": "",
+        "clubName": "",
+        "inviteFriends": [{"email": ""}],
+        "public":true,
+        "date":"",
+        "online": true, 
+        "location": "",       
+        "eventCategory":"",
+        "eventDescription": "",
+        "clubCategory": "",
+        "clubDescription": "",
+        "reqTransportation": true,
+        "transportation":  [{"driver":"", "riders":["", ""]}],
+        "plannedActivities":  [{"activity":"", "additional info":""}],
+        "delegateTasks": [{"task":"", "assignees":["", ""]}],
+        "notes": "",
+        "eventCode": ""
+        
+    }
+]

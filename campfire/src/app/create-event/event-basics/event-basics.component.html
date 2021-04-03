@@ -1,31 +1,44 @@
-<!-- <p>event-basics works!</p> -->
+<!--  <p>event-basics works </p> -->
 <div class="form">
     <form>
-      <h2 class="form-title">Create New Event</h2>
-      <div class="form-group">
-        <label for="emailAddress">Email address:</label>
-        <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp"
-          placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <label for="eventName">Event Name:</label>
-        <input type="event" class="form-control" id="eventName" aria-describedby="eventHelp"
-          placeholder="Enter Event Name">
-      </div>
-      <div class="form-group">
-        <label for="yourName">Your Name (will be displayed as event owner):</label>
-        <input type="name" class="form-control" id="yourName" aria-describedby="yourNameHelp" placeholder="Enter Name">
-      </div>
-      <div class="form-group">
-        <label for="addFriend">Invite friends (email address):</label>
-        <input type="friend" class="form-control" id="addFriend" aria-describedby="friendHelp"
-          placeholder="Enter Email">
-      </div>
-      <a type="button" class="bg-add btn-add" href=""> + Add Friends </a>
+        <h2 class="form-title">Event Basics</h2>
+        <br>
+        <label>Public or Private?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButton" id="publicButton" value="public">
+            <label class="form-check-label" for="publicButton">
+                Public
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButton" id="privateButton" value="private">
+            <label class="form-check-label" for="privateButton">
+                Private
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="text" class="form-control" id="datepicker" aria-label="date" placeholder="Enter Date">
+        </div>
+        <br>
+        <label>Held online or offline?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online">
+            <label class="form-check-label" for="online">
+                Online
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline">
+            <label class="form-check-label" for="offlineRadio">
+                Offline
+            </label>
+        </div>
     </form>
     <div class="centerButton">
-      <!-- <a type="button" class="bg-orange btn-step prev" href="eventBasics.html"> &#60; Back </a> -->
-      <!-- <h6 class="stepCompleted"> Step 1 of 4 </h6> -->
-      <a type="button" class="bg-orange btn-step next" routerLink='/eventActivities'>Next &#62;</a>
-    </div>
-  </div>
+        <a type="button" class="bg-orange btn-step prev" routerLink='/eventStart'>&#60; Back</a>
+        <!-- <h6 class="stepCompleted"> Step 2 of 4 </h6> -->
+        <a type="button" class="bg-orange btn-step next" routerLink='/eventActivities'>Next &#62;</a>
+    </div> 
+</div>

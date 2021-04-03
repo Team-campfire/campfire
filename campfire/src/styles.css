@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-/*
-Fonts: font-family: 'Brandon Grotesque Medium', sans-serif;
-font-family: 'Brandon Grotesque Thin', sans-serif;
-font-family: 'Brandon Grotesque Bold', sans-serif;
 
-*/
+/* Fonts: font-family: 'Brandon Grotesque Medium', sans-serif;
+font-family: 'Brandon Grotesque Thin', sans-serif;
+font-family: 'Brandon Grotesque Bold', sans-serif; */
+
+
 /*Font-face declarations for Frutura*/
-/*@font-face {
+/* @font-face {
     font-family: "Futura";
     src: url("futura/Futura-Medium.ttf") format("truetype");
     font-weight: medium;
@@ -39,7 +39,7 @@ font-family: 'Brandon Grotesque Bold', sans-serif;
     src: url("futura/Futura-Light.ttf") format("truetype");
     font-weight: lighter;
     font-style: normal;
-  }*/
+  } */
 
 html {
     scroll-behavior: smooth;
