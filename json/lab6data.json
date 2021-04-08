@@ -1,11 +1,11 @@
 [
        {
-        "eventName": "Web Sci Demo",
+        "eventName": "final four watching",
         "yourEmailAddress": "teamcampfire21@gmail.com",
-        "yourName": "Team Campfire",
-        "clubName": "",
-        "inviteFriends": [{"email": "atest910@gmail.com"},{"email": "wang.rachelj@gmail.com"},{"email": "mkokkatt57000@gmail.com"},{"email": "teddyc21799@gmail.com"}],
-        "public":true,
+        "yourName": "Michael",
+        "clubName": "march madness club",
+        "inviteFriends": [{"email": "mkokkatt57000@gmail.com"},{"email": "teddyc21799@gmail.com"}],
+        "public":false,
         "date":"6:00 PM EDT 5/2/2021",
         "online": true, 
         "location": "inserteventlinkhere",       
