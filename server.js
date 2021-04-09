@@ -9,6 +9,7 @@ var mongodb = require('mongodb');
 const port = 3000
 const path = require('path')
 
+
 // app.use(express.static(path.join(__dirname, './lab4/dist/lab4')));
 app.use(express.static(path.join(__dirname, './campfire/dist/campfire')));
 
@@ -23,7 +24,7 @@ const { MongoClient } = require("mongodb");
 const url = "mongodb+srv://teamCampfire:LqGg9CN0pnjylnOz@campfire.x1fg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
-// !!!!! BELOW CODE Used to test mongo queries. Leaving this here for easy test acess
+/*// !!!!! BELOW CODE Used to test mongo queries. Leaving this here for easy test acess
 MongoClient.connect(url, function (err, db) {
 	if (err) throw err;
 	var dbo = db.db("campfireApp");
@@ -38,8 +39,25 @@ MongoClient.connect(url, function (err, db) {
 		db.close();
 
 	});
-});
+});*/
 
+app.get('/event', (req, res) => {
+  MongoClient.connect(url, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("campfireApp");
+    // var query = { eventName: "Web Sci Demo" };
+    var query = "";
+  
+    // var newCustomDef = { $set: { customDefinitions: [] } };
+  
+    dbo.collection("lab6data").find(query).toArray(function (err, result) {
+      if (err) throw err;
+      console.log(result);
+      db.close();
+  
+    });
+  });
+});
 
 
 app.listen(port, () => { 
