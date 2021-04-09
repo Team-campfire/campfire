@@ -18,6 +18,7 @@ import { EditorDashboardComponent } from './dashboard/editor-dashboard/editor-da
 import { ViewerDashboardComponent } from './dashboard/viewer-dashboard/viewer-dashboard.component';
 import { EventFeedComponent } from './event-feed/event-feed.component';
 import { EventBasicsComponent } from './create-event/event-basics/event-basics.component';
+import { DataVizComponent } from './data-viz/data-viz.component';
 
 
 const appRoutes: Routes = [
@@ -32,7 +33,9 @@ const appRoutes: Routes = [
   {path: "ownerDashboard", component: OwnerDashboardComponent},
   {path: "editorDashboard", component: EditorDashboardComponent}, 
   {path: "viewerDashboard", component: ViewerDashboardComponent},
-  {path: "eventFeed", component: EventFeedComponent} 
+  {path: "eventFeed", component: EventFeedComponent},
+  {path: "dataViz", component: DataVizComponent} 
+
 
 ];
 
@@ -52,7 +55,8 @@ const appRoutes: Routes = [
     EditorDashboardComponent,
     ViewerDashboardComponent,
     EventFeedComponent,
-    EventBasicsComponent
+    EventBasicsComponent,
+    DataVizComponent
   ],
   imports: [
     BrowserModule,

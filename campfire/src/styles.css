@@ -58,6 +58,18 @@ a.bg-orange:hover{
     text-decoration: none;
     transform: scale(1.05);
 }
+.bg-white {
+    background-color: white;
+    border-color: #C32E09;
+    border-width: 2px;
+    color: #C32E09;
+}
+.bg-white:hover{
+    color: #EFD595;
+    text-decoration: none;
+    transform: scale(1.05);    
+   
+}
 
 #join-event {
     background-color: white;
