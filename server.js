@@ -5,11 +5,14 @@ const fetch = require('node-fetch');
 var bodyParser = require('body-parser');
 var cors = require('cors')
 var mongoose = require('mongoose')
-var mongodb = require('mongodb');
+// var mongodb = require('mongodb');
 const port = 3000
 const path = require('path')
 
-// app.use(express.static(path.join(__dirname, './lab4/dist/lab4')));
+const mongodb = require("mongodb").MongoClient;
+const Json2csvParser = require("json2csv").Parser;
+const fs = require("fs");
+
 app.use(express.static(path.join(__dirname, './campfire/dist/campfire')));
 
 app.get('/', (req, res) => {
@@ -23,25 +26,58 @@ const { MongoClient } = require("mongodb");
 const url = "mongodb+srv://teamCampfire:LqGg9CN0pnjylnOz@campfire.x1fg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
-// !!!!! BELOW CODE Used to test mongo queries. Leaving this here for easy test acess
+/*// !!!!! BELOW CODE Used to test mongo queries. Leaving this here for easy test acess
 MongoClient.connect(url, function (err, db) {
 	if (err) throw err;
 	var dbo = db.db("campfireApp");
 	// var query = { eventName: "Web Sci Demo" };
-  var query = "";
+	//var query = ({}, {eventName:1, _id:0}); // update for the keys you are querying
 
 	// var newCustomDef = { $set: { customDefinitions: [] } };
-
-	dbo.collection("lab6data").find(query).toArray(function (err, result) {
-    if (err) throw err;
-    console.log(result);
+	var lab6data = dbo.collection("lab6data");
+	lab6data.find({}).project({ eventName: 1 }).toArray(function (err, result) {
+		if (err) throw err;
+		console.log(result);
 		db.close();
 
 	});
-});
+});*/
+// generalized mongodb query -> json -> csv code
+// file: file name you're writing to, query: query for db
+function dbjson2csv(file, query) {
+	mongodb.connect(
+		url,
+		{ useNewUrlParser: true, useUnifiedTopology: true },
+		(err, client) => {
+			if (err) throw err;
+			/*Update file for the file you're writing to */
+			//var file = "test.csv";
+			//var query = { eventName: 1, clubName: 1 }; 
+			/*update "query" for the keys you are querying: 1 means return this field. id is auto returned, if you don't want
+			id, include "_id:0"*/
+			client
+				.db("campfireApp")
+				.collection("lab6data")
+				.find({}).project(query)
+				.toArray((err, data) => {
 
+					if (err) throw err;
 
+					console.log(data);
+					const json2csvParser = new Json2csvParser({ header: true });
+					const csvData = json2csvParser.parse(data);
 
-app.listen(port, () => { 
-  console.log('listening on :3000')
+					fs.writeFile("campfire/src/assets/csv-files/" + file, csvData, function (error) {
+						if (error) throw error;
+						console.log("Write to " + file + " successfully!");
+					});
+
+					client.close();
+				});
+		}
+	);
+}
+dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
+app.listen(port, () => {
+	console.log('listening on :3000')
 })
