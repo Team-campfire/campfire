@@ -43,8 +43,8 @@ MongoClient.connect(url, function (err, db) {
 	});
 });*/
 // generalized mongodb query -> json -> csv code
-// file: file name you're writing to, query: query for db
-function dbjson2csv(file, query) {
+// file: file name you're wr
+function dbjson2csv (file, query) {
 	mongodb.connect(
 		url,
 		{ useNewUrlParser: true, useUnifiedTopology: true },
@@ -66,10 +66,10 @@ function dbjson2csv(file, query) {
 					console.log(data);
 					const json2csvParser = new Json2csvParser({ header: true });
 					const csvData = json2csvParser.parse(data);
-
-					fs.writeFile("campfire/src/assets/csv-files/" + file, csvData, function (error) {
+				
+					fs.writeFile("campfire/src/assets/csv-files/"+file, csvData, function (error) {
 						if (error) throw error;
-						console.log("Write to " + file + " successfully!");
+						console.log("Write to "+file+" successfully!");
 					});
 
 					client.close();

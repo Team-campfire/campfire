@@ -1,0 +1,9 @@
+eventCategory <-table(eventCategories$eventCategory)
+> barplot(eventCategory)
+> barplot(eventCategory, las=2, cex.names=.7)
+ barplot(eventCategory, las=2, cex.names=.7, col=c("red3", "green3", "slateblue3", "yellow2", "olivedrab2", "orange", "purple4", "blue4", "maroon"))
+
+> onlineVsOffline$onVoff <- c("online", "online","online","online","online","online","online","online","online","online","offline","offline","online","online", "offline","offline","offline","offline","online","offline")
+> onlineEvent <- table(onlineVsOffline$onVoff)
+//> barplot(onlineEvent)
+> pie(onlineEvent, main="Online vs. Offline Events")
