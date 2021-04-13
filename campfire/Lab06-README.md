@@ -11,8 +11,11 @@ I personally worked on the Event Categories and Online vs. Offline visualization
 In terms of creativity besides stlying the buttons to fit them of our project I made sure that the colors of my visualizations fit into the theme of our app. 
 
 **Rachel Wang (RCS: wangr15, Github: rachel-wg):**
-Club categories (network connection graph) 
-Meeting dates 
+For this lab, I worked with Anya to wireframe this lab, and use the json2csv NPM package and related logic to convert the JSON files in our database into the CSV files used in our visualizations. 
+
+Personally, I worked on the visualizations related to the Club Categories of clubs hosting events, and the Meeting Dates of events. For Meeting Dates, I created a timeline (referencing this tutorial: https://benalexkeen.com/creating-a-timeline-graphic-using-r-and-ggplot2/) that plots the events on a timeline by what month they occur in. For the Club Categories visualization, I created a pie chart (referencing R documentation and tutorialspoint.com) with percentages and a legend. I couldn't find a nice way to fix the spacing in between the different events on for Meeting Dates unforunately, but otherwise tried to keep these graphs readable and with multiple signifiers to distinguish items (colors, labels, etc.) for readibility. 
+
+For creativity, I ran accessibility checks and edited our markup and CSS to follow w3c WAI accessibility guidelines.
 
 **Michael Kokkatt (RCS: kokkam, Github: mkokkatt):**
 Number of tasks
