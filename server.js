@@ -5,6 +5,7 @@ const fetch = require('node-fetch');
 var bodyParser = require('body-parser');
 var cors = require('cors')
 var mongoose = require('mongoose')
+const stream = require('stream')
 // var mongodb = require('mongodb');
 const port = 3000
 const path = require('path')
@@ -44,7 +45,7 @@ MongoClient.connect(url, function (err, db) {
 });*/
 // generalized mongodb query -> json -> csv code
 // file: file name you're wr
-function dbjson2csv (file, query) {
+function dbjson2csv(file, query) {
 	mongodb.connect(
 		url,
 		{ useNewUrlParser: true, useUnifiedTopology: true },
@@ -66,10 +67,10 @@ function dbjson2csv (file, query) {
 					console.log(data);
 					const json2csvParser = new Json2csvParser({ header: true });
 					const csvData = json2csvParser.parse(data);
-				
-					fs.writeFile("campfire/src/assets/csv-files/"+file, csvData, function (error) {
+
+					fs.writeFile("campfire/src/assets/csv-files/" + file, csvData, function (error) {
 						if (error) throw error;
-						console.log("Write to "+file+" successfully!");
+						console.log("Write to " + file + " successfully!");
 					});
 
 					client.close();
@@ -77,7 +78,21 @@ function dbjson2csv (file, query) {
 		}
 	);
 }
-dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
+// dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
+// var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
+// var pathEventCategoryPie = '/campfire/src/assets/data-viz/eventCategoryPie.png'
+app.post("/eventCategories", function(req, res)  {
+	dbjson2csv("eventCategories.csv", { eventName: 1, eventCategory: 1 });
+	res.send("event categories file has been updated")
+	// res.send("barplot", pathEventCategoryBarplot)
+	// res.send("pie", pathEventCategoryPie)
+});
+
+app.post("/onlineVsOffline", (req, res) => {
+	dbjson2csv("onlineVsOffline.csv", { eventName: 1, online: 1 });
+	res.send("online vs offline file has been updated")
+});
+
 app.listen(port, () => {
 	console.log('listening on :3000')
 })

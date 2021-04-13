@@ -10,7 +10,8 @@ export class DataVizComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
   }
-  //   constructor(private httpService: HttpService) {
+}
+  // constructor(private httpService: HttpService) {
   //     this.eventCategory = "";
   //   }
 
@@ -34,4 +35,3 @@ export class DataVizComponent implements OnInit {
   //     })
   //   }
   // }
-}
