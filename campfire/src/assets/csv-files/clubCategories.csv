@@ -1,21 +1,21 @@
-_id,eventName,clubCategory
-606f2b69af4fb573d8f7b9f9,final four watching,Hobby/Special Interest
-606f2b69af4fb573d8f7b9fa,Basketball at the Beach,Hobby/Special Interest
-606f2b69af4fb573d8f7b9fb,netflix day,Hobby/Special Interest
-606f2b69af4fb573d8f7b9fc,tennis,Hobby/Special Interest
-606f2b69af4fb573d8f7b9fd,birthday,Identity Based
-606f2b69af4fb573d8f7b9fe,campfire on beach,Sports & Recreation
-606f2b69af4fb573d8f7b9ff,community serving,Community Service
-606f2b69af4fb573d8f7ba00,Web Sci coding,Academic & Professional
-606f2b69af4fb573d8f7ba01,Ra's 5k,Sports & Recreation
-606f2b69af4fb573d8f7ba02,Watermelon Bash,Identity Based
-606f2b69af4fb573d8f7ba03,Dog Walking,Other
-606f2b69af4fb573d8f7ba04,RPI Union GBM,Student Government & Event Planning
-606f2b69af4fb573d8f7ba05,React Workshop,Academic & Professional
-606f2b69af4fb573d8f7ba06,Cook-Off,Community Service
-606f2b69af4fb573d8f7ba07,Potery,Identity Based
-606f2b69af4fb573d8f7ba08,Scooby-Doo! Movie Party,Hobby/Special Interest
-606f2b69af4fb573d8f7ba09,Resume Critique,Academic & Professional
-606f2b69af4fb573d8f7ba0a,Google Technical Workshops,Academic & Professional
-606f2b69af4fb573d8f7ba0b,Basketball Elections,Sports & Recreation
-606f2b69af4fb573d8f7ba0c,LXA House Meeting,Hobby/Special Interest
+"_id","eventName","clubCategory"
+"606f2b69af4fb573d8f7b9f9","final four watching","Hobby/Special Interest"
+"606f2b69af4fb573d8f7b9fa","Basketball at the Beach","Hobby/Special Interest"
+"606f2b69af4fb573d8f7b9fb","netflix day","Hobby/Special Interest"
+"606f2b69af4fb573d8f7b9fc","tennis","Hobby/Special Interest"
+"606f2b69af4fb573d8f7b9fd","birthday","Identity Based"
+"606f2b69af4fb573d8f7b9fe","campfire on beach","Sports & Recreation"
+"606f2b69af4fb573d8f7b9ff","community serving","Community Service"
+"606f2b69af4fb573d8f7ba00","Web Sci coding","Academic & Professional"
+"606f2b69af4fb573d8f7ba01","Ra's 5k","Sports & Recreation"
+"606f2b69af4fb573d8f7ba02","Watermelon Bash","Identity Based"
+"606f2b69af4fb573d8f7ba03","Dog Walking","Other"
+"606f2b69af4fb573d8f7ba04","RPI Union GBM","Student Government & Event Planning"
+"606f2b69af4fb573d8f7ba05","React Workshop","Academic & Professional"
+"606f2b69af4fb573d8f7ba06","Cook-Off","Community Service"
+"606f2b69af4fb573d8f7ba07","Potery","Identity Based"
+"606f2b69af4fb573d8f7ba08","Scooby-Doo! Movie Party","Hobby & Special Interest"
+"606f2b69af4fb573d8f7ba09","Resume Critique","Academic & Professional"
+"606f2b69af4fb573d8f7ba0a","Google Technical Workshops","Academic & Professional"
+"606f2b69af4fb573d8f7ba0b","Basketball Elections","Sports & Recreation"
+"606f2b69af4fb573d8f7ba0c","LXA House Meeting","Hobby/Special Interest"
