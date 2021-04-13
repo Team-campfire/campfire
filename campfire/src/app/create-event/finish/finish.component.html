@@ -10,7 +10,7 @@
             <h2 id="text"> You’re all set! </h2>
             <p id="subtext">Share the below code to invite others to your event at: </p>
             <p id="link"> campfire.com/join</p>
-            <p id="eventCode">zvshkj8!</p>
+            <p id="eventCode"><!-- zvshkj8! --></p>
             <p>Go to Event Dashboard and start adding activities, supplies, and more!</p>
             <a type="button" class="bg-orange eventD" routerLink='/ownerDashboard'>Event Dashboard</a>
         </div>
@@ -20,6 +20,7 @@
     type='text/javascript'>document.addEventListener('DOMContentLoaded', function () { window.setTimeout(document.querySelector('svg').classList.add('animated'), 1000); })</script> -->
 <script>
     // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+    // var eventCode = document.querySelector("#eventCode")
     function makeid(length) {
         var result = [];
         var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!&%$#@*^';
@@ -30,7 +31,8 @@
         }
         return result.join('');
     }
-    // document.getElementById("eventCode").setValue(makeid(8))
-    console.log(makeid(8));
+    var event_code = document.getElementById('eventCode');
+    event_code.innerHTML = makeid(8)    
+    // console.log(makeid(8));
 </script>
 <!-- <app-dashboard></app-dashboard> -->
