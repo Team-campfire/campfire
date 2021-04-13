@@ -9,12 +9,16 @@ Locations - Teddy
 Number of tasks - Michael
 Number of drivers/cars - Michael-->
 <div id="data-viz-navigation">
-    <a type="button" class="btn bg-orange"> Club Categories</a> <br>
+    <form method="post" action="/clubCategories"> 
+        <input type="submit" class="btn bg-orange" value="Club Categories"><br>
+    </form>
     <!-- <a type="button" class="btn bg-orange"> Event Categories</a><br> -->
     <form method="post" action="/eventCategories">
         <input type="submit" class="btn bg-orange" value="Event Categories"><br>
     </form>
-    <a type="button" class="btn bg-orange"> Event Dates</a><br>
+    <form method="post" action="/eventDates"> 
+        <input type="submit" class="btn bg-orange" value="Event Dates"><br>
+    </form>
     <!-- <a type="button" class="btn bg-orange"> Online vs. Offline</a><br> -->
     <form method="post" action="/onlineVsOffline">
         <input type="submit" class="btn bg-orange" value="Online vs. Offline"><br>
