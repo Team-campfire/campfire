@@ -1,0 +1,24 @@
+[
+    {
+        "eventName": "Web Sci Demo",
+        "yourEmailAddress": "teamcampfire21@gmail.com",
+        "yourName": "Team Campfire",
+        "clubName": "",
+        "inviteFriends": [{"email": "atest910@gmail.com"},{"email": "wang.rachelj@gmail.com"},{"email": "mkokkatt57000@gmail.com"},{"email": "teddyc21799@gmail.com"}],
+        "public":true,
+        "date":"6:00 PM EDT 4/3/2021",
+        "online": true, 
+        "location": "inserteventlinkhere",       
+        "eventCategory":"General Body Meetings (GBM)",
+        "eventDescription": "This is a cool event",
+        "clubCategory": "Hobby/Special Interest",
+        "clubDescription": "This is a cool club",
+        "reqTransportation": true,
+        "transportation":  [{"driver":"name", "riders":["name1", "name2"]}, {"driver":"name", "riders":["name1", "name2"]}],
+        "plannedActivities":  [{"activity":"activity1", "additional info":"this is additional info"}, {"activity":"activity2", "additional info":"this is additional info"}],
+        "delegateTasks": [{"task":"task1", "assignees":["name1", "name2"]}, {"task":"task2", "assignees":["name1", "name2"]}],
+        "notes": "These are some notes about the event",
+        "eventCode": "zskjs!48"
+        
+    }
+]

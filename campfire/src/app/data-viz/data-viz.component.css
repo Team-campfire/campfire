@@ -1,0 +1,11 @@
+.bg-orange {
+    background-color: #C32E09 !important;
+    color: white !important;
+    margin: 1%;
+    padding: 5px;
+}
+.bg-orange:hover{
+    color: #EFD595;
+    text-decoration: none;
+    transform: scale(1.05);
+}

@@ -1,0 +1,10 @@
+inviteFriends <- read_csv("/Applications/XAMPP/xamppfiles/htdocs/websci/campfire/campfire/dist/campfire/assets/csv-files/inviteFriends.csv")
+install.packages("viridis")
+library("viridis")
+
+barplot(tapply(inviteFriends$inviteFriends, inviteFriends$yourName, FUN=sum), main="Total Invites per User", las=2, cex.names=.7, col=viridis(10))
+
+reqTransportation$reqTransportation[reqTransportation$reqTransportation == TRUE] <- "Needs Transportation"
+reqTransportation$reqTransportation[reqTransportation$reqTransportation == FALSE] <- "Does not need Transportation"
+transportation <- table(reqTransportation$reqTransportation)
+pie(transportation, main="Transportation", cex=.8, col=cividis(2))

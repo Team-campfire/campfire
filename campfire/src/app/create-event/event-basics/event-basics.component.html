@@ -1,0 +1,44 @@
+<!--  <p>event-basics works </p> -->
+<div class="form">
+    <form>
+        <h2 class="form-title">Event Basics</h2>
+        <br>
+        <label>Public or Private?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButton" id="publicButton" value="public">
+            <label class="form-check-label" for="publicButton">
+                Public
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButton" id="privateButton" value="private">
+            <label class="form-check-label" for="privateButton">
+                Private
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="text" class="form-control" id="datepicker" aria-label="date" placeholder="Enter Date">
+        </div>
+        <br>
+        <label>Held online or offline?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online">
+            <label class="form-check-label" for="online">
+                Online
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline">
+            <label class="form-check-label" for="offlineRadio">
+                Offline
+            </label>
+        </div>
+    </form>
+    <div class="centerButton">
+        <a type="button" class="bg-orange btn-step prev" routerLink='/eventStart'>&#60; Back</a>
+        <!-- <h6 class="stepCompleted"> Step 2 of 4 </h6> -->
+        <a type="button" class="bg-orange btn-step next" routerLink='/eventActivities'>Next &#62;</a>
+    </div> 
+</div>
