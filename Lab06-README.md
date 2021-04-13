@@ -8,7 +8,7 @@ For this lab I worked with Rachel to create the general logic to create the csv 
 
 I personally worked on the Event Categories and Online vs. Offline visualizations and csv files. I created a barplot and pi chart for both differnt viz categories I focused on. I made sure they were visually appealing, evernly spaced, and representated the data well. 
 
-In terms of creativity besides stlying the buttons to fit them of our project I made sure that the colors of my visualizations fit into the theme of our app. 
+In terms of creativity besides stlying the buttons to fit them of our project I made sure that the colors of my visualizations fit into the theme of our app. I also created 2 visualizations per data set I worked on instead of the one that was required.
 
 **Rachel Wang (RCS: wangr15, Github: rachel-wg):**
 For this lab, I worked with Anya to wireframe this lab, and use the json2csv NPM package and related logic to convert the JSON files in our database into the CSV files used in our visualizations. 

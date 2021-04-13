@@ -79,16 +79,18 @@ function dbjson2csv(file, query) {
 	);
 }
 // dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
-// var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
-// var pathEventCategoryPie = '/campfire/src/assets/data-viz/eventCategoryPie.png'
-app.post("/eventCategories", function(req, res)  {
+
+// Anya's POST requests
+app.post("/data-viz/eventCategories", function (req, res) {
 	dbjson2csv("eventCategories.csv", { eventName: 1, eventCategory: 1 });
 	res.send("event categories file has been updated")
+	// var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
+	// var pathEventCategoryPie = '/campfire/src/assets/data-viz/eventCategoryPie.png'
 	// res.send("barplot", pathEventCategoryBarplot)
 	// res.send("pie", pathEventCategoryPie)
 });
 
-app.post("/onlineVsOffline", (req, res) => {
+app.post("/data-viz/onlineVsOffline", (req, res) => {
 	dbjson2csv("onlineVsOffline.csv", { eventName: 1, online: 1 });
 	res.send("online vs offline file has been updated")
 });
