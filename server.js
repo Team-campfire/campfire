@@ -93,6 +93,20 @@ app.post("/onlineVsOffline", (req, res) => {
 	res.send("online vs offline file has been updated")
 });
 
+/*Testing dbjson2csv function */
+dbjson2csv("meetingDates.csv", { eventName: 1, date: 1 });
+dbjson2csv("clubCategories.csv", { eventName: 1, clubCategory: 1 });
+/* Rachel's POST requests
+app.post("/clubCategories", (req, res) => {
+	dbjson2csv("clubCategories.csv", { eventName: 1, clubCategory: 1 });
+	res.send("club categories csv file has been updated")
+});
+
+app.post("/meetingDates", (req, res) => {
+	dbjson2csv("meetingDates.csv", { eventName: 1, date: 1 });
+	res.send("meeting dates csv file has been updated")
+});*/
+
 app.listen(port, () => {
 	console.log('listening on :3000')
 })
