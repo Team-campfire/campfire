@@ -9,46 +9,82 @@ Locations - Teddy
 Number of tasks - Michael
 Number of drivers/cars - Michael-->
 
-<h2>Data Visualizations</h2>
-<p>Click the buttons to create and download the corresponding CSV files for the data visualizations!</p>
 <div id="data-viz-navigation">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3>Club Categories</h3>
-                <img src="../assets/data-viz/clubCategories.png" alt="club categories data viz, pie chart">
-                <form method="post" action="/clubCategories">
-                    <input type="submit" class="btn bg-orange" value="Club Categories"><br>
-                </form>
+    <br>
+    <h2>Data Visualizations</h2>
+    <p>Click the buttons to create and download the corresponding CSV files for the data visualizations!</p>
+    <br>
+    <div id="data-viz-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3>Club Categories</h3>
+                        </div>
+                        <div class="card-body">
+                            <img class="zoom" src="../assets/data-viz/clubCategories.png"
+                                alt="club categories data viz, pie chart">
+                            <form method="post" action="/clubCategories">
+                                <input type="submit" class="btn bg-orange" value="Club Categories"><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3>Event Dates</h3>
+                        </div>
+                        <div class="card-body">
+                            <img class="zoom" src="../assets/data-viz/eventDates.png"
+                                alt="event dates data viz, timeline">
+                            <form method="post" action="/eventDates">
+                                <input type="submit" class="btn bg-orange" value="Event Dates"><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <h3>Event Dates</h3>
-                <img src="../assets/data-viz/eventDates.png" alt="event dates data viz, timeline">
-                <form method="post" action="/eventDates">
-                    <input type="submit" class="btn bg-orange" value="Event Dates"><br>
-                </form>
+            <br>
+            <div class="row">
+                <!-- <div class="col"> -->
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3>Event Categories</h3>
+                        </div>
+                        <div class="card-body">
+                            <img class="zoom" src="../assets/data-viz/eventCategoryBarplot.png"
+                                alt="event categories data viz, barplot">
+                            <img class="zoom" src="../assets/data-viz/eventCategoryDot.png"
+                                alt="event categories data viz, dotchart">
+                            <form method="post" action="/eventCategories">
+                                <input type="submit" class="btn bg-orange" value="Event Categories"><br>
+                            </form>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="col"> -->
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3>Online vs. Offline Events</h3>
+                        </div>
+                        <div class="card-body">
+                            <img class="zoom" src="../assets/data-viz/onlineVsOfflinePie.png"
+                                alt="online vs offline data viz, pie chart">
+                            <img class="zoom" src="../assets/data-viz/onlineVsOfflineBarplot.png"
+                                alt="online vs offline data viz, barplot">
+                            <form method="post" action="/onlineVsOffline">
+                                <input type="submit" class="btn bg-orange" value="Online vs. Offline"><br>
+                            </form>
+                        </div>
+                    </div>
+                <!-- </div> -->
             </div>
+            <br>
         </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <h3>Event Categories</h3>
-                <img src="../assets/data-viz/eventCategoryBarplot.png" alt="event categories data viz, barplot">
-                <form method="post" action="/eventCategories">
-                    <input type="submit" class="btn bg-orange" value="Event Categories"><br>
-                </form>
-            </div>
-            <div class="col">
-                <h3>Online vs. Offline Events</h3>
-                <img src="../assets/data-viz/onlineVsOfflinePie.png" alt="online vs offline data viz, pie chart">
-                <form method="post" action="/onlineVsOffline">
-                    <input type="submit" class="btn bg-orange" value="Online vs. Offline"><br>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- <a type="button" class="btn bg-orange"> Transportation vs. none</a><br>
+        <!-- <a type="button" class="btn bg-orange"> Transportation vs. none</a><br>
     <a type="button" class="btn bg-orange"> Locations</a><br>
     <a type="button" class="btn bg-orange"> Number of tasks</a><br>
-    <a type="button" class="btn bg-orange"> Number of drivers/cars</a><br> -->
-</div>
+    <a type="button" class="btn bg-orange"> Number of drivers/cars</a><br>-->
+    </div>

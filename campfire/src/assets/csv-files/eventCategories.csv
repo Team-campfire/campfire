@@ -1,21 +1,21 @@
-"_id","eventName","eventCategory"
-"606f2b69af4fb573d8f7b9f9","final four watching","General Body Meetings (GBM)"
-"606f2b69af4fb573d8f7b9fa","Basketball at the Beach","Casual"
-"606f2b69af4fb573d8f7b9fb","netflix day","Casual"
-"606f2b69af4fb573d8f7b9fc","tennis","Casual"
-"606f2b69af4fb573d8f7b9fd","birthday","Movie Showing"
-"606f2b69af4fb573d8f7b9fe","campfire on beach","Other"
-"606f2b69af4fb573d8f7b9ff","community serving","Professional Development"
-"606f2b69af4fb573d8f7ba00","Web Sci coding","Professional Development"
-"606f2b69af4fb573d8f7ba01","Ra's 5k","Games/Trivia"
-"606f2b69af4fb573d8f7ba02","Watermelon Bash","Informational"
-"606f2b69af4fb573d8f7ba03","Dog Walking","Other"
-"606f2b69af4fb573d8f7ba04","RPI Union GBM","General Body Meetings (GBM)"
-"606f2b69af4fb573d8f7ba05","React Workshop","Workshop"
-"606f2b69af4fb573d8f7ba06","Cook-Off","Casual"
-"606f2b69af4fb573d8f7ba07","Potery","Other"
-"606f2b69af4fb573d8f7ba08","Scooby-Doo! Movie Party","Movie Showing"
-"606f2b69af4fb573d8f7ba09","Resume Critique","Professional Development"
-"606f2b69af4fb573d8f7ba0a","Google Technical Workshops","Workshop"
-"606f2b69af4fb573d8f7ba0b","Basketball Elections","Elections"
-"606f2b69af4fb573d8f7ba0c","LXA House Meeting","General Body Meetings (GBM)"
+_id,eventName,eventCategory
+606f2b69af4fb573d8f7b9f9,final four watching,GBM
+606f2b69af4fb573d8f7b9fa,Basketball at the Beach,Casual
+606f2b69af4fb573d8f7b9fb,netflix day,Casual
+606f2b69af4fb573d8f7b9fc,tennis,Casual
+606f2b69af4fb573d8f7b9fd,birthday,Movie
+606f2b69af4fb573d8f7b9fe,campfire on beach,Other
+606f2b69af4fb573d8f7b9ff,community serving,PD
+606f2b69af4fb573d8f7ba00,Web Sci coding,PD
+606f2b69af4fb573d8f7ba01,Ra's 5k,Games/Trivia
+606f2b69af4fb573d8f7ba02,Watermelon Bash,Informational
+606f2b69af4fb573d8f7ba03,Dog Walking,Other
+606f2b69af4fb573d8f7ba04,RPI Union GBM,GBM
+606f2b69af4fb573d8f7ba05,React Workshop,Workshop
+606f2b69af4fb573d8f7ba06,Cook-Off,Casual
+606f2b69af4fb573d8f7ba07,Potery,Other
+606f2b69af4fb573d8f7ba08,Scooby-Doo! Movie Party,Movie
+606f2b69af4fb573d8f7ba09,Resume Critique,PD
+606f2b69af4fb573d8f7ba0a,Google Technical Workshops,Workshop
+606f2b69af4fb573d8f7ba0b,Basketball Elections,Elections
+606f2b69af4fb573d8f7ba0c,LXA House Meeting,GBM

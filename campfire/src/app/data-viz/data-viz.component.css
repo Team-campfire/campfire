@@ -1,6 +1,3 @@
-body {
-    text-align: center;
-}
 .bg-orange {
     background-color: #C32E09 !important;
     color: white !important;
@@ -12,10 +9,6 @@ body {
     text-decoration: none;
     transform: scale(1.05);
 }
-img{
-    height: 300px;
-    /* width: 350px; */
-}
 #data-viz-navigation{
     display: block;
     margin-left: 5%;
@@ -23,8 +16,18 @@ img{
     justify-content: center;
     text-align: center;
 }
-/* .container{
-    display: block;
-    margin-left: 5%;
-    margin-right: 5%;
-} */
+.zoom {
+    transition: transform .2s; /* Animation */
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* margin-right: 15px;
+    margin-left: 15px; */
+  }
+  .zoom:hover {
+    transform: scale(1.25);
+  }
+  h3{
+      color: black;
+  }
