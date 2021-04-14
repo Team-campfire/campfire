@@ -4,11 +4,11 @@
 
 **Anya Tralshawala (RCS: tralsa, Github: anya-tralshawala):** 
 
-For this lab I worked with Rachel to create the general logic to create the csv files we all used to do our R visualizations. We also created the original wireframe for this lab. As a group we campe up with the 8 differnt viz categories. I set up the organization and file structure for all the csv files, R projects, and visualizations. I also set up the json file for all the data we uploaded to mongo as well as the lab6data collection in compass. Everything is in the assets folder inside src in the angular campfire directory. 
+For this lab I worked with Rachel to create the logic to create and download the csv files we all used to do our R visualizations. We also created the wireframes for this lab (located in the "\src\assets\lab6-wireframe" directory). As a group we campe up with the 8 differnt viz categories. I set up the organization and file structure for all the csv files, R projects, and visualizations. I also set up the json file for all the data we uploaded to mongo as well as the lab6data collection in compass. Everything is in the assets folder inside src in the angular campfire directory. 
 
-I personally worked on the Event Categories and Online vs. Offline visualizations and csv files. I created a barplot and pi chart for both differnt viz categories I focused on. I made sure they were visually appealing, evernly spaced, and representated the data well. 
+I personally worked on the Event Categories and Online vs. Offline visualizations and csv files. I created a barplot and dot chart chart for Event Categories visualizations. I then created a pie chart and barplot for the Online vs. Offline visualizations. I made sure they were visually appealing, evernly spaced, and representated the data well. 
 
-In terms of creativity besides stlying the buttons to fit them of our project I made sure that the colors of my visualizations fit into the theme of our app. I also created 2 visualizations per data set I worked on instead of the one that was required.
+In terms of creativity besides styling the buttons to fit them of our project I made sure that the colors of my visualizations fit into the color scheme and theme of our app. I also created 2 visualizations per data set I worked on instead of the one that was required. I then styled the page using bootstrap cards, css animations and came up with the logic to enlarge the data viz images when they were hovered over. 
 
 **Rachel Wang (RCS: wangr15, Github: rachel-wg):**
 For this lab, I worked with Anya to wireframe this lab, and use the json2csv NPM package and related logic to convert the JSON files in our database into the CSV files used in our visualizations. 
