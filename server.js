@@ -6,7 +6,6 @@ var bodyParser = require('body-parser');
 var cors = require('cors')
 var mongoose = require('mongoose')
 const stream = require('stream')
-// var mongodb = require('mongodb');
 const port = 3000
 const path = require('path')
 
@@ -81,18 +80,25 @@ function dbjson2csv(file, query) {
 // dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
 
 // Anya's POST requests
-app.post("/data-viz/eventCategories", function (req, res) {
+app.post("/eventCategories", function (req, res) {
 	dbjson2csv("eventCategories.csv", { eventName: 1, eventCategory: 1 });
-	res.send("event categories file has been updated")
-	// var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
-	// var pathEventCategoryPie = '/campfire/src/assets/data-viz/eventCategoryPie.png'
-	// res.send("barplot", pathEventCategoryBarplot)
-	// res.send("pie", pathEventCategoryPie)
+	console.log("event categories file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/eventCategories.csv';
+	res.download(file);
+	// Different ways of updating front-end
+	//var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
+	//res.sendFile(__dirname + pathEventCategoryBarplot)
+
+	// res.redirect('localhost:3000/dataviz');
+	// console.log("test");
+	// $("#data-viz-image").html('<img src="/campfire/src/assets/data-viz/eventCategoryBarplot.png" alt="event categories data viz">');
 });
 
-app.post("/data-viz/onlineVsOffline", (req, res) => {
+app.post("/onlineVsOffline", (req, res) => {
 	dbjson2csv("onlineVsOffline.csv", { eventName: 1, online: 1 });
-	res.send("online vs offline file has been updated")
+	console.log("online vs offline file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/onlineVsOffline.csv';
+	res.download(file);
 });
 
 /*Testing dbjson2csv function */
@@ -102,13 +108,18 @@ app.post("/data-viz/onlineVsOffline", (req, res) => {
 /* Rachel's POST requests*/
 app.post("/clubCategories", (req, res) => {
 	dbjson2csv("clubCategories.csv", { eventName: 1, clubCategory: 1 });
-	res.send("club categories csv file has been updated")
+	console.log("club categories file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/clubCategories.csv';
+	res.download(file);
 });
 
 app.post("/eventDates", (req, res) => {
 	dbjson2csv("eventDates.csv", { eventName: 1, date: 1 });
-	res.send("event dates csv file has been updated")
+	console.log("event dates file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/eventDates.csv';
+	res.download(file);
 });
+
 
 app.listen(port, () => {
 	console.log('listening on :3000')
