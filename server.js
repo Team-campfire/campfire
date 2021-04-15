@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 const { MongoClient } = require("mongodb");
 
 // atlas connection string                                                                                                                                        
-const url = "mongodb+srv://teamCampfire:LqGg9CN0pnjylnOz@campfire.x1fg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const url = "mongodb+srv://teamCampfire:vC1gdZfqcVN7IErS@campfire.x1fg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
 /*// !!!!! BELOW CODE Used to test mongo queries. Leaving this here for easy test acess
@@ -32,14 +32,12 @@ MongoClient.connect(url, function (err, db) {
 	var dbo = db.db("campfireApp");
 	// var query = { eventName: "Web Sci Demo" };
 	//var query = ({}, {eventName:1, _id:0}); // update for the keys you are querying
-
 	// var newCustomDef = { $set: { customDefinitions: [] } };
 	var lab6data = dbo.collection("lab6data");
 	lab6data.find({}).project({ eventName: 1 }).toArray(function (err, result) {
 		if (err) throw err;
 		console.log(result);
 		db.close();
-
 	});
 });*/
 // generalized mongodb query -> json -> csv code
@@ -78,6 +76,7 @@ function dbjson2csv(file, query) {
 	);
 }
 // dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
+// dbjson2csv("test.csv", {});
 
 // Anya's POST requests
 app.post("/eventCategories", function (req, res) {
