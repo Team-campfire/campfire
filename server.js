@@ -119,6 +119,20 @@ app.post("/eventDates", (req, res) => {
 	res.download(file);
 });
 
+/*Michael's POST requests*/
+app.post("/numTasks", (req, res) => {
+	dbjson2csv("numTasks.csv", { eventName: 1, delegateTasks: 1 });
+	console.log("number of tasks file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/numTasks.csv';
+	res.download(file);
+});
+
+app.post("/numDrivers", (req, res) => {
+	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: 1 });
+	console.log("number of drivers file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
+	res.download(file);
+});
 
 app.listen(port, () => {
 	console.log('listening on :3000')
