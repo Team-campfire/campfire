@@ -9,143 +9,144 @@ Number of Invites - Teddy
 Number of tasks - Michael
 Number of drivers/cars - Michael-->
 
-<div id="data-viz-navigation">
-    <br>
-    <h2>Data Visualizations</h2>
-    <p>Click the buttons to create and download the corresponding CSV files for the data visualizations!</p>
-    <br>
-    <div id="data-viz-navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Club Categories</h3>
+    <div class="data-viz-navigation">
+        <br>
+        <h1>Data Visualizations</h1>
+        <p id="det">Click a button to create and download the corresponding CSV file for the data visualization!</p>
+        <br>
+        <div class="data-viz-navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center" aria-details="det">
+                            <div class="card-header">
+                                <h2>Club Categories</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/data-viz/clubCategories.png"
+                                    alt="image of club categories data viz, a pie chart">
+                                <form method="post" action="/clubCategories">
+                                    <input type="submit" class="btn bg-orange" value="Club Categories" aria-label="button for club categories" aria-details="det"><br>
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/data-viz/clubCategories.png"
-                                alt="club categories data viz, pie chart">
-                            <form method="post" action="/clubCategories">
-                                <input type="submit" class="btn bg-orange" value="Club Categories"><br>
-                            </form>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center" aria-details="det">
+                            <div class="card-header">
+                                <h2>Event Dates</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/data-viz/eventDates.png"
+                                    alt="image of event dates data viz, a timeline">
+                                <form method="post" action="/eventDates">
+                                    <input type="submit" class="btn bg-orange" value="Event Dates" aria-label="button for event dates" aria-details="det"><br>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Event Dates</h3>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center" aria-details="det">
+                            <div class="card-header">
+                                <h2>Number of Drivers</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/R-projects/mike/driver.png"
+                                    alt="image of number of drivers data viz, a bar plot">
+                                <form method="post" action="/numDrivers">
+                                    <input type="submit" class="btn bg-orange" value="Num Drivers" aria-label="button for number of drivers" aria-details="det"><br>
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/data-viz/eventDates.png"
-                                alt="event dates data viz, timeline">
-                            <form method="post" action="/eventDates">
-                                <input type="submit" class="btn bg-orange" value="Event Dates"><br>
-                            </form>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center" aria-details="det">
+                            <div class="card-header" >
+                                <h2>Number of Tasks</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/R-projects/mike/taskss.png"
+                                    alt="image of number of tasks data viz, a bar plot">
+                                <form method="post" action="/numTasks">
+                                    <input type="submit" class="btn bg-orange" value="Num Tasks" aria-label="button for number of tasks" aria-details="det"><br>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center" aria-details="det">
+                            <div class="card-header">
+                                <h2>Invites by Users</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/data-viz/invites.png"
+                                    alt="image of invites by user data viz, a bar plot">
+                                <form method="post" action="/inviteFriends">
+                                    <input type="submit" class="btn bg-orange" value="Invites" aria-label="button for invites by user" aria-details="det"><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center">
+                            <div class="card-header" aria-details="det">
+                                <h2>Required Transportation</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/data-viz/transportation.png"
+                                    alt="image of required transportation data viz, a timeline">
+                                <form method="post" action="/reqTransportation">
+                                    <input type="submit" class="btn bg-orange" value="Transportation" aria-label="button for required transportation" aria-details="det"><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center" aria-details="det">
+                            <div class="card-header">
+                                <h2>Event Categories</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/data-viz/eventCategoryBarplot.png"
+                                    alt="image of event categories data viz, a bar plot">
+                                <img class="zoom" src="../assets/data-viz/eventCategoryDot.png"
+                                    alt="event categories data viz, dot chart">
+                                <form method="post" action="/eventCategories">
+                                    <input type="submit" class="btn bg-orange" value="Event Categories" aria-label="button for event categories" aria-details="det"><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center" aria-details="det">
+                            <div class="card-header">
+                                <h2>Online vs. Offline Events</h2>
+                            </div>
+                            <div class="card-body">
+                                <img class="zoom" src="../assets/data-viz/onlineVsOfflinePie.png"
+                                    alt="image of online versus offline events data viz, a pie chart">
+                                <img class="zoom" src="../assets/data-viz/onlineVsOfflineBarplot.png"
+                                    alt="online vs offline data viz, barplot">
+                                <form method="post" action="/onlineVsOffline">
+                                    <input type="submit" class="btn bg-orange" value="Online vs. Offline" aria-label="button for online versus offline events" aria-details="det"><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
             </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Number of Drivers</h3>
-                        </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/R-projects/mike/driver.png"
-                                alt="num drivers data viz, bar plot">
-                            <form method="post" action="/numDrivers">
-                                <input type="submit" class="btn bg-orange" value="Num Drivers"><br>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Number of Tasks</h3>
-                        </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/R-projects/mike/taskss.png"
-                                alt="num tasks data viz, barplot">
-                            <form method="post" action="/numTasks">
-                                <input type="submit" class="btn bg-orange" value="Num Tasks"><br>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Invites by Users</h3>
-                        </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/data-viz/invites.png"
-                                alt="invites by user data viz, barplot">
-                            <form method="post" action="/inviteFriends">
-                                <input type="submit" class="btn bg-orange" value="Invites"><br>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Required Transportation</h3>
-                        </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/data-viz/transportation.png"
-                                alt="required transportation data viz, timeline">
-                            <form method="post" action="/reqTransportation">
-                                <input type="submit" class="btn bg-orange" value="Transportation"><br>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Event Categories</h3>
-                        </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/data-viz/eventCategoryBarplot.png"
-                                alt="event categories data viz, barplot">
-                            <img class="zoom" src="../assets/data-viz/eventCategoryDot.png"
-                                alt="event categories data viz, dotchart">
-                            <form method="post" action="/eventCategories">
-                                <input type="submit" class="btn bg-orange" value="Event Categories"><br>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3>Online vs. Offline Events</h3>
-                        </div>
-                        <div class="card-body">
-                            <img class="zoom" src="../assets/data-viz/onlineVsOfflinePie.png"
-                                alt="online vs offline data viz, pie chart">
-                            <img class="zoom" src="../assets/data-viz/onlineVsOfflineBarplot.png"
-                                alt="online vs offline data viz, barplot">
-                            <form method="post" action="/onlineVsOffline">
-                                <input type="submit" class="btn bg-orange" value="Online vs. Offline"><br>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
         </div>
-    </div>
+
