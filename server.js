@@ -104,18 +104,25 @@ app.post("/eventDates", (req, res) => {
 
 /*Michael's POST requests*/
 app.post("/numTasks", (req, res) => {
-	dbjson2csv("numTasks.csv", { eventName: 1, delegateTasks: 1 });
+	dbjson2csv("numTasks.csv", { eventName: 1, delegateTasks: {
+		$cond: { if: { $isArray: "$delegateTasks" }, then: { $size: "$delegateTasks" }, else: "NA"}
+	}});
 	console.log("number of tasks file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/numTasks.csv';
 	res.download(file);
 });
 
 app.post("/numDrivers", (req, res) => {
-	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: 1 });
+
+	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: {
+		$cond: { if: { $isArray: "$transportation" }, then: { $size: "$transportation" }, else: "NA"}
+	}});
+
 	console.log("number of drivers file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
 	res.download(file);
 });
+
 
 /*Teddy's POST requests*/
 app.post("/inviteFriends", (req, res) => {
