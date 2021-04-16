@@ -1,4 +1,5 @@
 <!-- <p>finish works!</p> -->
+<script src="finish.js"></script>
 <div class="form">
     <!-- top part of home page here -->
     <!-- two columns to position image and text -->
@@ -16,23 +17,4 @@
         </div>
     </div>
 </div>
-<!-- <script
-    type='text/javascript'>document.addEventListener('DOMContentLoaded', function () { window.setTimeout(document.querySelector('svg').classList.add('animated'), 1000); })</script> -->
-<script>
-    // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
-    // var eventCode = document.querySelector("#eventCode")
-    function makeid(length) {
-        var result = [];
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!&%$#@*^';
-        var charactersLength = characters.length;
-        for (var i = 0; i < length; i++) {
-            result.push(characters.charAt(Math.floor(Math.random() *
-                charactersLength)));
-        }
-        return result.join('');
-    }
-    var event_code = document.getElementById('eventCode');
-    event_code.innerHTML = makeid(8)    
-    // console.log(makeid(8));
-</script>
-<!-- <app-dashboard></app-dashboard> -->
+

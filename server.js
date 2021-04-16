@@ -48,11 +48,6 @@ function dbjson2csv(file, query) {
 		{ useNewUrlParser: true, useUnifiedTopology: true },
 		(err, client) => {
 			if (err) throw err;
-			/*Update file for the file you're writing to */
-			//var file = "test.csv";
-			//var query = { eventName: 1, clubName: 1 };
-			/*update "query" for the keys you are querying: 1 means return this field. id is auto returned, if you don't want
-			id, include "_id:0"*/
 			client
 				.db("campfireApp")
 				.collection("lab6data")
@@ -75,7 +70,6 @@ function dbjson2csv(file, query) {
 		}
 	);
 }
-// dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
 // dbjson2csv("test.csv", {});
 
 // Anya's POST requests
@@ -84,13 +78,6 @@ app.post("/eventCategories", function (req, res) {
 	console.log("event categories file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/eventCategories.csv';
 	res.download(file);
-	// Different ways of updating front-end
-	//var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
-	//res.sendFile(__dirname + pathEventCategoryBarplot)
-
-	// res.redirect('localhost:3000/dataviz');
-	// console.log("test");
-	// $("#data-viz-image").html('<img src="/campfire/src/assets/data-viz/eventCategoryBarplot.png" alt="event categories data viz">');
 });
 
 app.post("/onlineVsOffline", (req, res) => {
@@ -99,10 +86,6 @@ app.post("/onlineVsOffline", (req, res) => {
 	const file = 'campfire/src/assets/csv-files/onlineVsOffline.csv';
 	res.download(file);
 });
-
-/*Testing dbjson2csv function */
-//dbjson2csv("eventDates.csv", { eventName: 1, date: 1 });
-//dbjson2csv("clubCategories.csv", { eventName: 1, clubCategory: 1 });
 
 /* Rachel's POST requests*/
 app.post("/clubCategories", (req, res) => {
@@ -121,18 +104,25 @@ app.post("/eventDates", (req, res) => {
 
 /*Michael's POST requests*/
 app.post("/numTasks", (req, res) => {
-	dbjson2csv("numTasks.csv", { eventName: 1, delegateTasks: 1 });
+	dbjson2csv("numTasks.csv", { eventName: 1, delegateTasks: {
+		$cond: { if: { $isArray: "$delegateTasks" }, then: { $size: "$delegateTasks" }, else: "NA"}
+	}});
 	console.log("number of tasks file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/numTasks.csv';
 	res.download(file);
 });
 
 app.post("/numDrivers", (req, res) => {
-	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: 1 });
+
+	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: {
+		$cond: { if: { $isArray: "$transportation" }, then: { $size: "$transportation" }, else: "NA"}
+	}});
+
 	console.log("number of drivers file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
 	res.download(file);
 });
+
 
 /*Teddy's POST requests*/
 app.post("/inviteFriends", (req, res) => {
@@ -147,7 +137,7 @@ app.post("/inviteFriends", (req, res) => {
 app.post("/reqTransportation", (req, res) => {
 	dbjson2csv("reqTransportation.csv", { yourName: 1, reqTransportation: 1 });
 	console.log("transportation required file has been created and is downloading!");
-	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
+	const file = 'campfire/src/assets/csv-files/reqTransportation.csv';
 	res.download(file);
 });
 
