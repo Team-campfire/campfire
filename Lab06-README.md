@@ -18,8 +18,11 @@ Personally, I worked on the visualizations related to the Club Categories of clu
 For creativity, I ran accessibility checks and edited our markup and CSS to follow w3c WAI accessibility guidelines.
 
 **Michael Kokkatt (RCS: kokkam, Github: mkokkatt):**
-Number of tasks
-Number of drivers/cars 
+
+For this lab, I worked with Teddy in using our data schema for our project to create a data set to use for this lab. I helped come up with ideas for the different types of
+data we could exploit and use to display in our R visualizations. We populated a data set with fake data to use for this lab and made it accessible by uploading it to Mongo. I was in charge of the number of tasks visualizations and the number of driver visualizations.
+
+For creativity, when creating the data set, I made sure to add variances and similarities to create unique and interesting data out of 20 entries.  
 
 **Teddy Clark (RCS: clarke4, Github: teddy-clark):**
 Transportation vs. none 
