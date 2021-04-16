@@ -20,9 +20,9 @@ For creativity, I ran accessibility checks and edited our markup (aria labels, f
 **Michael Kokkatt (RCS: kokkam, Github: mkokkatt):**
 
 For this lab, I worked with Teddy in using our data schema for our project to create a data set to use for this lab. I helped come up with ideas for the different types of
-data we could exploit and use to display in our R visualizations. We populated a data set with fake data to use for this lab and made it accessible by uploading it to Mongo. I was in charge of the number of tasks visualizations and the number of driver visualizations.
+data we could exploit and use to display in our R visualizations. We populated a data set with fake data to use for this lab and made it accessible by uploading it to Mongo. I was in charge of the number of tasks visualizations and the number of driver visualizations. I had two data visualizations which were both bar plots because I felt that the clearest way to represent the data I was showing the user would be in the form of a bar graph. From looking at the graph, the user will know right away what the work load and transportation needs are by event. At the end of the day, the data visualization chosen largely depends on the data set and the analysis that is being conveyed. 
+For creativity, when creating the data set, I made sure to add variances and similarities to create unique and interesting data out of 20 entries. I also used different color schemes for my visualizations and flipped the coordinates of the plots to make them more aesthetically pleasing. 
 
-For creativity, when creating the data set, I made sure to add variances and similarities to create unique and interesting data out of 20 entries.  
 
 **Teddy Clark (RCS: clarke4, Github: teddy-clark):**
 
