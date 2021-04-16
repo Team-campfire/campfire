@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 // Mongo Connection
 const { MongoClient } = require("mongodb");
 
-// atlas connection string                                                                                                                                        
+// atlas connection string
 const url = "mongodb+srv://teamCampfire:vC1gdZfqcVN7IErS@campfire.x1fg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
@@ -50,7 +50,7 @@ function dbjson2csv(file, query) {
 			if (err) throw err;
 			/*Update file for the file you're writing to */
 			//var file = "test.csv";
-			//var query = { eventName: 1, clubName: 1 }; 
+			//var query = { eventName: 1, clubName: 1 };
 			/*update "query" for the keys you are querying: 1 means return this field. id is auto returned, if you don't want
 			id, include "_id:0"*/
 			client
@@ -130,6 +130,23 @@ app.post("/numTasks", (req, res) => {
 app.post("/numDrivers", (req, res) => {
 	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: 1 });
 	console.log("number of drivers file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
+	res.download(file);
+});
+
+/*Teddy's POST requests*/
+app.post("/inviteFriends", (req, res) => {
+	dbjson2csv("inviteFriends.csv", { yourName: 1, inviteFriends: {
+		$cond: { if: { $isArray: "$inviteFriends" }, then: { $size: "$inviteFriends" }, else: "NA"}
+	}});
+	console.log("invite friends file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/inviteFriends.csv';
+	res.download(file);
+});
+
+app.post("/reqTransportation", (req, res) => {
+	dbjson2csv("reqTransportation.csv", { yourName: 1, reqTransportation: 1 });
+	console.log("transportation required file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
 	res.download(file);
 });
