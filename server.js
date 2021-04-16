@@ -147,7 +147,7 @@ app.post("/inviteFriends", (req, res) => {
 app.post("/reqTransportation", (req, res) => {
 	dbjson2csv("reqTransportation.csv", { yourName: 1, reqTransportation: 1 });
 	console.log("transportation required file has been created and is downloading!");
-	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
+	const file = 'campfire/src/assets/csv-files/reqTransportation.csv';
 	res.download(file);
 });
 
