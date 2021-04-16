@@ -6,7 +6,6 @@ var bodyParser = require('body-parser');
 var cors = require('cors')
 var mongoose = require('mongoose')
 const stream = require('stream')
-// var mongodb = require('mongodb');
 const port = 3000
 const path = require('path')
 
@@ -23,8 +22,8 @@ app.get('/', (req, res) => {
 // Mongo Connection
 const { MongoClient } = require("mongodb");
 
-// atlas connection string                                                                                                                                        
-const url = "mongodb+srv://teamCampfire:LqGg9CN0pnjylnOz@campfire.x1fg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// atlas connection string
+const url = "mongodb+srv://teamCampfire:vC1gdZfqcVN7IErS@campfire.x1fg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
 /*// !!!!! BELOW CODE Used to test mongo queries. Leaving this here for easy test acess
@@ -33,14 +32,12 @@ MongoClient.connect(url, function (err, db) {
 	var dbo = db.db("campfireApp");
 	// var query = { eventName: "Web Sci Demo" };
 	//var query = ({}, {eventName:1, _id:0}); // update for the keys you are querying
-
 	// var newCustomDef = { $set: { customDefinitions: [] } };
 	var lab6data = dbo.collection("lab6data");
 	lab6data.find({}).project({ eventName: 1 }).toArray(function (err, result) {
 		if (err) throw err;
 		console.log(result);
 		db.close();
-
 	});
 });*/
 // generalized mongodb query -> json -> csv code
@@ -53,7 +50,7 @@ function dbjson2csv(file, query) {
 			if (err) throw err;
 			/*Update file for the file you're writing to */
 			//var file = "test.csv";
-			//var query = { eventName: 1, clubName: 1 }; 
+			//var query = { eventName: 1, clubName: 1 };
 			/*update "query" for the keys you are querying: 1 means return this field. id is auto returned, if you don't want
 			id, include "_id:0"*/
 			client
@@ -79,18 +76,28 @@ function dbjson2csv(file, query) {
 	);
 }
 // dbjson2csv("test.csv", { eventName: 1, clubName: 1 });
-// var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
-// var pathEventCategoryPie = '/campfire/src/assets/data-viz/eventCategoryPie.png'
-app.post("/eventCategories", function(req, res)  {
+// dbjson2csv("test.csv", {});
+
+// Anya's POST requests
+app.post("/eventCategories", function (req, res) {
 	dbjson2csv("eventCategories.csv", { eventName: 1, eventCategory: 1 });
-	res.send("event categories file has been updated")
-	// res.send("barplot", pathEventCategoryBarplot)
-	// res.send("pie", pathEventCategoryPie)
+	console.log("event categories file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/eventCategories.csv';
+	res.download(file);
+	// Different ways of updating front-end
+	//var pathEventCategoryBarplot = '/campfire/src/assets/data-viz/eventCategoryBarplot.png'
+	//res.sendFile(__dirname + pathEventCategoryBarplot)
+
+	// res.redirect('localhost:3000/dataviz');
+	// console.log("test");
+	// $("#data-viz-image").html('<img src="/campfire/src/assets/data-viz/eventCategoryBarplot.png" alt="event categories data viz">');
 });
 
 app.post("/onlineVsOffline", (req, res) => {
 	dbjson2csv("onlineVsOffline.csv", { eventName: 1, online: 1 });
-	res.send("online vs offline file has been updated")
+	console.log("online vs offline file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/onlineVsOffline.csv';
+	res.download(file);
 });
 
 /*Testing dbjson2csv function */
@@ -100,12 +107,48 @@ app.post("/onlineVsOffline", (req, res) => {
 /* Rachel's POST requests*/
 app.post("/clubCategories", (req, res) => {
 	dbjson2csv("clubCategories.csv", { eventName: 1, clubCategory: 1 });
-	res.send("club categories csv file has been updated")
+	console.log("club categories file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/clubCategories.csv';
+	res.download(file);
 });
 
 app.post("/eventDates", (req, res) => {
 	dbjson2csv("eventDates.csv", { eventName: 1, date: 1 });
-	res.send("event dates csv file has been updated")
+	console.log("event dates file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/eventDates.csv';
+	res.download(file);
+});
+
+/*Michael's POST requests*/
+app.post("/numTasks", (req, res) => {
+	dbjson2csv("numTasks.csv", { eventName: 1, delegateTasks: 1 });
+	console.log("number of tasks file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/numTasks.csv';
+	res.download(file);
+});
+
+app.post("/numDrivers", (req, res) => {
+	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: 1 });
+	console.log("number of drivers file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
+	res.download(file);
+});
+
+/*Teddy's POST requests*/
+app.post("/inviteFriends", (req, res) => {
+	dbjson2csv("inviteFriends.csv", { yourName: 1, inviteFriends: {
+		$cond: { if: { $isArray: "$inviteFriends" }, then: { $size: "$inviteFriends" }, else: "NA"}
+	}});
+	console.log("invite friends file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/inviteFriends.csv';
+	res.download(file);
+});
+
+app.post("/reqTransportation", (req, res) => {
+	dbjson2csv("reqTransportation.csv", { yourName: 1, reqTransportation: 1 });
+	console.log("transportation required file has been created and is downloading!");
+	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
+	res.download(file);
 });
 
 app.listen(port, () => {

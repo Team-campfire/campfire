@@ -9,3 +9,25 @@
     text-decoration: none;
     transform: scale(1.05);
 }
+#data-viz-navigation{
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    text-align: center;
+}
+.zoom {
+    transition: transform .2s; /* Animation */
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* margin-right: 15px;
+    margin-left: 15px; */
+  }
+  .zoom:hover {
+    transform: scale(1.25);
+  }
+  h3{
+      color: black;
+  }
