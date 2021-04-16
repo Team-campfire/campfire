@@ -25,5 +25,11 @@ data we could exploit and use to display in our R visualizations. We populated a
 For creativity, when creating the data set, I made sure to add variances and similarities to create unique and interesting data out of 20 entries.  
 
 **Teddy Clark (RCS: clarke4, Github: teddy-clark):**
-Transportation vs. none 
-Locations
+
+For this lab, I worked with Michael to populate the lab06.json file according to our data schema. After we completed populating data, we uploaded the file to
+MongoDB. I came up with ideas for the different R components that the team could use for data visualization. I used R to display the number of invititations sent
+out by each user and whether an event required transportation. In the server.js file, I also created 2 post requests to dowload data needed for these
+visualizations.
+
+For creativity, I made sure to duplicate attributes so that data visualization components would benfit from having attributes grouped together. I also created
+both a bar chart and pie chart to highlight different R visualizations and added colors to both charts to make the data more visually appealing. 
