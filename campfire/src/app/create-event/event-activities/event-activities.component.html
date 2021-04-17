@@ -1,51 +1,53 @@
 <!-- <p>event-activities works!</p> -->
-<div class="form">
-    <form>
-        <h2 class="form-title">Event Activities</h2>
-        <br>
-        <label>Event Categories:</label>
-        <div class="categories">
-            <button type="button" class="btns btn-orange">General Body Meeting (GBM)</button>
-            <button type="button" class="btns btn-orange">Casual</button>
-            <button type="button" class="btns btn-orange">Movie Showing</button>
-            <button type="button" class="btns btn-orange">Games/Trivia</button>
-            <button type="button" class="btns btn-orange">Informational</button>
-            <button type="button" class="btns btn-orange">Excursion</button>
-            <button type="button" class="btns btn-orange">Elections</button>
-            <button type="button" class="btns btn-orange">Workshop</button>
-            <button type="button" class="btns btn-orange">Recruiting (Company)</button>
-            <button type="button" class="btns btn-orange">Professional Development</button>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="comment">Event Description:</label>
-            <textarea class="form-control" rows="5" id="description"
-                placeholder="Please enter an event description."></textarea>
-        </div>
-        <br>
-        <label>Club/Organization Categories:</label>
-        <div class="categories">
-            <button type="button" class="btns btn-orange">Academic & Professional</button>
-            <button type="button" class="btns btn-orange">Identity Based</button>
-            <button type="button" class="btns btn-orange">Hobby & Special Interest</button>
-            <button type="button" class="btns btn-orange">Community Service</button>
-            <button type="button" class="btns btn-orange">Sports & Recreation</button>
-            <button type="button" class="btns btn-orange">Student Government & Event Planning</button>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="comment">Club/Organization Description:</label>
-            <textarea class="form-control" rows="5" id="club-org"
-                placeholder="Please enter an club/organization description."></textarea>
-        </div>
-    </form>
+<div class="background">
+    <div class="form">
+        <form>
+            <h2 class="form-title">Event Activities</h2>
+            <br>
+            <label>Event Categories:</label>
+            <div class="categories">
+                <button type="button" class="btns btn-orange">General Body Meeting (GBM)</button>
+                <button type="button" class="btns btn-orange">Casual</button>
+                <button type="button" class="btns btn-orange">Movie Showing</button>
+                <button type="button" class="btns btn-orange">Games/Trivia</button>
+                <button type="button" class="btns btn-orange">Informational</button>
+                <button type="button" class="btns btn-orange">Excursion</button>
+                <button type="button" class="btns btn-orange">Elections</button>
+                <button type="button" class="btns btn-orange">Workshop</button>
+                <button type="button" class="btns btn-orange">Recruiting (Company)</button>
+                <button type="button" class="btns btn-orange">Professional Development</button>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="comment">Event Description:</label>
+                <textarea class="form-control" rows="2" id="description"
+                    placeholder="Please enter an event description."></textarea>
+            </div>
+            <label>Club/Organization Categories:</label>
+            <div class="categories">
+                <button type="button" class="btns btn-orange">Academic & Professional</button>
+                <button type="button" class="btns btn-orange">Identity Based</button>
+                <button type="button" class="btns btn-orange">Hobby & Special Interest</button>
+                <button type="button" class="btns btn-orange">Community Service</button>
+                <button type="button" class="btns btn-orange">Sports & Recreation</button>
+                <button type="button" class="btns btn-orange">Student Government & Event Planning</button>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="comment">Club/Organization Description:</label>
+                <textarea class="form-control" rows="2" id="club-org"
+                    placeholder="Please enter an club/organization description."></textarea>
+            </div>
+        </form>
+    </div>
+
     <div class="centerButton">
         <a type="button" class="bg-orange btn-step prev" routerLink='/eventBasics'> &#60; Back </a>
-        <!-- <h6 class="stepCompleted"> Step 3 of 4 </h6> -->
         <a type="button" class="bg-orange btn-step next" routerLink='/eventTransportation'>Next &#62;</a>
+        <h6 class="stepCompleted"> Step 3 of 4 </h6>
     </div>
+    <div class="spacing"></div>
 </div>
-
 <!-- <script>
 $("button").click(function () {
     $("button").removeClass("active");
