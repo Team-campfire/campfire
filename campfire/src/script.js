@@ -29,3 +29,30 @@ function myFunction() {
       $(this).find(".caret").toggleClass("caretup");
     });
   });
+
+/*Add more fields to page when add button is clicked */
+function addFriends(){
+  console.log("entered add friends");
+  var friends = document.getElementById("addFriends");
+  var currFriendCount = document.getElementsByClassName("aFriend").length()+1;
+  friends.appendChild('<input type="friend" class="form-control aFriend" id="friend'+currFriendCount+'" aria-describedby="friendHelp" placeholder="Enter Email"></input>');
+}
+
+$('#addFriendButton').on('click', function() {
+  console.log("clicked");
+    addFriends();
+});
+
+$(function addCars() {
+  console.log("entered add cars");
+  var cars = document.getElementById("addCars");
+  var currFriendCount = document.getElementsByClassName("aCar").length()+1;
+  $(cars).append('<input type="car" class="form-control aCar" id="car'+currFriendCount+'" aria-describedby="carHelp" placeholder="Enter name of driver"></input>');
+});
+/*$(function(){
+  $("#addFriendButton").click(function(){
+    console.log("hi!");
+    $("p").append("<b>Appended text</b>");
+  });
+});*/
+$("#addCarButton").click(addCars());
