@@ -14,4 +14,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Contact us at teamcampfire21@gmail.com with the subject line "Secruity Vulnerability." In the body of the messange please detail how to recreate this vulnerability.
+Contact us at teamcampfire21@gmail.com with the subject line "Secruity Vulnerability." In the body of the message please detail how to recreate this vulnerability.
