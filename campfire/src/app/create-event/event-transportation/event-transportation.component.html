@@ -1,6 +1,6 @@
 <div class="background">
     <div class="form">
-        <form>
+        <form method="POST" action="/submitEventTransportation">
             <h2 class="form-title">Event Transportation</h2>
             <br>
             <label>Does your event require transportation?</label>
@@ -19,10 +19,11 @@
             <br>
             <div class="form-group" id="addCars">
                 <label for="addCar">If so, add cars:</label>
-                <input type="car" class="form-control aCar" id="addCar1" aria-describedby="carHelp"
+                <input type="car" class="form-control aCar" name="driverName" id="addCar1" aria-describedby="carHelp"
                     placeholder="Enter name of driver">
             </div>
             <a type="button" class="bg-add btn-add"> + Add Car </a>
+            <input class="btn bg-blue" type="submit" value="Save">
         </form>
     </div>
 

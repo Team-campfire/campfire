@@ -13,6 +13,9 @@ const mongodb = require("mongodb").MongoClient;
 const Json2csvParser = require("json2csv").Parser;
 const fs = require("fs");
 
+app.use(bodyParser.json())
+app.use(cors())
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, './campfire/dist/campfire')));
 
 app.get('/', (req, res) => {
@@ -42,6 +45,8 @@ MongoClient.connect(url, function (err, db) {
 });*/
 // generalized mongodb query -> json -> csv code
 // file: file name you're wr
+
+// Lab 6 stuff
 function dbjson2csv(file, query) {
 	mongodb.connect(
 		url,
@@ -71,7 +76,6 @@ function dbjson2csv(file, query) {
 	);
 }
 // dbjson2csv("test.csv", {});
-
 // Anya's POST requests
 app.post("/eventCategories", function (req, res) {
 	dbjson2csv("eventCategories.csv", { eventName: 1, eventCategory: 1 });
@@ -104,9 +108,11 @@ app.post("/eventDates", (req, res) => {
 
 /*Michael's POST requests*/
 app.post("/numTasks", (req, res) => {
-	dbjson2csv("numTasks.csv", { eventName: 1, delegateTasks: {
-		$cond: { if: { $isArray: "$delegateTasks" }, then: { $size: "$delegateTasks" }, else: "NA"}
-	}});
+	dbjson2csv("numTasks.csv", {
+		eventName: 1, delegateTasks: {
+			$cond: { if: { $isArray: "$delegateTasks" }, then: { $size: "$delegateTasks" }, else: "NA" }
+		}
+	});
 	console.log("number of tasks file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/numTasks.csv';
 	res.download(file);
@@ -114,9 +120,11 @@ app.post("/numTasks", (req, res) => {
 
 app.post("/numDrivers", (req, res) => {
 
-	dbjson2csv("numDrivers.csv", { eventName: 1, transportation: {
-		$cond: { if: { $isArray: "$transportation" }, then: { $size: "$transportation" }, else: "NA"}
-	}});
+	dbjson2csv("numDrivers.csv", {
+		eventName: 1, transportation: {
+			$cond: { if: { $isArray: "$transportation" }, then: { $size: "$transportation" }, else: "NA" }
+		}
+	});
 
 	console.log("number of drivers file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/numDrivers.csv';
@@ -126,9 +134,11 @@ app.post("/numDrivers", (req, res) => {
 
 /*Teddy's POST requests*/
 app.post("/inviteFriends", (req, res) => {
-	dbjson2csv("inviteFriends.csv", { yourName: 1, inviteFriends: {
-		$cond: { if: { $isArray: "$inviteFriends" }, then: { $size: "$inviteFriends" }, else: "NA"}
-	}});
+	dbjson2csv("inviteFriends.csv", {
+		yourName: 1, inviteFriends: {
+			$cond: { if: { $isArray: "$inviteFriends" }, then: { $size: "$inviteFriends" }, else: "NA" }
+		}
+	});
 	console.log("invite friends file has been created and is downloading!");
 	const file = 'campfire/src/assets/csv-files/inviteFriends.csv';
 	res.download(file);
@@ -140,6 +150,92 @@ app.post("/reqTransportation", (req, res) => {
 	const file = 'campfire/src/assets/csv-files/reqTransportation.csv';
 	res.download(file);
 });
+
+// event basics page
+app.post('/submitEventStart', function (req, res) {
+	MongoClient.connect(url, function (err, db) {
+		if (err) throw err;
+		var dbo = db.db("campfireApp");
+
+		dbo.collection("createEvent").insertOne(req.body, function (err) {
+			if (err) throw err;
+			console.log("data recieved");
+			db.close();
+		});
+		// res.send('Data received:\n' + JSON.stringify(req.body));
+		// res.redirect("http://localhost:3000")
+	});
+});
+app.post('/submitEventBasics', function (req, res) {
+	MongoClient.connect(url, function (err, db) {
+		if (err) throw err;
+		var dbo = db.db("campfireApp");
+		var query = {eventName: "Demo"};
+		var eventBasics = req.body;
+		var insert = {  $push:  {eventBasics} };
+		// var insert = req.body;
+		// db.collection("createEvent").findOne({}, {sort:{$natural:-1}}){
+		// dbo.collection("recommendation").findAndModify({}).sort({_id:-1}).limit(1).insertOne(req.body, function (err) {
+
+		// $mergeObjects: {{sort:{$natural:-1}};
+		dbo.collection("createEvent").updateOne(query, insert, function (err) {
+			// $mergeObjects: {{sort:{$natural:-1}}};
+			if (err) throw err;
+			console.log("basics update recieved");
+			db.close();
+			// res.status(200).json(recommendation);
+			// res.redirect("http://localhost:3000/")
+		});
+	});
+});
+app.post('/submitEventActivities', function (req, res) {
+	MongoClient.connect(url, function (err, db) {
+		if (err) throw err;
+		var dbo = db.db("campfireApp");
+		var query = {eventName: "Demo"};
+		var eventActivities = req.body;
+		var insert = {  $push:  {eventActivities} };
+		// var insert = req.body;
+		// db.collection("createEvent").findOne({}, {sort:{$natural:-1}}){
+		// dbo.collection("recommendation").findAndModify({}).sort({_id:-1}).limit(1).insertOne(req.body, function (err) {
+
+		// $mergeObjects: {{sort:{$natural:-1}};
+		dbo.collection("createEvent").updateOne(query, insert, function (err) {
+			// $mergeObjects: {{sort:{$natural:-1}}};
+			if (err) throw err;
+			console.log("activities update recieved");
+			db.close();
+			// res.status(200).json(recommendation);
+			// res.redirect("http://localhost:3000/")
+		});
+	});
+});
+app.post('/submitEventTransportation', function (req, res) {
+	MongoClient.connect(url, function (err, db) {
+		if (err) throw err;
+		var dbo = db.db("campfireApp");
+		var query = {eventName: "Demo"};
+		var eventTransportation = req.body;
+		var insert = {  $push:  {eventTransportation} };
+		// var insert = req.body;
+		// db.collection("createEvent").findOne({}, {sort:{$natural:-1}}){
+		// dbo.collection("recommendation").findAndModify({}).sort({_id:-1}).limit(1).insertOne(req.body, function (err) {
+
+		// $mergeObjects: {{sort:{$natural:-1}};
+		dbo.collection("createEvent").updateOne(query, insert, function (err) {
+			// $mergeObjects: {{sort:{$natural:-1}}};
+			if (err) throw err;
+			console.log("transportation update recieved");
+			db.close();
+			// res.status(200).json(recommendation);
+			// res.redirect("http://localhost:3000/")
+		});
+	});
+});
+
+
+
+
 
 app.listen(port, () => {
 	console.log('listening on :3000')

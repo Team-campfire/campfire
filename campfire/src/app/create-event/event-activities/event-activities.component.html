@@ -1,7 +1,7 @@
 <!-- <p>event-activities works!</p> -->
 <div class="background">
     <div class="form">
-        <form>
+        <form method="POST" action="/submitEventActivities">
             <h2 class="form-title">Event Activities</h2>
             <br>
             <label>Event Categories:</label>
@@ -20,7 +20,7 @@
             <br>
             <div class="form-group">
                 <label for="comment">Event Description:</label>
-                <textarea class="form-control" rows="2" id="description"
+                <textarea class="form-control" name="eventDescription" rows="2" id="description"
                     placeholder="Please enter an event description."></textarea>
             </div>
             <label>Club/Organization Categories:</label>
@@ -35,9 +35,10 @@
             <br>
             <div class="form-group">
                 <label for="comment">Club/Organization Description:</label>
-                <textarea class="form-control" rows="2" id="club-org"
+                <textarea class="form-control" name="clubDescription" rows="2" id="club-org"
                     placeholder="Please enter an club/organization description."></textarea>
             </div>
+            <input class="btn bg-blue" type="submit" value="Save">
         </form>
     </div>
 
