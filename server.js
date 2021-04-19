@@ -151,40 +151,31 @@ app.post("/reqTransportation", (req, res) => {
 	res.download(file);
 });
 
-// event basics page
+// event start page
 app.post('/submitEventStart', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-
 		dbo.collection("createEvent").insertOne(req.body, function (err) {
 			if (err) throw err;
 			console.log("data recieved");
 			db.close();
 		});
-		// res.send('Data received:\n' + JSON.stringify(req.body));
-		// res.redirect("http://localhost:3000")
 	});
 });
 app.post('/submitEventBasics', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-		var query = {eventName: "Demo"};
+		// replace "Demo" with eventName of last document in db
+		var query = { eventName: "Demo" };
 		var eventBasics = req.body;
-		var insert = {  $push:  {eventBasics} };
-		// var insert = req.body;
-		// db.collection("createEvent").findOne({}, {sort:{$natural:-1}}){
-		// dbo.collection("recommendation").findAndModify({}).sort({_id:-1}).limit(1).insertOne(req.body, function (err) {
+		var insert = { $push: { eventBasics } };
 
-		// $mergeObjects: {{sort:{$natural:-1}};
 		dbo.collection("createEvent").updateOne(query, insert, function (err) {
-			// $mergeObjects: {{sort:{$natural:-1}}};
 			if (err) throw err;
 			console.log("basics update recieved");
 			db.close();
-			// res.status(200).json(recommendation);
-			// res.redirect("http://localhost:3000/")
 		});
 	});
 });
@@ -192,21 +183,14 @@ app.post('/submitEventActivities', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-		var query = {eventName: "Demo"};
+		var query = { eventName: "Demo" };
 		var eventActivities = req.body;
-		var insert = {  $push:  {eventActivities} };
-		// var insert = req.body;
-		// db.collection("createEvent").findOne({}, {sort:{$natural:-1}}){
-		// dbo.collection("recommendation").findAndModify({}).sort({_id:-1}).limit(1).insertOne(req.body, function (err) {
+		var insert = { $push: { eventActivities } };
 
-		// $mergeObjects: {{sort:{$natural:-1}};
 		dbo.collection("createEvent").updateOne(query, insert, function (err) {
-			// $mergeObjects: {{sort:{$natural:-1}}};
 			if (err) throw err;
 			console.log("activities update recieved");
 			db.close();
-			// res.status(200).json(recommendation);
-			// res.redirect("http://localhost:3000/")
 		});
 	});
 });
@@ -214,28 +198,17 @@ app.post('/submitEventTransportation', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-		var query = {eventName: "Demo"};
+		var query = { eventName: "Demo" };
 		var eventTransportation = req.body;
-		var insert = {  $push:  {eventTransportation} };
-		// var insert = req.body;
-		// db.collection("createEvent").findOne({}, {sort:{$natural:-1}}){
-		// dbo.collection("recommendation").findAndModify({}).sort({_id:-1}).limit(1).insertOne(req.body, function (err) {
+		var insert = { $push: { eventTransportation } };
 
-		// $mergeObjects: {{sort:{$natural:-1}};
 		dbo.collection("createEvent").updateOne(query, insert, function (err) {
-			// $mergeObjects: {{sort:{$natural:-1}}};
 			if (err) throw err;
 			console.log("transportation update recieved");
 			db.close();
-			// res.status(200).json(recommendation);
-			// res.redirect("http://localhost:3000/")
 		});
 	});
 });
-
-
-
-
 
 app.listen(port, () => {
 	console.log('listening on :3000')
