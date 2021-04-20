@@ -2,18 +2,19 @@
 <div class="background">
 
     <div class="form">
-        <form>
+        <form method="POST" action="/submitEventBasics">
             <h2 class="form-title">Event Basics</h2>
             <br>
             <label>Public or Private?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButton" id="publicButton" value="public">
+                <input class="form-check-input" type="radio" name="radioButtonPublic" id="publicButton" value="public">
                 <label class="form-check-label" for="publicButton">
                     Public
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButton" id="privateButton" value="private">
+                <input class="form-check-input" type="radio" name="radioButtonPrivate" id="privateButton"
+                    value="private">
                 <label class="form-check-label" for="privateButton">
                     Private
                 </label>
@@ -21,7 +22,8 @@
             <br>
             <div class="form-group">
                 <label for="date">Date:</label>
-                <input type="text" class="form-control" id="datepicker" aria-label="date" placeholder="Enter Date">
+                <input type="text" name="date" class="form-control" id="datepicker" aria-label="date"
+                    placeholder="Enter Date">
             </div>
             <br>
             <label>Held online or offline?</label>
@@ -37,6 +39,8 @@
                     Offline
                 </label>
             </div>
+            <input class="btn bg-blue" type="submit" value="Save">
+
         </form>
     </div>
     <div class="centerButton">

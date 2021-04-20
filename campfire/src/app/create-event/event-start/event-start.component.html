@@ -1,28 +1,29 @@
 <!-- <p>event-basics works!</p> -->
 <div class="background">
   <div class="form ">
-    <form>
+    <form method="POST" action="/submitEventStart">
       <h2 class="form-title">Create New Event</h2>
       <div class="form-group">
         <label for="emailAddress">Email address:</label>
-        <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp"
+        <input type="email" name="yourEmailAddress" class="form-control" id="emailAddress" aria-describedby="emailHelp"
           placeholder="Enter email">
       </div>
       <div class="form-group">
         <label for="eventName">Event Name:</label>
-        <input type="event" class="form-control" id="eventName" aria-describedby="eventHelp"
+        <input type="event" name="eventName" class="form-control" id="eventName" aria-describedby="eventHelp"
           placeholder="Enter Event Name">
       </div>
       <div class="form-group">
         <label for="yourName">Your Name (will be displayed as event owner):</label>
-        <input type="name" class="form-control" id="yourName" aria-describedby="yourNameHelp" placeholder="Enter Name">
+        <input type="name" name="yourName" class="form-control" id="yourName" aria-describedby="yourNameHelp" placeholder="Enter Name">
       </div>
       <div class="form-group" id="addFriends">
         <label for="addFriend">Invite friends (email address):</label>
-        <input type="friend" class="form-control aFriend" id="addFriend1" aria-describedby="friendHelp"
+        <input type="friend" name="inviteFriends" class="form-control aFriend" id="addFriend1" aria-describedby="friendHelp"
           placeholder="Enter Email">
       </div>
       <a type="button" id="addFriendButton" class="bg-add btn-add"> + Add Friends </a>
+      <input class="btn bg-blue" type="submit" value="Save">
       </form>
   </div>
 
