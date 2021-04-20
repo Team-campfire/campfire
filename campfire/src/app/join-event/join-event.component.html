@@ -16,28 +16,72 @@
         <br>
         <a type="button" class="bg-add btn-add" routerLink='/eventFeed'>View All Events</a>
         <br>
-        <label>Event Categories:</label>
-        <div class="categories">
-            <button type="button" class="btns btn-orange">General Body Meeting (GBM)</button>
-            <button type="button" class="btns btn-orange">Casual</button>
-            <button type="button" class="btns btn-orange">Movie Showing</button>
-            <button type="button" class="btns btn-orange">Games/Trivia</button>
-            <button type="button" class="btns btn-orange">Informational</button>
-            <button type="button" class="btns btn-orange">Excursion</button>
-            <button type="button" class="btns btn-orange">Elections</button>
-            <button type="button" class="btns btn-orange">Workshop</button>
-            <button type="button" class="btns btn-orange">Recruiting (Company)</button>
-            <button type="button" class="btns btn-orange">Professional Development</button>
+
+        <label id="eventCategories">Event Categories:</label>
+        <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="eventCategories">
+            <!--<label class="btn btn-orange">
+                <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
+            </label>-->
+            <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off"> General Body Meeting (GBM)
+            </label>
+            <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off"> Casual
+            </label>
+            <label for="movie" id="movie" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="movie" type="radio" class="btns btn-orange" autocomplete="off"> Movie Showing
+            </label>
+            <label for="games" id="games" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="games" type="radio" class="btns btn-orange" autocomplete="off"> Games/Trivia
+            </label>
+            <label for="info" id="info" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="info" type="radio" class="btns btn-orange" autocomplete="off"> Informational
+            </label>
+            <label for="excursion" id="excursion" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="excursion" type="radio" class="btns btn-orange" autocomplete="off"> Excursion
+            </label>
+            <label for="elections" id="elections" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="elections" type="radio" class="btns btn-orange" autocomplete="off"> Elections
+            </label>
+            <label for="workshop" id="workshop" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="workshop" type="radio" class="btns btn-orange" autocomplete="off"> Workshop
+            </label>
+            <label for="recruit" id="recruit" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="recruit" type="radio" class="btns btn-orange" autocomplete="off"> Recruiting (Company)
+            </label>
+            <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="other" type="radio" class="btns btn-orange" autocomplete="off"> Other
+            </label>
         </div>
         <br>
-        <label>Club/Organization Categories:</label>
-        <div class="categories">
-            <button type="button" class="btns btn-orange">Academic & Professional</button>
-            <button type="button" class="btns btn-orange">Identity Based</button>
-            <button type="button" class="btns btn-orange">Hobby & Special Interest</button>
-            <button type="button" class="btns btn-orange">Community Service</button>
-            <button type="button" class="btns btn-orange">Sports & Recreation</button>
-            <button type="button" class="btns btn-orange">Student Government & Event Planning</button>
+        <label id="clubCategories">Club/Organization Categories:</label>
+        <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="clubCategories">
+            <label for="academicProf" id="academicProf" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off"> Academic &
+                Professional
+            </label>
+            <label for="identity" id="identity" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="identity" type="radio" class="btns btn-orange" autocomplete="off"> Identity Based
+            </label>
+            <label for="hobby" id="hobby" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="hobby" type="radio" class="btns btn-orange" autocomplete="off"> Hobby & Special Interest
+            </label>
+            <label for="service" id="service" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="service" type="radio" class="btns btn-orange" autocomplete="off"> Community Service
+            </label>
+            <label for="greek" id="greek" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="greek" type="radio" class="btns btn-orange" autocomplete="off"> Greek Organization
+            </label>
+            <label for="sportsRec " id="sportsRec" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off"> Sports & Recreation
+            </label>
+            <label for="stuGov" id="stuGov" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off"> Student Government & Event
+                Planning
+            </label>
+            <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="other" type="radio" class="btns btn-orange" autocomplete="off"> Other
+            </label>
         </div>
         <br>
 
