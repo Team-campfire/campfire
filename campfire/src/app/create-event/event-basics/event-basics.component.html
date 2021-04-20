@@ -1,4 +1,14 @@
 <!--  <p>event-basics works </p> -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
+
 <div class="background">
 
     <div class="form">
@@ -21,9 +31,9 @@
             </div>
             <br>
             <div class="form-group">
-                <label for="date">Date:</label>
-                <input type="text" name="date" class="form-control" id="datepicker" aria-label="date"
-                    placeholder="Enter Date">
+                <h5 for="date">Date:</h5>
+                <input type="event" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp"
+                    placeholder="04/27/2021">
             </div>
             <br>
             <label>Held online or offline?</label>
