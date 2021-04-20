@@ -53,6 +53,7 @@ function dbjson2csv(file, query) {
 		{ useNewUrlParser: true, useUnifiedTopology: true },
 		(err, client) => {
 			if (err) throw err;
+
 			client
 				.db("campfireApp")
 				.collection("lab6data")
@@ -155,58 +156,83 @@ app.post("/reqTransportation", (req, res) => {
 app.post('/submitEventStart', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
-		var dbo = db.db("campfireApp");
-		dbo.collection("createEvent").insertOne(req.body, function (err) {
+		db.db("campfireApp").collection("createEvent").insertOne(req.body, function (err) {
 			if (err) throw err;
 			console.log("data recieved");
 			db.close();
 		});
 	});
 });
+
 app.post('/submitEventBasics', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-		// replace "Demo" with eventName of last document in db
-		var query = { eventName: "Demo" };
-		var eventBasics = req.body;
-		var insert = { $push: { eventBasics } };
+		db
+			.db("campfireApp")
+			.collection("createEvent")
+			.find({}).project({}).sort({ _id: -1 })
+			.toArray((err, data) => {
+				if (err) throw err;
 
-		dbo.collection("createEvent").updateOne(query, insert, function (err) {
-			if (err) throw err;
-			console.log("basics update recieved");
-			db.close();
-		});
+				var query = { eventName: data[0].eventName };
+				var eventBasics = req.body;
+				var insert = { $push: { eventBasics } };
+
+				dbo.collection("createEvent").updateOne(query, insert, function (err) {
+					if (err) throw err;
+					console.log("basics update recieved");
+					db.close();
+				});
+			});
 	});
 });
+
 app.post('/submitEventActivities', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-		var query = { eventName: "Demo" };
-		var eventActivities = req.body;
-		var insert = { $push: { eventActivities } };
+		db
+			.db("campfireApp")
+			.collection("createEvent")
+			.find({}).project({}).sort({ _id: -1 })
+			.toArray((err, data) => {
+				if (err) throw err;
 
-		dbo.collection("createEvent").updateOne(query, insert, function (err) {
-			if (err) throw err;
-			console.log("activities update recieved");
-			db.close();
-		});
+				var query = { eventName: data[0].eventName };
+				var eventActivities = req.body;
+				var insert = { $push: { eventActivities } };
+
+				dbo.collection("createEvent").updateOne(query, insert, function (err) {
+					if (err) throw err;
+					console.log("activities update recieved");
+					db.close();
+				});
+			});
 	});
 });
+
 app.post('/submitEventTransportation', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-		var query = { eventName: "Demo" };
-		var eventTransportation = req.body;
-		var insert = { $push: { eventTransportation } };
+		db
+			.db("campfireApp")
+			.collection("createEvent")
+			.find({}).project({}).sort({ _id: -1 })
+			.toArray((err, data) => {
+				if (err) throw err;
 
-		dbo.collection("createEvent").updateOne(query, insert, function (err) {
-			if (err) throw err;
-			console.log("transportation update recieved");
-			db.close();
-		});
+				var query = { eventName: data[0].eventName };
+				var eventTransportation = req.body;
+				var insert = { $push: { eventTransportation } };
+
+				dbo.collection("createEvent").updateOne(query, insert, function (err) {
+					if (err) throw err;
+					console.log("transportation update recieved");
+					db.close();
+				});
+			});
 	});
 });
 
