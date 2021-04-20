@@ -615,3 +615,17 @@ a.bg-add:hover{
     background-position: right; 
     padding-bottom: 250px;
 } */
+
+.saveButton{
+    margin: auto;
+    margin-left: 90%;
+    display: inline-block;
+    justify-content: right;
+    background-color: #279185;
+    color: white;
+}
+.saveButton:hover{
+    color: #373A3C;
+    text-decoration: none;
+    transform: scale(1.05);
+}
