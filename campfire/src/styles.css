@@ -40,7 +40,19 @@ font-family: 'Brandon Grotesque Bold', sans-serif; */
     font-weight: lighter;
     font-style: normal;
   } */
-
+  :root {
+      /*rainbow color palette, using names of colors on coolors*/
+    --carnelian: #B31412;
+    --cinnabar: #ea4335;
+    --fulvous: #ea8600;
+    --mango:  #ffbd00;
+    --greenPigment: #02a144;
+    --dartmouthGreen: #137333;
+    --maximumBlue: #41BBD9;
+    --denim: #185ABC;
+    --trypanBlue: #390099;
+    --jazzberryJam: #9E0059;
+  }
 html {
     scroll-behavior: smooth;
   }
@@ -471,6 +483,127 @@ a.bg-add:hover{
 .spacing{
     margin: 4%;
 }
+/*club/event category radio button styling*/
+.btn-category{
+    border: 1px solid;
+    border-radius: 8px;
+}
+/*.btn-category:hover{
+    color:white;
+}*/
+#gbm, #academicProf {
+   
+    color: var(--carnelian);
+    border-color: var(--carnelian);
+  
+}
+
+#gbm.active, #academicProf.active{
+    background-color: var(--carnelian) !important;
+    border-color: var(--carnelian);
+    color: white;
+}
+
+#casual, #identity {
+    color: var(--cinnabar);
+    border-color: var(--cinnabar);
+}
+
+#casual.active, #identity.active{
+    background-color: var(--cinnabar) !important;
+    border-color: var(--cinnabar);
+    color: white;
+}
+
+#movie, #identity{
+    color: var(--fulvous);
+    border-color: var(--fulvous);
+}
+
+#movie.active, #identity.active{
+    background-color: var(--fulvous) !important;
+    border-color: var(--fulvous) !important;
+    color: white;
+}
+
+#games, #hobby{
+    color: var(--mango);
+    border-color: var(--mango);
+}
+
+#games.active, #hobby.active{
+    background-color: var(--mango) !important;
+    border-color: var(--mango) !important;
+    color: white;
+}
+
+#info, #service {
+    color: var(--greenPigment);
+    border-color: var(--greenPigment);
+}
+
+#info.active, #service.active{
+    background-color: var(--greenPigment) !important;
+    border-color: var(--greenPigment) !important;
+    color: white;
+}
+
+#excursion, #greek{
+    color: var(--dartmouthGreen);
+    border-color: var(--dartmouthGreen);
+}
+
+#excursion.active, #greek.active {
+    background-color: var(--dartmouthGreen) !important;
+    border-color: var(--dartmouthGreen) !important;
+    color: white;
+}
+
+#elections, #sportsRec {
+    color: var(--maximumBlue);
+    border-color: var(--maximumBlue);
+}
+
+#elections.active, #sportsRec.active{
+    background-color: var(--maximumBlue) !important;
+    border-color: var(--maximumBlue) !important;
+    color: white;
+}
+
+#workshop, #stuGov {
+    color: var(--denim);
+    border-color: var(--denim);
+}
+
+#workshop.active, #stuGov.active {
+    background-color: var(--denim) !important;
+    border-color: var(--denim) !important;
+    color: white;
+}
+
+
+#recruit {
+    color: var(--jazzberryJam);
+    border-color: var(--jazzberryJam);
+}
+
+#recruit.active {
+    background-color: var(--jazzberryJam) !important;
+    border-color: var(--jazzberryJam) !important;
+    color: white;
+}
+
+#other {
+    color: var(--trypanBlue);
+    border-color: var(--trypanBlue);
+}
+
+#other.active{
+    background-color: var(--trypanBlue) !important;
+    border-color: var(--trypanBlue) !important;
+    color: white;
+}
+    
 /* .background {
     background-image: url("assets/Forest-cuate-no-river.svg");
     background-image: url("assets/Forest-cuate.svg");
