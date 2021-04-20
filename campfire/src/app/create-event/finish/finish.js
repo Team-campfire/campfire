@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 // var eventCode = document.querySelector("#eventCode")
-type='text/javascript'>document.addEventListener('DOMContentLoaded', function () { window.setTimeout(document.querySelector('svg').classList.add('animated'), 1000); })
+document.addEventListener('DOMContentLoaded', function () { window.setTimeout(document.querySelector('svg').classList.add('animated'), 1000); });
 
 function makeid(length) {
     var result = [];
@@ -12,6 +12,10 @@ function makeid(length) {
     }
     return result.join('');
 }
-var event_code = document.getElementById('eventCode');
-event_code.innerHTML = makeid(8)
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('eventCode').innerHTML = makeid(8);
+});
+
+// event_code.innerHTML = makeid(8)
     // console.log(makeid(8));

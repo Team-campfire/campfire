@@ -175,7 +175,7 @@ app.post('/submitEventBasics', function (req, res) {
 			.toArray((err, data) => {
 				if (err) throw err;
 
-				var query = { eventName: data[0].eventName };
+				var query = { _id: data[0]._id };
 				var eventBasics = req.body;
 				var insert = { $push: { eventBasics } };
 
@@ -199,7 +199,7 @@ app.post('/submitEventActivities', function (req, res) {
 			.toArray((err, data) => {
 				if (err) throw err;
 
-				var query = { eventName: data[0].eventName };
+				var query = { _id: data[0]._id };
 				var eventActivities = req.body;
 				var insert = { $push: { eventActivities } };
 
@@ -223,7 +223,7 @@ app.post('/submitEventTransportation', function (req, res) {
 			.toArray((err, data) => {
 				if (err) throw err;
 
-				var query = { eventName: data[0].eventName };
+				var query = { _id: data[0]._id };
 				var eventTransportation = req.body;
 				var insert = { $push: { eventTransportation } };
 
