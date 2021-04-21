@@ -9,6 +9,7 @@ p.num-attendees{
     font-size: 16px;
     line-height: 150%;
     color: #373A3C;
+    padding-left: 2%;
     display: inline;
 
 }
@@ -60,6 +61,10 @@ p.event-date{
     margin-left: 5%;
     margin-bottom: 5%;
 }
+img.card-img-top{
+    height: 20%;
+}
 div.align-items-center{
-    margin-top: 25%;
+    margin-top: 5%;
+
 }

@@ -2,7 +2,20 @@
 toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
-  }
+}
+/*Club and event catgeory dropdowns on public feed */
+// right now: can only have one dropdown open at a time
+function eventDropdown() {
+  document.getElementById("clubDropdown").classList.remove("show");
+  document.getElementById("eventDropdown").classList.toggle("show");
+}
+
+function clubDropdown() {
+  document.getElementById("eventDropdown").classList.remove("show");
+  document.getElementById("clubDropdown").classList.toggle("show");
+}
+
+
   
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(event) {

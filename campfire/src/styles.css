@@ -166,9 +166,11 @@ a.bg-orange:hover{
     justify-content: center;
     text-align: center;
 }
+/*Right button div styling for homepage (buttons in navbar)*/
 .rightButton{
     margin: auto;
-    margin-left: 45%;
+    margin-left: 30%;
+    padding-left: 10%;
     justify-content: right;
     display: inline-block;
 }
@@ -491,119 +493,127 @@ a.bg-add:hover{
 /*.btn-category:hover{
     color:white;
 }*/
-#gbm, #academicProf {
+#gbm, #academicProf, .gbm-outline, .academicProf-outline {
    
     color: var(--carnelian);
     border-color: var(--carnelian);
   
 }
 
-#gbm.active, #academicProf.active{
+#gbm.active, #academicProf.active, .gbm, .academicProf{
     background-color: var(--carnelian) !important;
-    border-color: var(--carnelian);
+    border-color: var(--carnelian) !important;
     color: white;
 }
 
-#casual, #identity {
+#casual, #identity, .casual-outline, .identity-outline{
     color: var(--cinnabar);
     border-color: var(--cinnabar);
 }
 
-#casual.active, #identity.active{
+#casual.active, #identity.active, .casual, .identity {
     background-color: var(--cinnabar) !important;
-    border-color: var(--cinnabar);
+    border-color: var(--cinnabar) !important;
     color: white;
 }
 
-#movie, #identity{
+#movie, #identity, .movie-outline, .identity-outline{
     color: var(--fulvous);
     border-color: var(--fulvous);
 }
 
-#movie.active, #identity.active{
+#movie.active, #identity.active, .movie, .identity{
     background-color: var(--fulvous) !important;
     border-color: var(--fulvous) !important;
     color: white;
 }
 
-#games, #hobby{
+#games, #hobby, .games-outline, .hobby-outline{
     color: var(--mango);
     border-color: var(--mango);
 }
 
-#games.active, #hobby.active{
+#games.active, #hobby.active, .games, .hobby{
     background-color: var(--mango) !important;
     border-color: var(--mango) !important;
     color: white;
 }
 
-#info, #service {
+#info, #service, .info-outline, .service-outline {
     color: var(--greenPigment);
     border-color: var(--greenPigment);
 }
 
-#info.active, #service.active{
+#info.active, #service.active, .info, .service{
     background-color: var(--greenPigment) !important;
     border-color: var(--greenPigment) !important;
     color: white;
 }
 
-#excursion, #greek{
+#excursion, #greek, .excursion-outline, .greek-outline{
     color: var(--dartmouthGreen);
     border-color: var(--dartmouthGreen);
 }
 
-#excursion.active, #greek.active {
+#excursion.active, #greek.active, .excursion, .greek {
     background-color: var(--dartmouthGreen) !important;
     border-color: var(--dartmouthGreen) !important;
     color: white;
 }
 
-#elections, #sportsRec {
+#elections, #sportsRec, .elections-outline, .sportsRec-outline {
     color: var(--maximumBlue);
     border-color: var(--maximumBlue);
 }
 
-#elections.active, #sportsRec.active{
+#elections.active, #sportsRec.active, .elections, .sportsRec{
     background-color: var(--maximumBlue) !important;
     border-color: var(--maximumBlue) !important;
     color: white;
 }
 
-#workshop, #stuGov {
+#workshop, #stuGov, .workshop-outline, .stuGov-outline {
     color: var(--denim);
     border-color: var(--denim);
 }
 
-#workshop.active, #stuGov.active {
+#workshop.active, #stuGov.active, .workshop, .stuGov {
     background-color: var(--denim) !important;
     border-color: var(--denim) !important;
     color: white;
 }
 
 
-#recruit {
+#recruit, .recruit-outline {
     color: var(--jazzberryJam);
     border-color: var(--jazzberryJam);
 }
 
-#recruit.active {
+#recruit.active, .recruit{
     background-color: var(--jazzberryJam) !important;
     border-color: var(--jazzberryJam) !important;
     color: white;
 }
 
-#other {
+#other, .other-outline {
     color: var(--trypanBlue);
     border-color: var(--trypanBlue);
 }
 
-#other.active{
+#other.active, .other{
     background-color: var(--trypanBlue) !important;
     border-color: var(--trypanBlue) !important;
     color: white;
 }
-    
+.eventDropdown {
+ border-radius: 20px;
+}
+div.eventDropdown{
+ margin-right: 2.5%;
+}
+.onlineOffline{
+    margin-left: 50%
+}
 /* .background {
     background-image: url("assets/Forest-cuate-no-river.svg");
     background-image: url("assets/Forest-cuate.svg");
