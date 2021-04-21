@@ -339,7 +339,7 @@ a.bg-orange:hover{
     padding-left: 10%;
     padding-right: 10%;
     /* margin: 10%; */
-}
+  }
   .dropdown-content {
     display: none;
     position: absolute;

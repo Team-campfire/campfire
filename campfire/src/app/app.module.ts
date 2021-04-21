@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,19 +23,19 @@ import { DataVizComponent } from './data-viz/data-viz.component';
 
 
 const appRoutes: Routes = [
-  {path: '', pathMatch: 'full', component: HomeComponent},
-  {path: 'createEvent', component: CreateEventComponent},
-  {path: "joinEvent", component: JoinEventComponent},
-  {path: "eventStart", component: EventStartComponent},
-  {path: "eventBasics", component: EventBasicsComponent},
-  {path: "eventCategories", component: EventCategoriesComponent},
-  {path: "eventTransportation", component: EventTransportationComponent},
-  {path: "finish", component: FinishComponent},
-  {path: "ownerDashboard", component: OwnerDashboardComponent},
-  {path: "editorDashboard", component: EditorDashboardComponent}, 
-  {path: "viewerDashboard", component: ViewerDashboardComponent},
-  {path: "eventFeed", component: EventFeedComponent},
-  {path: "dataViz", component: DataVizComponent} 
+  { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'createEvent', component: CreateEventComponent },
+  { path: "joinEvent", component: JoinEventComponent },
+  { path: "eventStart", component: EventStartComponent },
+  { path: "eventBasics", component: EventBasicsComponent },
+  { path: "eventCategories", component: EventCategoriesComponent },
+  { path: "eventTransportation", component: EventTransportationComponent },
+  { path: "finish", component: FinishComponent },
+  { path: "ownerDashboard", component: OwnerDashboardComponent },
+  { path: "editorDashboard", component: EditorDashboardComponent },
+  { path: "viewerDashboard", component: ViewerDashboardComponent },
+  { path: "eventFeed", component: EventFeedComponent },
+  { path: "dataViz", component: DataVizComponent }
 
 
 ];
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
