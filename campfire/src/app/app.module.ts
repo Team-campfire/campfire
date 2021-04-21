@@ -9,7 +9,7 @@ import { AjaxComponent } from './ajax/ajax.component';
 import { JoinEventComponent } from './join-event/join-event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { EventStartComponent } from './create-event/event-start/event-start.component';
-import { EventActivitiesComponent } from './create-event/event-activities/event-activities.component';
+import { EventCategoriesComponent } from './create-event/event-categories/event-categories.component';
 import { EventTransportationComponent } from './create-event/event-transportation/event-transportation.component';
 import { FinishComponent } from './create-event/finish/finish.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -27,7 +27,7 @@ const appRoutes: Routes = [
   {path: "joinEvent", component: JoinEventComponent},
   {path: "eventStart", component: EventStartComponent},
   {path: "eventBasics", component: EventBasicsComponent},
-  {path: "eventActivities", component: EventActivitiesComponent},
+  {path: "eventCategories", component: EventCategoriesComponent},
   {path: "eventTransportation", component: EventTransportationComponent},
   {path: "finish", component: FinishComponent},
   {path: "ownerDashboard", component: OwnerDashboardComponent},
@@ -47,7 +47,7 @@ const appRoutes: Routes = [
     JoinEventComponent,
     CreateEventComponent,
     EventStartComponent,
-    EventActivitiesComponent,
+    EventCategoriesComponent,
     EventTransportationComponent,
     FinishComponent,
     DashboardComponent,
