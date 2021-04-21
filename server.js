@@ -188,7 +188,7 @@ app.post('/submitEventBasics', function (req, res) {
 	});
 });
 
-app.post('/submitEventActivities', function (req, res) {
+app.post('/submitCategories', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
@@ -200,12 +200,12 @@ app.post('/submitEventActivities', function (req, res) {
 				if (err) throw err;
 
 				var query = { _id: data[0]._id };
-				var eventActivities = req.body;
-				var insert = { $push: { eventActivities } };
+				var eventCategories = req.body;
+				var insert = { $push: { eventCategories } };
 
 				dbo.collection("createEvent").updateOne(query, insert, function (err) {
 					if (err) throw err;
-					console.log("activities update recieved");
+					console.log("categories update recieved");
 					db.close();
 				});
 			});
