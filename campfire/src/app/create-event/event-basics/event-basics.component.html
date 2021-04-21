@@ -1,4 +1,14 @@
 <!--  <p>event-basics works </p> -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
+
 <div class="background">
 
     <div class="form">
@@ -21,9 +31,9 @@
             </div>
             <br>
             <div class="form-group">
-                <label for="date">Date:</label>
-                <input type="text" name="date" class="form-control" id="datepicker" aria-label="date"
-                    placeholder="Enter Date">
+                <h5 for="date">Date:</h5>
+                <input type="event" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp"
+                    placeholder="04/27/2021">
             </div>
             <br>
             <label>Held online or offline?</label>
@@ -39,13 +49,13 @@
                     Offline
                 </label>
             </div>
-            <input class="btn bg-blue" type="submit" value="Save">
+            <input class="btn saveButton" type="submit" value="Save">
 
         </form>
     </div>
     <div class="centerButton">
         <a type="button" class="bg-orange btn-step prev" routerLink='/eventStart'>&#60; Back</a>
-        <a type="button" class="bg-orange btn-step next" routerLink='/eventActivities'>Next &#62;</a>
+        <a type="button" class="bg-orange btn-step next" routerLink='/eventCategories'>Next &#62;</a>
         <h6 class="stepCompleted"> Step 2 of 4 </h6>
     </div>
     <div class="spacing"></div>

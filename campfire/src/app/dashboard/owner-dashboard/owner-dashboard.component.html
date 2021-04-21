@@ -2,6 +2,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> -->
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
 
 <div class="form-dashboard">
     <div class="dropdown">
@@ -12,7 +22,8 @@
             <a class="dropdown-item" href="approveSuggestions.html">Approve Suggestion</a>
         </div>
     </div>
-    <h1 class="form-center">Web Science Demo</h1>
+    <h1 class="form-center">Beach Volleyball</h1>
+    <!-- <input class="form-center" class="form-control" type="text" [value]="eventName"> -->
     <div id="accordion">
         <div class="panel-group" id="accordion">
 
@@ -26,6 +37,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="column7">
+                                <!-- <input type="button" (click)="fillForm()" id="coolbutton"> -->
                                 <h4>Public or Private Event?</h4>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="radioButton" id="publicButton"
@@ -43,8 +55,8 @@
                                 </div><br>
                                 <div class="form-group">
                                     <h5 for="date">Date:</h5>
-                                    <input type="event" class="form-control" id="datepicker" aria-describedby="dateHelp"
-                                        placeholder="03/12/2021">
+                                    <input type="event" class="form-control" id="datepicker" type="text"
+                                        aria-describedby="dateHelp" placeholder="04/27/2021" [value]="date">
                                 </div>
                                 <div class="calander">
                                     <iframe
@@ -58,11 +70,11 @@
                                 <div class="form-group">
                                     <h5 for="date">In-Person:</h5>
                                     <input type="event" class="form-control" id="In-Person" aria-describedby="dateHelp"
-                                        placeholder="Enter Event Address">
+                                        placeholder="Enter Event Address" [value]="addy">
                                     <br>
                                     <h5 for="date">Virtual:</h5>
                                     <input type="event" class="form-control" id="virtual" aria-describedby="dateHelp"
-                                        placeholder="https://rensselaer.webex.com/meet/tralsa">
+                                        placeholder="https://rensselaer.webex.com/meet/tralsa" [value]="oaddy">
                                     <br>
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.7698036395595!2d-73.68107708522975!3d42.72976277916387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0f9eebfa097d%3A0xa5592b13db1f5302!2sRensselaer%20Polytechnic%20Institute!5e0!3m2!1sen!2sus!4v1615488659473!5m2!1sen!2sus"
@@ -74,8 +86,117 @@
                     </div>
                 </div>
             </div>
-
             <!-- Second Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-full">
+                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseCategories"> Categories</h4>
+                </div>
+                <div id="collapseCategories" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <label id="eventCategories">Event Categories:</label>
+                        <div class="btn-group-toggle categories" data-toggle="buttons"
+                            aria-labelledby="eventCategories">
+                            <!--<label class="btn btn-orange">
+                                <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
+                            </label>-->
+                            <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off" />
+                                General Body Meeting (GBM)
+                            </label>
+                            <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="casual" type="radio" class="btns btn-orange btn-category"
+                                    autocomplete="off" />
+                                Casual
+                            </label>
+                            <label for="movie" id="movie" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="movie" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Movie Showing
+                            </label>
+                            <label for="games" id="games" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="games" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Games/Trivia
+                            </label>
+                            <label for="info" id="info" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="info" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Informational
+                            </label>
+                            <label for="excursion" id="excursion"
+                                class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="excursion" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Excursion
+                            </label>
+                            <label for="elections" id="elections"
+                                class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="elections" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Elections
+                            </label>
+                            <label for="workshop" id="workshop" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="workshop" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Workshop
+                            </label>
+                            <label for="recruit" id="recruit" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="recruit" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Recruiting (Company)
+                            </label>
+                            <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="other" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Other
+                            </label>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="comment">Event Description:</label>
+                            <textarea class="form-control" name="eventDescription" rows="2" id="description"
+                                placeholder="Please enter an event description."></textarea>
+                        </div>
+                        <br />
+                        <label id="clubCategories">Club/Organization Categories:</label>
+                        <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="clubCategories">
+                            <label for="academicProf" id="academicProf"
+                                class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Academic & Professional
+                            </label>
+                            <label for="identity" id="identity" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="identity" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Identity Based
+                            </label>
+                            <label for="hobby" id="hobby" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="hobby" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Hobby & Special Interest
+                            </label>
+                            <label for="service" id="service" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="service" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Community Service
+                            </label>
+                            <label for="greek" id="greek" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="greek" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Greek Organization
+                            </label>
+                            <label for="sportsRec " id="sportsRec"
+                                class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Sports & Recreation
+                            </label>
+                            <label for="stuGov" id="stuGov" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Student Government & Event Planning
+                            </label>
+                            <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="other" type="radio" class="btns btn-orange" autocomplete="off" />
+                                Other
+                            </label>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="comment">Club/Organization Description:</label>
+                            <textarea class="form-control" name="clubDescription" rows="2" id="club-org"
+                                placeholder="Please enter an club/organization description."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Third Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapseActivities">Activities</h4>
@@ -83,27 +204,29 @@
 
                 <div id="collapseActivities" class="panel-collapse collapse">
                     <div class="panel-body">
-                    <div class="panel-body">
-                        <h4>Planned Activities:</h4>
-                        <!-- add chart -->
-                        <a type="button" class="bg-add btn-add" href=""> + Add Activity </a>
-                        <br>
-                        <h4>Delagate Tasks:</h4>
-                        <!-- add chart -->
-                        <a type="button" class="bg-add btn-add" href=""> + Add Tasks </a>
-                        <br>
-                        <h4>Spotify Playlist:</h4>
-                        <!-- <iframe src="https://open.spotify.com/embed/playlist/7qV4iT5K3Ivk8FlokZEBR9" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
-                        <iframe src="https://open.spotify.com/embed/playlist/6gXbIpaokqIdRKJtYlp7HO" width="100%"
-                            height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <div class="panel-body">
+                            <h4>Planned Activities:</h4>
+                            <!-- add chart -->
+                            <a type="button" class="bg-add btn-add" href=""> + Add Activity </a>
+                            <br>
+                            <h4>Delagate Tasks:</h4>
+                            <!-- add chart -->
+                            <a type="button" class="bg-add btn-add" href=""> + Add Tasks </a>
+                            <br>
+                            <h4>Spotify Playlist:</h4>
+                            <!-- <iframe src="https://open.spotify.com/embed/playlist/7qV4iT5K3Ivk8FlokZEBR9" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+                            <iframe src="https://open.spotify.com/embed/playlist/6gXbIpaokqIdRKJtYlp7HO" width="100%"
+                                height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Third Panel -->
+            <!-- Fourth Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTransportation">Transportation</h4>
+                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTransportation">
+                        Transportation</h4>
                 </div>
 
                 <div id="collapseTransportation" class="panel-collapse collapse">
@@ -115,7 +238,7 @@
                 </div>
             </div>
 
-            <!-- Fourth Panel -->
+            <!-- Fifth Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapseNotes">Notes</h4>
@@ -127,7 +250,8 @@
                             <div class="form-group">
                                 <h4 for="comment">Event Description:</h4>
                                 <textarea class="form-control" rows="5" id="description"
-                                    placeholder="Please enter any additional notes for event attendees."></textarea>
+                                    placeholder="Please enter any additional notes for event attendees."
+                                    [value]="desc"></textarea>
                             </div>
                             <!-- <p id="eventCode">zvshkj8!</p> -->
                             <!--<a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
@@ -137,7 +261,7 @@
                 </div>
             </div>
 
-            <!-- Fifth Panel -->
+            <!-- Sixth Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapseJoin">Join</h4>

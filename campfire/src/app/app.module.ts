@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,7 @@ import { AjaxComponent } from './ajax/ajax.component';
 import { JoinEventComponent } from './join-event/join-event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { EventStartComponent } from './create-event/event-start/event-start.component';
-import { EventActivitiesComponent } from './create-event/event-activities/event-activities.component';
+import { EventCategoriesComponent } from './create-event/event-categories/event-categories.component';
 import { EventTransportationComponent } from './create-event/event-transportation/event-transportation.component';
 import { FinishComponent } from './create-event/finish/finish.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -22,19 +23,19 @@ import { DataVizComponent } from './data-viz/data-viz.component';
 
 
 const appRoutes: Routes = [
-  {path: '', pathMatch: 'full', component: HomeComponent},
-  {path: 'createEvent', component: CreateEventComponent},
-  {path: "joinEvent", component: JoinEventComponent},
-  {path: "eventStart", component: EventStartComponent},
-  {path: "eventBasics", component: EventBasicsComponent},
-  {path: "eventActivities", component: EventActivitiesComponent},
-  {path: "eventTransportation", component: EventTransportationComponent},
-  {path: "finish", component: FinishComponent},
-  {path: "ownerDashboard", component: OwnerDashboardComponent},
-  {path: "editorDashboard", component: EditorDashboardComponent}, 
-  {path: "viewerDashboard", component: ViewerDashboardComponent},
-  {path: "eventFeed", component: EventFeedComponent},
-  {path: "dataViz", component: DataVizComponent} 
+  { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'createEvent', component: CreateEventComponent },
+  { path: "joinEvent", component: JoinEventComponent },
+  { path: "eventStart", component: EventStartComponent },
+  { path: "eventBasics", component: EventBasicsComponent },
+  { path: "eventCategories", component: EventCategoriesComponent },
+  { path: "eventTransportation", component: EventTransportationComponent },
+  { path: "finish", component: FinishComponent },
+  { path: "ownerDashboard", component: OwnerDashboardComponent },
+  { path: "editorDashboard", component: EditorDashboardComponent },
+  { path: "viewerDashboard", component: ViewerDashboardComponent },
+  { path: "eventFeed", component: EventFeedComponent },
+  { path: "dataViz", component: DataVizComponent }
 
 
 ];
@@ -47,7 +48,7 @@ const appRoutes: Routes = [
     JoinEventComponent,
     CreateEventComponent,
     EventStartComponent,
-    EventActivitiesComponent,
+    EventCategoriesComponent,
     EventTransportationComponent,
     FinishComponent,
     DashboardComponent,
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
