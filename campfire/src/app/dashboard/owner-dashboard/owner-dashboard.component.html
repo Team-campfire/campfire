@@ -96,8 +96,8 @@
                         <div class="btn-group-toggle categories" data-toggle="buttons"
                             aria-labelledby="eventCategories">
                             <!--<label class="btn btn-orange">
-                <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
-            </label>-->
+                                <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
+                            </label>-->
                             <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category">
                                 <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off" />
                                 General Body Meeting (GBM)
@@ -148,7 +148,7 @@
                             <textarea class="form-control" name="eventDescription" rows="2" id="description"
                                 placeholder="Please enter an event description."></textarea>
                         </div>
-                        <br/>
+                        <br />
                         <label id="clubCategories">Club/Organization Categories:</label>
                         <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="clubCategories">
                             <label for="academicProf" id="academicProf"
@@ -219,67 +219,68 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Fourth Panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading panel-heading-full">
-                        <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTransportation">
-                            Transportation</h4>
-                    </div>
-
-                    <div id="collapseTransportation" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <h4>Ride Arrangements:</h4>
-                            <!-- add chart -->
-                            <a type="button" class="bg-add btn-add" href=""> + Add Car </a>
-                        </div>
-                    </div>
+            <!-- Fourth Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-full">
+                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTransportation">
+                        Transportation</h4>
                 </div>
 
-                <!-- Fifth Panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading panel-heading-full">
-                        <h4 class="panel-title" data-toggle="collapse" data-target="#collapseNotes">Notes</h4>
+                <div id="collapseTransportation" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Ride Arrangements:</h4>
+                        <!-- add chart -->
+                        <a type="button" class="bg-add btn-add" href=""> + Add Car </a>
                     </div>
+                </div>
+            </div>
 
-                    <div id="collapseNotes" class="panel-collapse collapse">
-                        <div class="panel-body">
+            <!-- Fifth Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-full">
+                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseNotes">Notes</h4>
+                </div>
+
+                <div id="collapseNotes" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="form-group">
                             <div class="form-group">
-                                <div class="form-group">
-                                    <h4 for="comment">Event Description:</h4>
-                                    <textarea class="form-control" rows="5" id="description"
-                                        placeholder="Please enter any additional notes for event attendees."
-                                        [value]="desc"></textarea>
-                                </div>
-                                <!-- <p id="eventCode">zvshkj8!</p> -->
-                                <!--<a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
+                                <h4 for="comment">Event Description:</h4>
+                                <textarea class="form-control" rows="5" id="description"
+                                    placeholder="Please enter any additional notes for event attendees."
+                                    [value]="desc"></textarea>
+                            </div>
+                            <!-- <p id="eventCode">zvshkj8!</p> -->
+                            <!--<a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
                             Changes</a>-->
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Sixth Panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading panel-heading-full">
-                        <h4 class="panel-title" data-toggle="collapse" data-target="#collapseJoin">Join</h4>
-                    </div>
+            <!-- Sixth Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-full">
+                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseJoin">Join</h4>
+                </div>
 
-                    <div id="collapseJoin" class="panel-collapse collapse">
-                        <div class="panel-body">
+                <div id="collapseJoin" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="form-group">
                             <div class="form-group">
-                                <div class="form-group">
-                                    <p id="subtext">Share the below code to invite others to your event at: </p>
-                                    <p id="link"> campfire.com/join</p>
-                                    <p id="subtext">Code: zvshkj8!</p>
-                                </div>
-                                <!-- <p id="eventCode">zvshkj8!</p> -->
-
+                                <p id="subtext">Share the below code to invite others to your event at: </p>
+                                <p id="link"> campfire.com/join</p>
+                                <p id="subtext">Code: zvshkj8!</p>
                             </div>
+                            <!-- <p id="eventCode">zvshkj8!</p> -->
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a type="button" class="bg-orange saveChanges" routerLink='/ownerDashboard'>Save Changes</a>
     </div>
+    <a type="button" class="bg-orange saveChanges" routerLink='/ownerDashboard'>Save Changes</a>
+</div>
