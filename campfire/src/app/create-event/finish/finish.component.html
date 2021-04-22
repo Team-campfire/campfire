@@ -11,10 +11,9 @@
             <h2 id="text"> You’re all set! </h2>
             <p id="subtext">Share the below code to invite others to your event at: </p>
             <p id="link"> campfire.com/join</p>
-            <p id="eventCode"><!-- zvshkj8! --></p>
+            <p id="eventCode" [innerHTML]="ecode"></p>
             <p>Go to Event Dashboard and start adding activities, supplies, and more!</p>
             <a type="button" class="bg-orange eventD" routerLink='/ownerDashboard'>Event Dashboard</a>
         </div>
     </div>
 </div>
-

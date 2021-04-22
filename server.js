@@ -236,6 +236,30 @@ app.post('/submitEventTransportation', function (req, res) {
 	});
 });
 
+app.post('/submitEventCode', function (req, res) {
+	MongoClient.connect(url, function (err, db) {
+		if (err) throw err;
+		var dbo = db.db("campfireApp");
+		db
+			.db("campfireApp")
+			.collection("createEvent")
+			.find({}).project({}).sort({ _id: -1 })
+			.toArray((err, data) => {
+				if (err) throw err;
+
+				var query = { _id: data[0]._id };
+				var eventCode = req.body;
+				var insert = { $push: { eventcode } };
+
+				dbo.collection("createEvent").updateOne(query, insert, function (err) {
+					if (err) throw err;
+					console.log("event code update recieved");
+					db.close();
+				});
+			});
+	});
+});
+
 app.listen(port, () => {
 	console.log('listening on :3000')
 })
