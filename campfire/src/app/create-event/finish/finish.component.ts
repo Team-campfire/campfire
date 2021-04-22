@@ -15,16 +15,16 @@ export class FinishComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.httpService.sendGetRequest('/submitEventCode').subscribe((data) => {
-
-      interface EventObj {
-        msg: string;
-      }
-
-      let obj: EventObj = JSON.parse(JSON.stringify(data));
-      this.theHtmlString = obj.msg;
-    })
-    this.rcode = this.makeid(8);
+    // this.httpService.sendGetRequest('/submitEventCode').subscribe((data) => {
+    //
+    //   interface EventObj {
+    //     msg: string;
+    //   }
+    //
+    //   let obj: EventObj = JSON.parse(JSON.stringify(data));
+    //   this.ecode = obj.msg;
+    // })
+    this.ecode = this.makeid(8);
   }
 
   makeid(length: number): string {
