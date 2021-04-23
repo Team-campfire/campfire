@@ -249,7 +249,7 @@ app.post('/submitEventCode', function (req, res) {
 
 				var query = { _id: data[0]._id };
 				var eventCode = req.body;
-				var insert = { $push: { eventcode } };
+				var insert = { $push: { eventCode } };
 
 				dbo.collection("createEvent").updateOne(query, insert, function (err) {
 					if (err) throw err;
