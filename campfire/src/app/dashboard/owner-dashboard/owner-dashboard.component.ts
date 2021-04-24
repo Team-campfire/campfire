@@ -19,13 +19,17 @@ export class OwnerDashboardComponent implements OnInit {
   oaddy = '';
   eventName = '';
   date = '';
+  eventDesc = '';
+  clubOrgDesc = '';
 
   constructor(private httpService: HttpService) {
-    this.eventName = "Beach Volleyball";
-    this.addy = "2 Discord Drive, Wilmington, Virginia";
-    this.oaddy = "https://rensselaer.webex.com/meet/tralsa";
-    this.date = "4/20/2021";
-    this.desc = "Lit event!"
+    this.eventName = "Web Sci Demo";
+    this.addy = "";
+    this.oaddy = "";
+    this.date = "4/27/2021";
+    this.desc = ""
+    this.eventDesc = "This is our final presentation"
+    this.clubOrgDesc = "This is an amazing club"
 
     // let btn = document.getElementById("coolbutton");
     // if (btn) {
@@ -36,11 +40,13 @@ export class OwnerDashboardComponent implements OnInit {
   }
 
   fillForm() {
-     // button click handler
-     this.eventName = "Beach Volleyball";
-     this.addy = "2 discord drive, wilmington, virginia";
-     this.oaddy = "https://rensselaer.webex.com/meet/tralsa";
-     this.date = "5/3/21";
-     this.desc = "Lit event!"
+    // button click handler
+    this.eventName = "Web Sci Demo";
+    this.addy = "N/A";
+    this.oaddy = "https://rensselaer.webex.com/meet/tralsa";
+    this.date = "4/27/2021";
+    this.desc = "This is a really cool event and you should join!"
+    this.eventDesc = "This is our final presentation"
+    this.clubOrgDesc = "This is an amazing club"
   }
 }
