@@ -27,7 +27,7 @@ export class OwnerDashboardComponent implements OnInit {
     this.addy = "";
     this.oaddy = "";
     this.date = "4/27/2021";
-    this.desc = "This is a really cool event and you should join!"
+    this.desc = ""
     this.eventDesc = "This is our final presentation"
     this.clubOrgDesc = "This is an amazing club"
 

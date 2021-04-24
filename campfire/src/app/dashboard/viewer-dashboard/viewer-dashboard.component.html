@@ -18,12 +18,12 @@
         <button onclick="myFunction()" class="btn-secondary dropdown-toggle bg-orange">View Mode <b
                 class="caret"></b></button>
         <div id="myDropdown" class="dropdown-menu">
-            <a class="dropdown-item" href="eventDashboard.html">Editing (Current)</a>
-            <a class="dropdown-item" href="approveSuggestions.html">Approve Suggestion</a>
+            <a class="dropdown-item">View Only (Current)</a>
+            <!-- <a class="dropdown-item" href="approveSuggestions.html">Approve Suggestion</a> -->
         </div>
     </div>
-    <!-- <h1 [innerHTML]="eventname" class="form-center">Beach Volleyball</h1> -->
-    <input class="form-center" class="form-control" type="text" [value]="eventName" readonly>
+    <h1 class="form-center">Web Sci Demo</h1>
+    <!-- <input class="form-center" class="form-control" type="text" [value]="eventName" readonly> -->
     <div id="accordion">
         <div class="panel-group" id="accordion">
 
@@ -56,7 +56,7 @@
                                 <div class="form-group">
                                     <h5 for="date">Date:</h5>
                                     <input type="event" class="form-control" id="datepicker" type="text"
-                                        aria-describedby="dateHelp" placeholder="Enter Date" [value]="date" readonly>
+                                        aria-describedby="dateHelp" placeholder="Enter Date" [value]="date"readonly>
                                 </div>
                                 <div class="calander">
                                     <iframe
@@ -147,8 +147,7 @@
                         <div class="form-group">
                             <label for="comment">Event Description:</label>
                             <textarea class="form-control" name="eventDescription" rows="2" id="description"
-                                placeholder="Please enter an event description." [value]="eventDesc"
-                                readonly></textarea>
+                                placeholder="Please enter an event description." [value]="eventDesc" readonly></textarea>
                         </div>
                         <br />
                         <label id="clubCategories">Club/Organization Categories:</label>
@@ -192,8 +191,8 @@
                         <div class="form-group">
                             <label for="comment">Club/Organization Description:</label>
                             <textarea class="form-control" name="clubDescription" rows="2" id="club-org"
-                                placeholder="Please enter an club/organization description." [value]="clubOrgDesc"
-                                readonly></textarea>
+                                placeholder="Please enter an club/organization description."
+                                [value]="clubOrgDesc" readonly></textarea>
                         </div>
                     </div>
                 </div>
@@ -252,8 +251,8 @@
                             <div class="form-group">
                                 <h4 for="comment">Notes:</h4>
                                 <textarea class="form-control" rows="5" id="description"
-                                    placeholder="Please enter any additional notes for event attendees." [value]="desc"
-                                    readonly></textarea>
+                                    placeholder="Please enter any additional notes for event attendees."
+                                    [value]="desc" readonly></textarea>
                             </div>
                             <!-- <p id="eventCode">zvshkj8!</p> -->
                             <!--<a type="button" class="bg-orange saveChanges" href="eventDashboard.html">Save
