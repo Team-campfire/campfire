@@ -152,14 +152,85 @@ a.bg-orange:hover{
 .peopleMeeting{
     margin: 40px;
 }
+@media only screen and (min-width: 0px) {
 
-.centerButton{
-    margin: 0px;
-    display: inline;
-    justify-content: center;
-    text-align: center;
-    padding: 200px;
+    .centerButton{
+        margin: 0px;
+        display: inline;
+        justify-content: center;
+        text-align: center;
+        padding: 200px;
+    }
+    .btn-step{
+        margin-top: 4%;
+        margin-right: 20%;
+        margin-left: 20%;
+        margin-bottom:5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 90px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+    .stepCompleted{
+        text-align: center;
+        margin-bottom: 10%;
+        padding-top: 15%;
+        font-size: xx-large;
+        color: #373A3C;
+    }
+    .next{
+        position: absolute; 
+        right: 0;
+    }
+    .prev{
+        position: absolute; 
+        left: 0;
+    }
 }
+@media only screen and (min-width: 768px) {
+
+    .centerButton{
+        margin: 0px;
+        display: inline;
+        justify-content: center;
+        text-align: center;
+        padding: 200px;
+    }
+    .btn-step{
+        margin-top: 4%;
+        margin-right: 20%;
+        margin-left: 20%;
+        margin-bottom:5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 130px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 150%;
+    }
+    .stepCompleted{
+        text-align: center;
+        margin-bottom: 10%;
+        padding-top: 3%;
+        font-size: xx-large;
+        color: #373A3C;
+    }
+    .next{
+        position: absolute; 
+        right: 0;
+    }
+    .prev{
+        position: absolute; 
+        left: 0;
+    }
+}
+
 .centerButtonHome{
     margin: auto;
     display: inline;
@@ -238,29 +309,6 @@ a.bg-orange:hover{
     margin-bottom: 25px;
     background-color: white;
 }
-.btn-step{
-    margin-top: 4%;
-    margin-right: 20%;
-    margin-left: 20%;
-    margin-bottom:5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    width: 130px;
-    text-align: center;
-    border-radius: 5px;
-   /* font-family: Futura;*/
-    font-size: 24px;
-}
-.next{
-    position: absolute; 
-    right: 0;
-}
-.prev{
-    position: absolute; 
-    left: 0;
-}
 /* Finish start event page */
 .peopleCelebrate{
     margin: 20px;
@@ -283,13 +331,13 @@ a.bg-orange:hover{
 .column5 {
     text-align: center;
     width: 50%;
-    padding: 10px;
+    padding: 5%;
 }
 
 .column6 {
     text-align: center;
     width: 50%;
-    padding: 10px;
+    padding: 5%;
     color: #373A3C;
     width: 50%; 
 }
@@ -306,8 +354,8 @@ a.bg-orange:hover{
     font-size: x-large;
     font-weight: bold;
     background-color: rgba(202, 202, 202, 0.781);
-    margin-left:30%;
-    margin-right:30%;
+    margin-left:25%;
+    margin-right:25%;
 
 }
 
@@ -388,11 +436,17 @@ a.bg-orange:hover{
     float: right;
     margin-top: 4%;
     margin-bottom: 2%;
+    border-radius: 500px;
+    border: solid;
+}
+.saveChanges:hover{
+    text-decoration: none;
+    transform: scale(1.05);
 }
 .column7 {
     text-align: left;
     width: 50%;
-    padding: 10px;
+    padding: 5%;
     color: #373A3C;
     margin: auto;
     width: 50%; 
@@ -400,9 +454,8 @@ a.bg-orange:hover{
 .column8 {
     text-align: left;
     width: 50%;
-    padding: 10px;
+    padding: 5%;
     color: #373A3C;
-    width: 50%; 
 }
 .form-center{
     text-align: center;
@@ -478,14 +531,6 @@ a.bg-add:hover{
 
 .btn-secondary{
     border: none;
-}
-.stepCompleted{
-    text-align: center;
-    margin-bottom: 10%;
-    padding-top: 3%;
-    font-size: xx-large;
-    /* color: #373A3C; */
-    color: #E45C3A;
 }
 .spacing{
     margin: 4%;
@@ -631,16 +676,25 @@ div.eventDropdown{
     padding-bottom: 250px;
 } */
 
-.saveButton{
-    margin: auto;
-    margin-left: 90%;
-    display: inline-block;
-    justify-content: right;
+.btn-save{
+    margin-top: 5px;
+    margin-right: 20%;
+    /* margin-left: 22%; */
+    margin-bottom:1%;
+    font-size: large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 140px;
+    text-align: center;
+    border-radius: 500px;
+    border: solid;
     background-color: #279185;
     color: white;
 }
-.saveButton:hover{
-    color: #373A3C;
+.btn-save:hover{
+    color: white;
     text-decoration: none;
     transform: scale(1.05);
 }
