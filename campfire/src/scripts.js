@@ -69,3 +69,61 @@ function addCars() {
   });
 });*/
 $("#addCarButton").click(addCars());
+
+
+$(document).ready(function () {
+  var counter = 0;
+  $("#addrow").on("click", function () {
+      var newRow = $("<tr>");
+      var cols = "";
+      cols += '<td><input type="text" class="form-control" name="number' + counter + '"/></td>';
+      cols += '<td><input type="text" class="form-control" name="activity' + counter + '"/></td>';
+      cols += '<td><input type="text" class="form-control" name="assignee' + counter + '"/></td>';
+      cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+      newRow.append(cols);
+      $("table.order-list").append(newRow);
+      counter++;
+  });
+  $("table.order-list").on("click", ".ibtnDel", function (event) {
+      $(this).closest("tr").remove();
+      counter -= 1
+  });
+});
+
+$(document).ready(function () {
+  var counter = 0;
+  $("#addtasks").on("click", function () {
+      var newRow = $("<tr>");
+      var cols = "";
+      cols += '<td><input type="text" class="form-control" name="num' + counter + '"/></td>';
+      cols += '<td><input type="text" class="form-control" name="task' + counter + '"/></td>';
+      cols += '<td><input type="text" class="form-control" name="assignees' + counter + '"/></td>';
+      cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+      newRow.append(cols);
+      $("table.order-list-tasks").append(newRow);
+      counter++;
+  });
+  $("table.order-list-tasks").on("click", ".ibtnDel", function (event) {
+      $(this).closest("tr").remove();
+      counter -= 1
+  });
+});
+
+$(document).ready(function () {
+  var counter = 0;
+  $("#addcar").on("click", function () {
+      var newRow = $("<tr>");
+      var cols = "";
+      cols += '<td><input type="text" class="form-control" name="carNum' + counter + '"/></td>';
+      cols += '<td><input type="text" class="form-control" name="car' + counter + '"/></td>';
+      cols += '<td><input type="text" class="form-control" name="driver' + counter + '"/></td>';
+      cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+      newRow.append(cols);
+      $("table.order-list-car").append(newRow);
+      counter++;
+  });
+  $("table.order-list-car").on("click", ".ibtnDel", function (event) {
+      $(this).closest("tr").remove();
+      counter -= 1
+  });
+});
