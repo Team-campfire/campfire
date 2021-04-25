@@ -87,6 +87,15 @@ a.bg-orange:hover{
    
 }
 
+@media (min-width:768px) {
+    .card-deck > .card
+    {
+        width: 29%;
+        flex-wrap: wrap;
+        flex: initial; 
+    }
+}
+
 
 @media only screen and (min-width: 0px) {
     #create-event {
@@ -774,7 +783,23 @@ a.bg-add-form:hover{
     padding-left: 10px;
     width: 140px;
     text-align: center;
-    border: solid;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-add-small{
+    margin-right: 20%;
+    display: inline;
+    /* margin-left: 22%; */
+    margin-bottom:1%;
+    font-size: medium;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: auto;
+    text-align: center;
+    border: none;
     border-radius: 10px;
 }
 input.bg-add:hover{
@@ -810,28 +835,51 @@ a.bg-add:hover{
 /*.btn-category:hover{
     color:white;
 }*/
-#gbm, #academicProf, .gbm-outline, .academicProf-outline {
-   
-    color: var(--carnelian);
-    border-color: var(--carnelian);
-  
+
+.event-nav{
+    margin-top: 2%;
+    display: block;
 }
 
-#gbm.active, #academicProf.active, .gbm, .academicProf{
+div.right-align {
+    margin: auto;
+    margin-left: 50%;
+    padding-left: 10%;
+    justify-content: right;
+    display: inline-block;
+}
+
+#gbm, #academicProf, .gbm-outline, .academicProf-outline { 
+    color: var(--carnelian);
+    border-color: var(--carnelian); 
+}
+
+#gbm.active, #academicProf.active, .gbm, .academicProf, .gbm-outline:hover, .academicProf-outline:hover{
     background-color: var(--carnelian) !important;
     border-color: var(--carnelian) !important;
     color: white;
+}
+
+p.gbm-outline, p.academicProf-outline, p.gbm-outline:hover, p.academicProf-outline:hover { 
+    color: var(--carnelian);
+    border-color: var(--carnelian); 
+    background-color: transparent !important;
+    font-size: large;
 }
 
 #casual, #identity, .casual-outline, .identity-outline{
     color: var(--cinnabar);
     border-color: var(--cinnabar);
 }
-
-#casual.active, #identity.active, .casual, .identity {
+#casual.active,  .casual, .casual-outline:hover {
     background-color: var(--cinnabar) !important;
     border-color: var(--cinnabar) !important;
     color: white;
+}
+
+p.casual-outline,  p.casual-outline:hover
+    color: var(--cinnabar);
+    border-color: var(--cinnabar);
 }
 
 #movie, #identity, .movie-outline, .identity-outline{
@@ -839,7 +887,7 @@ a.bg-add:hover{
     border-color: var(--fulvous);
 }
 
-#movie.active, #identity.active, .movie, .identity{
+#movie.active, #identity.active, .movie, .identity, .movie-outline:hover, .identity-outline:hover{
     background-color: var(--fulvous) !important;
     border-color: var(--fulvous) !important;
     color: white;
@@ -850,7 +898,7 @@ a.bg-add:hover{
     border-color: var(--mango);
 }
 
-#games.active, #hobby.active, .games, .hobby{
+#games.active, #hobby.active, .games, .hobby, .games-outline:hover, .hobby-outline:hover{
     background-color: var(--mango) !important;
     border-color: var(--mango) !important;
     color: white;
@@ -861,7 +909,7 @@ a.bg-add:hover{
     border-color: var(--greenPigment);
 }
 
-#info.active, #service.active, .info, .service{
+#info.active, #service.active, .info, .service, .info-outline:hover, .service-outline:hover{
     background-color: var(--greenPigment) !important;
     border-color: var(--greenPigment) !important;
     color: white;
@@ -872,7 +920,7 @@ a.bg-add:hover{
     border-color: var(--dartmouthGreen);
 }
 
-#excursion.active, #greek.active, .excursion, .greek {
+#excursion.active, #greek.active, .excursion, .greek, .excursion-outline:hover, .greek-outline:hover {
     background-color: var(--dartmouthGreen) !important;
     border-color: var(--dartmouthGreen) !important;
     color: white;
@@ -883,7 +931,7 @@ a.bg-add:hover{
     border-color: var(--maximumBlue);
 }
 
-#elections.active, #sportsRec.active, .elections, .sportsRec{
+#elections.active, #sportsRec.active, .elections, .sportsRec, .elections-outline:hover, .sportsRec-outline:hover {
     background-color: var(--maximumBlue) !important;
     border-color: var(--maximumBlue) !important;
     color: white;
@@ -894,7 +942,7 @@ a.bg-add:hover{
     border-color: var(--denim);
 }
 
-#workshop.active, #stuGov.active, .workshop, .stuGov {
+#workshop.active, #stuGov.active, .workshop, .stuGov, .workshop-outline:hover, .stuGov-outline:hover {
     background-color: var(--denim) !important;
     border-color: var(--denim) !important;
     color: white;
@@ -906,7 +954,7 @@ a.bg-add:hover{
     border-color: var(--jazzberryJam);
 }
 
-#recruit.active, .recruit{
+#recruit.active, .recruit, .recruit-outline:hover{
     background-color: var(--jazzberryJam) !important;
     border-color: var(--jazzberryJam) !important;
     color: white;
@@ -917,7 +965,7 @@ a.bg-add:hover{
     border-color: var(--trypanBlue);
 }
 
-#other.active, .other{
+#other.active, .other, .other-outline:hover{
     background-color: var(--trypanBlue) !important;
     border-color: var(--trypanBlue) !important;
     color: white;

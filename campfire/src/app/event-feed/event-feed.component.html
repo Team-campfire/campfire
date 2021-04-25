@@ -1,158 +1,158 @@
 <!-- <p>event-feed works!</p> -->
 <div class="container">
     <div class="row align-items-start event-nav">
-        <div class="dropdown eventDropdown">
-            <button class="eventDropdown" onclick="eventDropdown()"
-                class="btn-secondary dropdown-toggle bg-orange">Event Category <b class="caret"></b></button>
-            <!--DROPDOWN STYLE ONE: standard drop down menus, different colors for the text depending on the event.
-            Could add some icons to the left of each item's text to better clarify?-->
-            <div id="eventDropdown" class="dropdown-menu">
-                <!-- <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons" -->
-                <!-- aria-labelledby="eventCategories"> -->
-                <!--BUTTON STYLE ONE: GBM has a colored in block for the button, everything else is an outline-->
-                <button class="dropdown-item gbm" type="button"> General Body Meeting (GBM)</button>
+        <div class = "left-align" >
+            <div class="dropdown eventDropdown">
+                <button id="eventDropdownBtn" onclick="eventDropdown()"
+                    class="btn-secondary dropdown-toggle bg-orange">Event Category <b class="caret"></b></button>
+                <!--DROPDOWN STYLE ONE: standard drop down menus, different colors for the text depending on the event.
+                Could add some icons to the left of each item's text to better clarify?-->
+                <div id="eventDropdown" class="dropdown-menu">
+                    <!-- <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons" -->
+                    <!-- aria-labelledby="eventCategories"> -->
+                    <!--BUTTON STYLE ONE: GBM has a colored in block for the button, everything else is an outline-->
+                    <button class="dropdown-item gbm-outline" type="button"> General Body Meeting (GBM)</button>
 
-                <!-- </div> -->
-                <!--BUTTON STYLE TWO: Colored text, no fill-->
-                <button class="dropdown-item casual-outline" type="button">Casual</button>
+                    <!-- </div> -->
+                    <!--BUTTON STYLE TWO: Colored text, no fill-->
+                    <button class="dropdown-item casual-outline" type="button">
+                        Casual
+                    </button>
 
-                <button class="dropdown-item movie-outline" type="button">
-                    Movie Showing
-                </button>
+                    <button class="dropdown-item movie-outline" type="button">
+                        Movie Showing
+                    </button>
 
-                <button class="dropdown-item games-outline" type="button">
-                    Games/Trivia
-                </button>
+                    <button class="dropdown-item games-outline" type="button">
+                        Games/Trivia
+                    </button>
 
-                <button class="dropdown-item casual-outline" type="button">
-                    Informational
-                </button>
+                    <button class="dropdown-item info-outline" type="button">
+                        Informational
+                    </button>
 
-                <button class="dropdown-item casual-outline" type="button">
-                    Excursion
-                </button>
+                    <button class="dropdown-item excursion-outline" type="button">
+                        Excursion
+                    </button>
 
-                <button class="dropdown-item elections-outline" type="button">
-                    Elections
-                </button>
+                    <button class="dropdown-item elections-outline" type="button">
+                        Elections
+                    </button>
 
-                <button class="dropdown-item workshop-outline" type="button">
-                    Workshop
-                </button>
+                    <button class="dropdown-item workshop-outline" type="button">
+                        Workshop
+                    </button>
 
-                <button class="dropdown-item recruit-outline" type="button">
-                    Recruiting (Company)
-                </button>
-                <button class="dropdown-item other-outline" type="button">
-                    Other
-                </button>
-            </div>
-        </div>
-        <br>
-        <br>
-
-        <div class="dropdown">
-            <button onclick="clubDropdown()" class="btn-secondary dropdown-toggle bg-orange">Club Category <b
-                    class="caret"></b></button>
-            <div id="clubDropdown" class="dropdown-menu">
-                <!--DROPDOWN STYLE TWO: buttons within each dropdown menu item-->
-                <!--BUTTON STYLE THREE: Buttons the same size as the text-->
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="academicProf" id="academicProf" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off" disabled />
-                        Academic & Professional
-                    </label>
-                </div>
-                <!--BUTTON STYLE FOUR: Buttons fill/are the same size as the dropdown menu iten-->
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="identity" id="identity"
-                        class="btn btn-secondary btns btn-orange btn-category dropdown-item">
-                        <input id="identity" type="radio" class="btns btn-orange" autocomplete="off" active disabled />
-                        Identity Based
-                    </label>
-                </div>
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="hobby" id="hobby" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="hobby" type="radio" class="btns btn-orange" autocomplete="off" disabled />
-                        Hobby & Special Interest
-                    </label>
-                </div>
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="service" id="service" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="service" type="radio" class="btns btn-orange" autocomplete="off" disabled />
-                        Community Service
-                    </label>
-                </div>
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="greek" id="greek" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="greek" type="radio" class="btns btn-orange" autocomplete="off" disabled />
-                        Greek Organization
-                    </label>
-                </div>
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="sportsRec " id="sportsRec" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off" disabled />
-                        Sports & Recreation
-                    </label>
-                </div>
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="stuGov" id="stuGov" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off" disabled />
-                        Student Government & Event Planning
-                    </label>
-                </div>
-                <div class="dropdown-item btn-group-toggle categories" data-toggle="buttons"
-                    aria-labelledby="clubCategories">
-                    <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="other" type="radio" class="btns btn-orange" autocomplete="off" disabled />
+                    <button class="dropdown-item recruit-outline" type="button">
+                        Recruiting (Company)
+                    </button>
+                    <button class="dropdown-item other-outline" type="button">
                         Other
-                    </label>
+                    </button>
                 </div>
             </div>
-        </div>
+        
 
-        <div class="rightButton onlineOffline btn-group-toggle categories" data-toggle="buttons">
+            <div class="dropdown">
+                <button id = "clubDropdownBtn" onclick="clubDropdown()" class="btn-secondary dropdown-toggle bg-orange">Club Category <b
+                        class="caret"></b></button>
+                <div id="clubDropdown" class="dropdown-menu">
+                    <!--DROPDOWN STYLE TWO: buttons within each dropdown menu item-->
+                    <!--BUTTON STYLE THREE: Buttons the same size as the text-->
+                    <button class="dropdown-item academicProf-outline" type="button">
+                        Academic & Professional
+                    </button>
+                    
+                    <button class="dropdown-item identity-outline" type="button">
+                        Identity Based
+                    </button>
+
+                    <button class="dropdown-item hobby-outline" type="button">
+                        Hobby & Special Interest
+                    </button>
+                    <button class="dropdown-item service-outline" type="button">
+                        Community Service
+                    </button>
+
+                    <button class="dropdown-item greek-outline" type="button">
+                        Greek Organization
+                    </button>
+
+                    <button class="dropdown-item sportsRec-outline" type="button">
+                        Sports & Recreation
+                    </button>
+
+                    <button class="dropdown-item stuGov-outline" type="button">
+                        Student Government & Event Planning
+                    </button>
+
+                    <button class="dropdown-item other-outline" type="button">
+                        Other
+                    </button>
+                </div>
+            </div>
+
+        <div class="right-align onlineOffline btn-group-toggle categories" data-toggle="buttons">
             <!--<label class="btn btn-orange">
                     <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
                 </label>-->
             <!--  <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category">
                     <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off"> Casual
                 </label> -->
-            <label for="online" id="online" class="btn-secondary btns btn-orange btn-category">
-                <input id="online" type="radio" class="btns btn-orange btn-category" autocomplete="off"> Online
-            </label>
-            <label for="offline" id="offline" class="btn-secondary btns btn-orange btn-category">
-                <input id="offline" type="radio" class="btns btn-orange btn-category" autocomplete="off"> Online
-            </label>
+
+                <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
+                    <input id="online" type="radio" class="btns btn-orange" autocomplete="off"> Online
+                </label>
+
+                <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
+                    <input id="offline" type="radio" class="btns btn-orange" autocomplete="off"> Offline
+                </label>
+         
             <!-- <button type="button" class="btns btn-orange event-category" style="width: auto;">Online</button>
             <button type="button" class="btns btn-orange event-category" style="width: auto;">Offline</button> -->
         </div>
     </div>
-    <div class="row align-items-center">
+    
+    <div class="row card-deck" id="first-card-row">
         <div class="card event-card" style="width: 18rem;">
             <img src="../../assets/casual-Hangout-rafiki.svg" class="card-img-top"
                 alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">WED, 22 APR, 6:00 PM EDT</p>
-                <h5 class="card-title event-name">Special title treatment</h5>
-                <p class="card-text event-organizer">Club name</p>
-                <button type="button" class="btns event-category casual" style="width: auto;" disabled>Casual</button>
+                <h5 class="card-title event-name">Web Sci Demo</h5>
+                <p class="card-text event-organizer">Team Campfire</p>
+                <button type="button" class="btns event-category gbm" style="width: auto;" disabled>General Body Meetings (GBM)</button>
                 <br>
                 <br>
-                <p class="card-text event-short-desc">Short description here of what the event is.</p>
+                <p class="card-text event-short-desc">This is a cool event!</p>
                 <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
             <div class="card-header">
-                <button type="button" class="btns  club-category academicProf-outline" style="width: auto;"
-                    disabled>Academic & Professional</button>
-                <p class="num-attendees"># Attendees</p>
+                <p class="club category academicProf-outline"
+                    disabled>Academic & Professional</p>
+                <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
+            </div>
+        </div>
+
+        <div class="card event-card" style="width: 18rem;">
+            <img src="../../assets/casual-Hangout-rafiki.svg" class="card-img-top"
+                alt="Illustration of two people hanging out.">
+            <div class="card-body">
+                <p class="card-text event-date">THURS, 29 APR, 5:00 PM EDT</p>
+                <h5 class="card-title event-name">Finding your 'Ninth Path'</h5>
+                <p class="card-text event-organizer">ITWS Leadership</p>
+                <button type="button" class="btns event-category gbm" style="width: auto;" disabled>General Body Meetings (GBM)</button>
+                <br>
+                <br>
+                <p class="card-text event-short-desc">
+                    Cofounder of Grailed Fashion Marketplace, and original employee of Venmo, RPI Alumni Julian Connor will discuss how to turn your passions into a career.
+                </p>
+                <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+            <div class="card-header">
+                <p class="club-category academicProf-outline"
+                    disabled>Academic & Professional</p>
+                <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
         </div>
 
@@ -170,33 +170,14 @@
                 <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
             <div class="card-header">
-                <button type="button" class="btns  club-category academicProf-outline" style="width: auto;"
-                    disabled>Academic & Professional</button>
-                <p class="num-attendees"># Attendees</p>
-            </div>
-        </div>
-
-        <div class="card event-card" style="width: 18rem;">
-            <img src="../../assets/casual-Hangout-rafiki.svg" class="card-img-top"
-                alt="Illustration of two people hanging out.">
-            <div class="card-body">
-                <p class="card-text event-date">WED, 22 APR, 6:00 PM EDT</p>
-                <h5 class="card-title event-name">Special title treatment</h5>
-                <p class="card-text event-organizer">Club name</p>
-                <button type="button" class="btns event-category casual" style="width: auto;" disabled>Casual</button>
-                <br>
-                <br>
-                <p class="card-text event-short-desc">Short description here of what the event is.</p>
-                <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
-            </div>
-            <div class="card-header">
-                <button type="button" class="btns  club-category academicProf-outline" style="width: auto;"
-                    disabled>Academic & Professional</button>
-                <p class="num-attendees"># Attendees</p>
+                <p class="club-category academicProf-outline" disabled>
+                    Academic & Professional
+                </p>
+                 <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
         </div>
     </div>
-    <div class="row align-items-center">
+    <div class="row card-deck">
         <div class="card event-card" style="width: 18rem;">
             <img src="../../assets/casual-Hangout-rafiki.svg" class="card-img-top"
                 alt="Illustration of two people hanging out.">
@@ -207,13 +188,14 @@
                 <button type="button" class="btns event-category casual" style="width: auto;" disabled>Casual</button>
                 <br>
                 <br>
-                <p class="card-text event-short-desc">Short description here of what the event is.</p>
+                <p class="card-text event-short-desc">Short description here of what the event is. Short description here of what the event is. Short description here of what the event is. Short description here of what the event is.</p>
                 <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
             <div class="card-header">
-                <button type="button" class="btns  club-category academicProf-outline" style="width: auto;"
-                    disabled>Academic & Professional</button>
-                <p class="num-attendees"># Attendees</p>
+                <p class="club-category academicProf-outline" disabled>
+                    Academic & Professional
+                </p>
+                 <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
         </div>
 
@@ -231,9 +213,10 @@
                 <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
             <div class="card-header">
-                <button type="button" class="btns  club-category academicProf-outline" style="width: auto;"
-                    disabled>Academic & Professional</button>
-                <p class="num-attendees"># Attendees</p>
+                <p class="club-category academicProf-outline" disabled>
+                    Academic & Professional
+                </p>
+                 <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
         </div>
 
@@ -251,9 +234,10 @@
                 <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
             <div class="card-header">
-                <button type="button" class="btns  club-category academicProf-outline" style="width: auto;"
-                    disabled>Academic & Professional</button>
-                <p class="num-attendees"># Attendees</p>
+                <p class="club-category academicProf-outline" disabled>
+                    Academic & Professional
+                </p>
+                 <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
         </div>
     </div>
