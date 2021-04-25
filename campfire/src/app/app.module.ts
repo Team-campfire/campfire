@@ -20,6 +20,7 @@ import { ViewerDashboardComponent } from './dashboard/viewer-dashboard/viewer-da
 import { EventFeedComponent } from './event-feed/event-feed.component';
 import { EventBasicsComponent } from './create-event/event-basics/event-basics.component';
 import { DataVizComponent } from './data-viz/data-viz.component';
+import { HttpService } from './http.service';
 
 
 const appRoutes: Routes = [
@@ -65,7 +66,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

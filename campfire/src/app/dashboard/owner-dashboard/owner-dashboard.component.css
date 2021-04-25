@@ -1,42 +1,43 @@
 .panel-title {
     position: relative;
-    color:white;
+    color:#C32E09;
     font-family: 'Alata', sans-serif;
     font-weight: normal;
-}
+  }
     
-.panel-title::after {
+  .panel-title::after {
     content: "\f107";
     color: white;
     font-weight: bolder;
     top: -2px;
     right: 0px;
     position: absolute;
-    font-family: "FontAwesome";
-}
+    font-family: "FontAwesome"
+  }
   
-.panel-title[aria-expanded="true"]::after {
+  .panel-title[aria-expanded="true"]::after {
     content: "\f106";
-}
+  }
   
   /*
    * Added 12-27-20 to showcase full title clickthrough
    */
   
-.panel-heading-full.panel-heading {
+  .panel-heading-full.panel-heading {
     padding: 0;
-}
+  }
   
-.panel-heading-full .panel-title {
+  .panel-heading-full .panel-title {
     padding: 10px 15px;
-}
+  }
   
-.panel-heading-full .panel-title::after {
+  .panel-heading-full .panel-title::after {
     top: 10px;
     right: 15px;
-}
-h4.panel-title{
+  }
+  h4.panel-title{
     background-color: #C32E09;
+    color: white;
     height: 50px;
     border-radius: 10px;
     margin-right: 2%;

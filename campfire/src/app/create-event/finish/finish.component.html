@@ -3,18 +3,22 @@
 <div class="form">
     <!-- top part of home page here -->
     <!-- two columns to position image and text -->
-    <div class="row">
-        <div class="column5">
-            <img class="peopleCelebrate" src="../../assets/celebrate.svg" height="350">
+    <form method="POST" action="/submitEventCode">
+        <div class="row">
+            <div class="column5">
+                <img class="peopleCelebrate" src="../../assets/celebrate.svg" width="100%">
+            </div>
+            <div class="column6">
+                <h2 id="text"> You’re all set! </h2>
+                <p id="subtext">Share the below code to invite others to your event at: </p>
+                <p id="link"> campfire.com/join</p>
+                <p id="eventCode" name="eventcode" [innerHTML]="ecode"></p>
+                <p>Go to Event Dashboard and start adding activities, supplies, and more!</p>
+                <input class="btn-save-finish" type="submit" value="Save Code">
+                <br>
+                <br>
+                <a type="submit" class="bg-orange eventD" routerLink='/ownerDashboard'>Event Dashboard</a>
+            </div>
         </div>
-        <div class="column6">
-            <h2 id="text"> You’re all set! </h2>
-            <p id="subtext">Share the below code to invite others to your event at: </p>
-            <p id="link"> campfire.com/join</p>
-            <p id="eventCode"><!-- zvshkj8! --></p>
-            <p>Go to Event Dashboard and start adding activities, supplies, and more!</p>
-            <a type="button" class="bg-orange eventD" routerLink='/ownerDashboard'>Event Dashboard</a>
-        </div>
-    </div>
+    </form>
 </div>
-

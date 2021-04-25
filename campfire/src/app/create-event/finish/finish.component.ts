@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../http.service';
 
 @Component({
   selector: 'app-finish',
@@ -7,10 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinishComponent implements OnInit {
 
-  constructor() { }
+  public ecode: string;
 
-  ngOnInit(): void {
-    // type='text/javascript'>document.addEventListener('DOMContentLoaded', function () { window.setTimeout(document.querySelector('svg').classList.add('animated'), 1000); })
+  constructor(private httpService: HttpService) {
+    this.ecode = "";
   }
 
+  ngOnInit(): void {
+    // this.httpService.sendGetRequest('/submitEventCode').subscribe((data) => {
+    //
+    //   interface EventObj {
+    //     msg: string;
+    //   }
+    //
+    //   let obj: EventObj = JSON.parse(JSON.stringify(data));
+    //   this.ecode = obj.msg;
+    // })
+    this.ecode = this.makeid(8);
+  }
+
+  makeid(length: number): string {
+    let result: string[] = [];
+    let characters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!&%$#@*^';
+    let charactersLength: number = characters.length;
+    for (let i: number = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() *
+            charactersLength)));
+    }
+    return result.join('');
+  }
 }

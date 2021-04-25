@@ -8,5 +8,8 @@
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.3",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.5"
   }
 }
