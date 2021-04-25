@@ -2,8 +2,13 @@
     <div class="form">
         <form method="POST" action="/submitEventTransportation">
         <!-- <form #eventTransportation = "ngForm" (ngSubmit) = "onClickSubmit(eventTransportation.value)" > -->
-            <h2 class="form-title">Event Transportation</h2>
+            <h2 class="form-title">Event Activities and Transportation</h2>
             <br>
+            <div class="form-group">
+                <label for="yourName">Spotify Playlist link:</label>
+                <input type="name" name="yourName" class="form-control" id="yourName" aria-describedby="yourNameHelp"
+                  placeholder="Spotify URL">
+              </div>
             <label>Does your event require transportation?</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="radioButton" id="yesButton" value="yes">
