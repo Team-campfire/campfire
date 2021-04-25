@@ -15,6 +15,7 @@ export class ViewerDashboardComponent implements OnInit {
   oaddy = '';
   eventName = '';
   date = '';
+  time = '';
   eventDesc = '';
   clubOrgDesc = '';
   
@@ -24,6 +25,7 @@ export class ViewerDashboardComponent implements OnInit {
     this.addy = "N/A";
     this.oaddy = "https://rensselaer.webex.com/meet/tralsa";
     this.date = "4/27/2021";
+    this.time = "6:00 PM EDT"
     this.desc = "This is a really cool event and you should join!"
     this.eventDesc = "This is our final presentation"
     this.clubOrgDesc = "This is an amazing club"
