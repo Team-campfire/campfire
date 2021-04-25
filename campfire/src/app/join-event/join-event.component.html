@@ -10,13 +10,10 @@
             <a type="button" class="bg-add btn-add" routerLink="/viewerDashboard">Join Event </a>
 
         </div>
-
-
         <h4>Just browsing? Select the categories that interest you, and we'll find events that match!</h4>
-        <br>
         <a type="button" class="bg-add btn-add" routerLink='/eventFeed'>View All Events</a>
         <br>
-    
+        <br>
         <label id="eventCategories">Event Categories:</label>
         <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="eventCategories">
             <!--<label class="btn btn-orange">
@@ -79,6 +76,17 @@
             </label>
             <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
                 <input id="other" type="radio" class="btns btn-orange" autocomplete="off"> Other
+            </label>
+        </div>
+        <br>
+        <label id="onlineOffline">Online or Offline:</label>
+        <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="onlineOffline">
+            <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="online" type="radio" class="btns btn-orange" autocomplete="off"> Online
+            </label>
+
+            <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="offline" type="radio" class="btns btn-orange" autocomplete="off"> Offline
             </label>
         </div>
         <br>

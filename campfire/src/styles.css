@@ -877,7 +877,7 @@ p.gbm-outline, p.academicProf-outline, p.gbm-outline:hover, p.academicProf-outli
     color: white;
 }
 
-p.casual-outline,  p.casual-outline:hover
+p.casual-outline,  p.casual-outline:hover {
     color: var(--cinnabar);
     border-color: var(--cinnabar);
 }
