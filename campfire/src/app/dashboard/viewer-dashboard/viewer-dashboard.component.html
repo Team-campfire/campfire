@@ -9,17 +9,15 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script>
-    $(function () {
-        $("#datepicker").datetimepicker({
-            dateFormat: "yy-mm-dd",
+        $('#datepicker').datetimepicker({
+            dateFormat: 'yy-mm-dd',
             timeFormat: 'HH:mm z',
 	        timezoneList: [ 
 			{ value: -300, label: 'Eastern'}, 
 			{ value: -360, label: 'Central' }, 
 			{ value: -420, label: 'Mountain' }, 
 			{ value: -480, label: 'Pacific' } 
-        });
-    });
+        ]});
 </script>
 
 <div class="form-dashboard">
@@ -36,7 +34,7 @@
     <div id="accordion">
         <div class="panel-group" id="accordion">
 
-            <!-- First Panel -->
+             <!--First Panel-->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapseBasics">Basics</h4>
@@ -70,9 +68,6 @@
                                     <label for="time">Time:</label>
                                     <input type="time" class="form-control" type="text" aria-describedby="timeHelp"
                                     [value]="time" readonly>
-                                   <!-- <h5 for="date">Date:</h5>
-                                    <input type="event" class="form-control" id="datepicker" type="text"
-                                        aria-describedby="dateHelp" placeholder="Enter Date" [value]="date" readonly>
                                 </div>
                                 <div class="calendar">
                                     <iframe
