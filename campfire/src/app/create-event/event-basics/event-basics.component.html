@@ -5,7 +5,15 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     $(function () {
-        $("#datepicker").datepicker();
+        $("#datepicker").datetimepicker({
+            dateFormat: "yy-mm-dd",
+            timeFormat: 'HH:mm z',
+	        timezoneList: [ 
+			{ value: -300, label: 'Eastern'}, 
+			{ value: -360, label: 'Central' }, 
+			{ value: -420, label: 'Mountain' }, 
+			{ value: -480, label: 'Pacific' } 
+        });
     });
 </script>
 
@@ -31,9 +39,13 @@
             </div>
             <br>
             <div class="form-group">
-                <h5 for="date">Date:</h5>
-                <input type="event" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp"
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp"
                     placeholder="04/27/2021">
+                <br>
+                <label for="time">Time:</label>
+                 <input type="time" class="form-control" type="text" aria-describedby="timeHelp"
+                 placeholder="6:00 PM EDT">
             </div>
             <br>
             <label>Held online or offline?</label>

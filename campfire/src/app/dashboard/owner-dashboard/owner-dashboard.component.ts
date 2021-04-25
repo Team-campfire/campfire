@@ -19,6 +19,7 @@ export class OwnerDashboardComponent implements OnInit {
   oaddy = '';
   eventName = '';
   date = '';
+  time = '';
   eventDesc = '';
   clubOrgDesc = '';
 
@@ -27,9 +28,10 @@ export class OwnerDashboardComponent implements OnInit {
     this.addy = "";
     this.oaddy = "";
     this.date = "4/27/2021";
-    this.desc = ""
-    this.eventDesc = "This is our final presentation"
-    this.clubOrgDesc = "This is an amazing club"
+    this.time = "6:00 PM EDT";
+    this.desc = "";
+    this.eventDesc = "This is our final presentation";
+    this.clubOrgDesc = "This is an amazing club";
 
     // let btn = document.getElementById("coolbutton");
     // if (btn) {

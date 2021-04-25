@@ -8,9 +8,17 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-    $(function () {
-        $("#datepicker").datepicker();
-    });
+    // $(function () {
+        $('#datepicker').datetimepicker({
+            dateFormat: "yy-mm-dd",
+            timeFormat: 'HH:mm z',
+	        timezoneList: [ 
+			{ value: -300, label: 'Eastern'}, 
+			{ value: -360, label: 'Central' }, 
+			{ value: -420, label: 'Mountain' }, 
+			{ value: -480, label: 'Pacific' } 
+		]});
+    //});
 </script>
 
 <div class="form-dashboard">
@@ -53,11 +61,16 @@
                                     </label>
                                 </div><br>
                                 <div class="form-group">
-                                    <h5 for="date">Date:</h5>
+                                    <label for="date">Date:</label>
+                                    <input type="date" class="form-control" id="datepicker" type="text" [value]="date" aria-describedby="dateHelp">
+                                    <br>
+                                    <label for="time">Time:</label>
+                                    <input type="time" class="form-control" type="text" aria-describedby="timeHelp" [value]="time">
+                                    <!--<h5 for="date">Date:</h5>
                                     <input type="event" class="form-control" id="datepicker" type="text"
-                                        aria-describedby="dateHelp" placeholder="Enter Date" [value]="date">
+                                        aria-describedby="dateHelp" placeholder="Enter Date" [value]="date">-->
                                 </div>
-                                <div class="calander">
+                                <div class="calendar">
                                     <iframe
                                         src="https://calendar.google.com/calendar/embed?src=teamcampfire21%40gmail.com&ctz=America%2FNew_York"
                                         style="border: 0" width="100%" height="400px" frameborder="0"
