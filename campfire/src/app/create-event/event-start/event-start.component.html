@@ -1,27 +1,27 @@
 <!-- <p>event-basics works!</p> -->
 <div class="background">
   <div class="form ">
-    <form method="POST" action="/submitEventStart">
+    <form #eventStart = "ngForm" (ngSubmit) = "onClickSubmit(eventStart.value)">
       <h2 class="form-title">Create New Event</h2>
       <div class="form-group">
         <label for="emailAddress">Email address:</label>
         <input type="email" name="yourEmailAddress" class="form-control" id="emailAddress" aria-describedby="emailHelp"
-          placeholder="Enter email">
+          placeholder="Enter email" ngModel>
       </div>
       <div class="form-group">
         <label for="eventName">Event Name:</label>
         <input type="event" name="eventName" class="form-control" id="eventName" aria-describedby="eventHelp"
-          placeholder="Enter Event Name">
+          placeholder="Enter Event Name" ngModel>
       </div>
       <div class="form-group">
         <label for="yourName">Your Name (will be displayed as event owner):</label>
         <input type="name" name="yourName" class="form-control" id="yourName" aria-describedby="yourNameHelp"
-          placeholder="Enter Name">
+          placeholder="Enter Name" ngModel>
       </div>
       <div class="form-group" id="addFriends">
         <label for="addFriend">Invite friends (email address):</label>
         <input type="friend" name="inviteFriends" class="form-control aFriend" id="addFriend1"
-          aria-describedby="friendHelp" placeholder="Enter Email">
+          aria-describedby="friendHelp" placeholder="Enter Email" ngModel>
       </div>
       <a type="button" id="addFriendButton" class="bg-add-form btn-add-form"> + Add Friends </a>
       <br>
