@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
 import { HttpService } from '../../http.service';
 
 @Component({
@@ -10,22 +11,16 @@ export class FinishComponent implements OnInit {
 
   public ecode: string;
 
-  constructor(private httpService: HttpService) {
+  constructor(private http: HttpClient) {
     this.ecode = "";
   }
 
   ngOnInit(): void {
-    // this.httpService.sendGetRequest('/submitEventCode').subscribe((data) => {
-    //
-    //   interface EventObj {
-    //     msg: string;
-    //   }
-    //
-    //   let obj: EventObj = JSON.parse(JSON.stringify(data));
-    //   this.ecode = obj.msg;
-    // })
+
     this.ecode = this.makeid(8);
   }
+
+
 
   makeid(length: number): string {
     let result: string[] = [];
@@ -37,4 +32,28 @@ export class FinishComponent implements OnInit {
     }
     return result.join('');
   }
+
+
+
+
+    //post request to post event code
+   onClickSubmit(mi : any): void {
+
+
+       this.http.post<any>('/submitEventCode',
+	{
+eventCode:  this.ecode
+})
+.subscribe(
+(data)  => {
+console.log(data);
+},
+(err) => {
+
+console.log("Error", err);
+
+}
+
+);
+    }
 }
