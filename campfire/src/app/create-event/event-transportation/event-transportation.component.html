@@ -1,23 +1,23 @@
 <div class="background">
     <div class="form">
-        <form method="POST" action="/submitEventTransportation">
+        <form #submitEventTransportation = "ngForm" (ngSubmit) = "onClickSubmit(submitEventTransportation.value)">
         <!-- <form #eventTransportation = "ngForm" (ngSubmit) = "onClickSubmit(eventTransportation.value)" > -->
             <h2 class="form-title">Event Activities and Transportation</h2>
             <br>
             <div class="form-group">
                 <label for="yourName">Spotify Playlist link:</label>
-                <input type="name" name="yourName" class="form-control" id="yourName" aria-describedby="yourNameHelp"
-                  placeholder="Spotify URL">
+                <input type="name" name="spotifyPlaylist" class="form-control" id="yourName" aria-describedby="yourNameHelp"
+                  placeholder="Spotify URL" ngModel>
               </div>
             <label>Does your event require transportation?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButton" id="yesButton" value="yes">
+                <input class="form-check-input" type="radio" id="yesButton" value="yes" name="yes" (click)="setTransport('yes')" [checked]='true' ngModel>
                 <label class="form-check-label" for="yesButton">
                     Yes
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButton" id="noButton" value="no">
+                <input class="form-check-input" type="radio" id="noButton" value="no" name="no" (click)="setTransport('no')" ngModel>
                 <label class="form-check-label" for="noButton">
                     No
                 </label>
@@ -26,7 +26,7 @@
             <div class="form-group" id="addCars">
                 <label for="addCar">If so, add cars:</label>
                 <input type="car" class="form-control aCar" name="driverName" id="addCar1" aria-describedby="carHelp"
-                    placeholder="Enter name of driver">
+                    placeholder="Enter name of driver" ngModel>
             </div>
             <a type="button" id="addCarButton" class="bg-add-form btn-add-form"> + Add Car </a>
             <br>
