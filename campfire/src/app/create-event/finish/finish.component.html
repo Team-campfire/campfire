@@ -1,9 +1,8 @@
 <!-- <p>finish works!</p> -->
-<script src="finish.js"></script>
 <div class="form">
     <!-- top part of home page here -->
     <!-- two columns to position image and text -->
-    <form method="POST" action="/submitEventCode">
+    <form #submitEventCode = "ngForm" (ngSubmit) = "onClickSubmit(submitEventCode.value)">
         <div class="row">
             <div class="column5">
                 <img class="peopleCelebrate" src="../../assets/celebrate.svg" width="100%">
@@ -12,7 +11,7 @@
                 <h2 id="text"> You’re all set! </h2>
                 <p id="subtext">Share the below code to invite others to your event at: </p>
                 <p id="link"> campfire.com/join</p>
-                <p id="eventCode" name="eventcode" [innerHTML]="ecode"></p>
+                <p id="eventCode" name="eventcode" [innerHTML]="ecode" ngModel></p>
                 <p>Go to Event Dashboard and start adding activities, supplies, and more!</p>
                 <input class="btn-save-finish" type="submit" value="Save Code">
                 <br>
