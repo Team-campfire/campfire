@@ -872,7 +872,7 @@ p.gbm-outline, p.academicProf-outline, p.gbm-outline:hover, p.academicProf-outli
     font-size: large;
 }
 
-#casual, #identity, .casual-outline, .identity-outline{
+#casual, .casual-outline{
     color: var(--cinnabar);
     border-color: var(--cinnabar);
 }
@@ -882,10 +882,13 @@ p.gbm-outline, p.academicProf-outline, p.gbm-outline:hover, p.academicProf-outli
     color: white;
 }
 
-p.casual-outline,  p.casual-outline:hover {
+p.casual-outline, p.casual-outline:hover { 
     color: var(--cinnabar);
-    border-color: var(--cinnabar);
+    border-color: var(--cinnabar); 
+    background-color: transparent !important;
+    font-size: large;
 }
+
 
 #movie, #identity, .movie-outline, .identity-outline{
     color: var(--fulvous);
@@ -897,7 +900,12 @@ p.casual-outline,  p.casual-outline:hover {
     border-color: var(--fulvous) !important;
     color: white;
 }
-
+p.movie-outline, p.identity-outline, p.movie:hover, p.identity-outline:hover { 
+    color: var(--fulvous);
+    border-color: var(--fulvous); 
+    background-color: transparent !important;
+    font-size: large;
+}
 #games, #hobby, .games-outline, .hobby-outline{
     color: var(--mango);
     border-color: var(--mango);
@@ -908,7 +916,12 @@ p.casual-outline,  p.casual-outline:hover {
     border-color: var(--mango) !important;
     color: white;
 }
-
+p.games-outline, p.hobby-outline, p.games-outline:hover, p.hoby-outline:hover { 
+    color: var(--mango);
+    border-color: var(--mango); 
+    background-color: transparent !important;
+    font-size: large;
+}
 #info, #service, .info-outline, .service-outline {
     color: var(--greenPigment);
     border-color: var(--greenPigment);
@@ -918,6 +931,12 @@ p.casual-outline,  p.casual-outline:hover {
     background-color: var(--greenPigment) !important;
     border-color: var(--greenPigment) !important;
     color: white;
+}
+p.info-outline, p.service-outline, p.info-outline:hover, p.service-outline:hover { 
+    color: var(--greenPigment);
+    border-color: var(--greenPigment); 
+    background-color: transparent !important;
+    font-size: large;
 }
 
 #excursion, #greek, .excursion-outline, .greek-outline{
@@ -930,6 +949,12 @@ p.casual-outline,  p.casual-outline:hover {
     border-color: var(--dartmouthGreen) !important;
     color: white;
 }
+p.excursion-outline, p.greek-outline, p.excursion-outline:hover, p.greek-outline:hover { 
+    color: var(--dartmouthGreen);
+    border-color: var(--dartmouthGreen); 
+    background-color: transparent !important;
+    font-size: large;
+}
 
 #elections, #sportsRec, .elections-outline, .sportsRec-outline {
     color: var(--maximumBlue);
@@ -941,7 +966,12 @@ p.casual-outline,  p.casual-outline:hover {
     border-color: var(--maximumBlue) !important;
     color: white;
 }
-
+p.elections-outline, p.sportsRec-outline, p.elections-outline:hover, p.sportsRec-outline:hover { 
+    color: var(--maximumBlue);
+    border-color: var(--maximumBlue); 
+    background-color: transparent !important;
+    font-size: large;
+}
 #workshop, #stuGov, .workshop-outline, .stuGov-outline {
     color: var(--denim);
     border-color: var(--denim);
@@ -953,6 +983,12 @@ p.casual-outline,  p.casual-outline:hover {
     color: white;
 }
 
+p.workshop-outline, p.stuGov-outline, p.workshop-outline:hover, p.stuGov-outline:hover { 
+    color: var(--denim);
+    border-color: var(--denim); 
+    background-color: transparent !important;
+    font-size: large;
+}
 
 #recruit, .recruit-outline {
     color: var(--jazzberryJam);
@@ -964,6 +1000,12 @@ p.casual-outline,  p.casual-outline:hover {
     border-color: var(--jazzberryJam) !important;
     color: white;
 }
+p.recruit-outline, p.recruit-outline:hover { 
+    color: var(--jazzberryJam);
+    border-color: var(--jazzberryJam); 
+    background-color: transparent !important;
+    font-size: large;
+}
 
 #other, .other-outline {
     color: var(--trypanBlue);
@@ -974,6 +1016,12 @@ p.casual-outline,  p.casual-outline:hover {
     background-color: var(--trypanBlue) !important;
     border-color: var(--trypanBlue) !important;
     color: white;
+}
+p.other-outline,  p.other-outline:hover { 
+    color: var(--trypanBlue);
+    border-color: var(--trypanBlue); 
+    background-color: transparent !important;
+    font-size: large;
 }
 .eventDropdown {
  border-radius: 20px;
