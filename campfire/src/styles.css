@@ -39,7 +39,7 @@ font-family: 'Brandon Grotesque Bold', sans-serif; */
     src: url("futura/Futura-Light.ttf") format("truetype");
     font-weight: lighter;
     font-style: normal;
-  } */
+  } 
   :root {
       /*rainbow color palette, using names of colors on coolors*/
     --carnelian: #B31412;
