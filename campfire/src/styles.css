@@ -7,7 +7,7 @@ font-family: 'Brandon Grotesque Bold', sans-serif; */
 
 
 /*Font-face declarations for Frutura*/
-/* @font-face {
+ @font-face {
     font-family: "Futura";
     src: url("futura/Futura-Medium.ttf") format("truetype");
     font-weight: medium;
@@ -247,20 +247,20 @@ a.bg-orange:hover{
         width: 100%; 
     }
     .row{
-        margin:0px
+        margin:0px;
     }
-    #subtext{
+    .subtext{
         font-size: large;
         margin-right: 10%;
         margin-left: 10%;
     }
-    #link{
-        font-size: large;
+    .link{
+        font-size: x-large;
         margin-right: 10%;
         margin-left: 10%;
         text-align: center;
     }
-    #eventCode{
+    .eventCode{
         font-size: x-large;
         font-weight: bold;
         background-color: rgba(202, 202, 202, 0.781);
