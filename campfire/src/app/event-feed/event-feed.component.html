@@ -93,12 +93,6 @@
             </div>
 
         <div class="right-align onlineOffline btn-group-toggle categories" data-toggle="buttons">
-            <!--<label class="btn btn-orange">
-                    <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
-                </label>-->
-            <!--  <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off"> Casual
-                </label> -->
 
                 <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
                     <input id="online" type="radio" class="btns btn-orange" autocomplete="off" name="online" (click)="setLocation('online')" ngModel> Online
@@ -108,13 +102,11 @@
                     <input id="offline" type="radio" class="btns btn-orange" autocomplete="off"  name="offline" (click)="setLocation('offline')" ngModel> Offline
                 </label>
          
-            <!-- <button type="button" class="btns btn-orange event-category" style="width: auto;">Online</button>
-            <button type="button" class="btns btn-orange event-category" style="width: auto;">Offline</button> -->
         </div>
     </div>
     
     <div class="row card-deck" id="first-card-row">
-        <div class="card event-card" style="width: 18rem;" *ngFor="let event of events">
+        <!-- <div class="card event-card" style="width: 18rem;" *ngFor="let event of events">
             <img src="../../assets/casual-Hangout-rafiki.svg" class="card-img-top"
                 alt="Illustration of two people hanging out.">
             <div class="card-body">
@@ -127,8 +119,27 @@
 
                 <p class="card-text event-short-desc">This is our final presentation</p>
 
-               <!-- <p class="card-text event-short-desc">{{event.eventCategories[0].eventDescription}}</p>-->
+                <p class="card-text event-short-desc">{{event.eventCategories[0].eventDescription}}</p>-->
 
+                <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
+            <!--</div>
+            <div class="card-header">
+                <p class="club category academicProf-outline"
+                    disabled>Academic & Professional</p>
+                <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
+            </div>
+        </div> -->
+        <div class="card event-card" style="width: 18rem;">
+            <img src="../../assets/casual-Hangout-rafiki.svg" class="card-img-top"
+                alt="Illustration of two people hanging out.">
+            <div class="card-body">
+                <p class="card-text event-date">WED, 22 APR, 6:00 PM EDT</p>
+                <h5 class="card-title event-name">Web Sci Demo</h5>
+                <p class="card-text event-organizer">Team Campfire</p>
+                <button type="button" class="btns event-category info" style="width: auto;" disabled>Informational</button>
+                <br>
+                <br>
+                <p class="card-text event-short-desc">This is our final presentation</p>
                 <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
             <div class="card-header">
@@ -137,7 +148,6 @@
                 <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
         </div>
-
 
         <div class="card event-card" style="width: 18rem;">
             <img src="../../assets/finding-pana.svg" class="card-img-top"
