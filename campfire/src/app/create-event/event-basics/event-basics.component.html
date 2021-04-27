@@ -8,11 +8,11 @@
         $("#datepicker").datetimepicker({
             dateFormat: "yy-mm-dd",
             timeFormat: 'HH:mm z',
-	        timezoneList: [ 
-			{ value: -300, label: 'Eastern'}, 
-			{ value: -360, label: 'Central' }, 
-			{ value: -420, label: 'Mountain' }, 
-			{ value: -480, label: 'Pacific' } 
+	        timezoneList: [
+			{ value: -300, label: 'Eastern'},
+			{ value: -360, label: 'Central' },
+			{ value: -420, label: 'Mountain' },
+			{ value: -480, label: 'Pacific' }
         ]});
    // });
 </script>
@@ -20,19 +20,18 @@
 <div class="background">
 
     <div class="form">
-        <form method="POST" action="/submitEventBasics">
+        <form #submitEventBasics = "ngForm" (ngSubmit) = "onClickSubmit(submitEventBasics.value)">
             <h2 class="form-title">Event Basics</h2>
             <br>
             <label>Public or Private?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonPublic" id="publicButton" value="public">
+                <input class="form-check-input" type="radio" name="radioButtonPublic" id="publicButton" value="public" (click)="setPrivacy('yes')" [checked]='true' ngModel>
                 <label class="form-check-label" for="publicButton">
                     Public
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonPrivate" id="privateButton"
-                    value="private">
+                <input class="form-check-input" type="radio" name="radioButtonPrivate" id="privateButton" value="private" (click)="setPrivacy('no')" ngModel>
                 <label class="form-check-label" for="privateButton">
                     Private
                 </label>
@@ -40,29 +39,26 @@
             <br>
             <div class="form-group">
                 <label for="date">Date:</label>
-                <input type="date" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp"
-                    placeholder="Enter date">
+                <input type="date" name="date" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp" placeholder="Enter date" ngModel>
                 <br>
                 <label for="time">Time:</label>
-                 <input type="time" class="form-control" type="text" aria-describedby="timeHelp"
-                 placeholder="Enter time">
+                <input type="time" name="time" class="form-control" type="text" aria-describedby="timeHelp" placeholder="Enter time" ngModel>
             </div>
             <br>
             <label>Held online or offline?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online">
+                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online" (click)="setLine('yes')" [checked]='true' ngModel>
                 <label class="form-check-label" for="online">
                     Online
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline">
+                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline" (click)="setLine('no')" ngModel>
                 <label class="form-check-label" for="offlineRadio" >
                     Offline
                 </label>
             </div>
             <input class="btn-save" type="submit" value="Save">
-
         </form>
     </div>
     <div class="centerButton">

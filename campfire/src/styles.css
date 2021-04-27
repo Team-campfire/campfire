@@ -133,7 +133,7 @@ a.bg-orange:hover{
     }
     
     #heading{
-        font-size: 500%;
+        font-size: 400%;
         font-family: 'Palanquin Dark', sans-serif;
     }
     
@@ -357,7 +357,12 @@ a.bg-orange:hover{
         font-size: 100px;
         font-family: 'Palanquin Dark', sans-serif;
     }
-    
+    .feature{
+        font-size: xx-large;
+    }
+    .description{
+        font-size: large;
+    }
     #tagline{
         font-size: 50px;
     }
