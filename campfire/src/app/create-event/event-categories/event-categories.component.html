@@ -10,43 +10,43 @@
                 <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
             </label>-->
                 <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off" value = "gbm" name="gbm" (click)="setCategory('gbm')" [checked]='true' ngModel>
+                    <input name="gbm" id="gbm" type="radio" class="btns btn-orange" autocomplete="off" value = "gbm" (click)="setCategory('gbm')" [checked]='true' ngModel>
                     General Body Meeting (GBM)
                 </label>
                 <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off" name="casual" (click)="setCategory('casual')" ngModel>
+                    <input name="casual" id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off" (click)="setCategory('casual')" ngModel>
                     Casual
                 </label>
                 <label for="movie" id="movie" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="movie" type="radio" class="btns btn-orange" autocomplete="off" name="movie" (click)="setCategory('movie')" ngModel>
+                    <input name="movie" id="movie" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('movie')" ngModel>
                     Movie Showing
                 </label>
                 <label for="games" id="games" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="games" type="radio" class="btns btn-orange" autocomplete="off" name="games" (click)="setCategory('games')" ngModel>
+                    <input name="games" id="games" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('games')" ngModel>
                     Games/Trivia
                 </label>
                 <label for="info" id="info" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="info" type="radio" class="btns btn-orange" autocomplete="off" name="info" (click)="setCategory('info')" ngModel>
+                    <input name="info" id="info" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('info')" ngModel>
                     Informational
                 </label>
                 <label for="excursion" id="excursion" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="excursion" type="radio" class="btns btn-orange" autocomplete="off" name="excursion" (click)="setCategory('excursion')" ngModel>
+                    <input name="excursion" id="excursion" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('excursion')" ngModel>
                     Excursion
                 </label>
                 <label for="elections" id="elections" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="elections" type="radio" class="btns btn-orange" autocomplete="off" name="elections" (click)="setCategory('elections')" ngModel>
+                    <input name="elections" id="elections" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('elections')" ngModel>
                     Elections
                 </label>
                 <label for="workshop" id="workshop" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="workshop" type="radio" class="btns btn-orange" autocomplete="off" name="workshop" (click)="setCategory('workshop')" ngModel>
+                    <input name="workshop" id="workshop" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('workshop')" ngModel>
                     Workshop
                 </label>
                 <label for="recruit" id="recruit" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="recruit" type="radio" class="btns btn-orange" autocomplete="off" name="recruit" (click)="setCategory('recruit')" ngModel>
+                    <input name="recruit" id="recruit" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('recruit')" ngModel>
                     Recruiting (Company)
                 </label>
                 <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="other" type="radio" class="btns btn-orange" autocomplete="off" name="other" (click)="setCategory('other')" ngModel>
+                    <input name="other" id="other" type="radio" class="btns btn-orange" autocomplete="off" (click)="setCategory('other')" ngModel>
                     Other
                 </label>
             </div>
@@ -60,35 +60,35 @@
             <label id="clubCategories">Club/Organization Categories:</label>
             <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="clubCategories">
                 <label for="academicProf" id="academicProf" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off" name="academicProf" (click)="setClub('academicProf')" [checked]='true' ngModel>
+                    <input name="academicProf" id="academicProf" type="radio" class="btns btn-orange" autocomplete="off" (click)="setClub('academicProf')" [checked]='true' ngModel>
                     Academic & Professional
                 </label>
                 <label for="identity" id="identity" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="identity" type="radio" class="btns btn-orange" autocomplete="off" name="identity" (click)="setClub('identity')" ngModel>
+                    <input name="identity" id="identity" type="radio" class="btns btn-orange" autocomplete="off"  (click)="setClub('identity')" ngModel>
                     Identity Based
                 </label>
                 <label for="hobby" id="hobby" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="hobby" type="radio" class="btns btn-orange" autocomplete="off" name="hobby" (click)="setClub('hobby')" ngModel>
+                    <input name="hobby" id="hobby" type="radio" class="btns btn-orange" autocomplete="off" (click)="setClub('hobby')" ngModel>
                     Hobby & Special Interest
                 </label>
                 <label for="service" id="service" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="service" type="radio" class="btns btn-orange" autocomplete="off" name="service" (click)="setClub('service')" ngModel>
+                    <input name="service" id="service" type="radio" class="btns btn-orange" autocomplete="off" (click)="setClub('service')" ngModel>
                     Community Service
                 </label>
                 <label for="greek" id="greek" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="greek" type="radio" class="btns btn-orange" autocomplete="off" name="greek" (click)="setClub('greek')" ngModel>
+                    <input name="greek" id="greek" type="radio" class="btns btn-orange" autocomplete="off" (click)="setClub('greek')" ngModel>
                     Greek Organization
                 </label>
                 <label for="sportsRec " id="sportsRec" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off" name="sportsRec" (click)="setClub('sportsRec')" ngModel>
+                    <input name="sportsRec" id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off" (click)="setClub('sportsRec')" ngModel>
                     Sports & Recreation
                 </label>
                 <label for="stuGov" id="stuGov" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off" name="stuGov" (click)="setClub('stuGov')" ngModel>
+                    <input name="stuGov" id="stuGov" type="radio" class="btns btn-orange" autocomplete="off" (click)="setClub('stuGov')" ngModel>
                     Student Government & Event Planning
                 </label>
                 <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="other" type="radio" class="btns btn-orange" autocomplete="off" name="other" (click)="setClub('other')" ngModel>
+                    <input name="other" id="other" type="radio" class="btns btn-orange" autocomplete="off" (click)="setClub('other')" ngModel>
                     Other
                 </label>
             </div>
