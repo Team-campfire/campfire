@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { HttpService } from '../../http.service';
 
 @Component({
@@ -25,16 +25,16 @@ export class EventBasicsComponent implements OnInit {
   public line: string;
 
   //post request for transportation details
-   onClickSubmit(mi : any): void {
-      this.http.post<any>('/submitEventBasics', {
-        radioButtonPublic:  this.privacy,
-        date: mi.date,
-        time: mi.time,
-        radioButtonOnOff:  this.line
-      })
-        .subscribe((data)  => { console.log(data); }, (err) => {
-          console.log("Error", err);
-        });
+  onClickSubmit(mi: any): void {
+    this.http.post<any>('/submitEventBasics', {
+      radioButtonPublic: this.privacy,
+      date: mi.date,
+      time: mi.time,
+      radioButtonOnOff: this.line
+    })
+      .subscribe((data) => { console.log(data); }, (err) => {
+        console.log("Error", err);
+      });
   }
 
   setPrivacy(e: string): void {
