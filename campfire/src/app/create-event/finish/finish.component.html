@@ -9,13 +9,19 @@
             </div>
             <div class="column6">
                 <h2 id="text"> You’re all set! </h2>
-                <p id="subtext">Share the below code to invite others to your event at: </p>
-                <p id="link"> campfire.com/join</p>
-                <p id="eventCode" name="eventcode" [innerHTML]="ecode" ngModel></p>
-                <p>Go to Event Dashboard and start adding activities, supplies, and more!</p>
+                <p class="subtext">Share the below code to invite others to your event at: </p>
+                <p class="link"> campfire.com/join</p>
+                <p class="eventCode" id="eventCode" name="eventcode" [innerHTML]="ecode" ngModel></p>
                 <input class="btn-save-finish" type="submit" value="Save Code">
                 <br>
                 <br>
+                <p class="subtext"><b>Edit</b> your event (make sure to keep this code private) at: </p>
+                <p class="link"> campfire.com/edit</p>
+                <p id="ownerCode" class="eventCode" name="ownerCode">jfUz6HHA</p>
+                <input class="btn-save-finish" type="submit" value="Save Code">
+                <br>
+                <br>
+                <p>Click the button below to directly go to Event Dashboard and start adding activities and more!</p>
                 <a type="submit" class="bg-orange eventD" routerLink='/ownerDashboard'>Event Dashboard</a>
             </div>
         </div>
