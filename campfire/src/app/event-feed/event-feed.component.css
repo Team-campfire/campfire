@@ -8,34 +8,34 @@
     src: url("../../futura/Futura-Medium.ttf") format("truetype");
     font-weight: medium;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Futura";
     src: url("../../futura/Futura-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Futura";
     src: url("../../futura/Futura-Book.ttf") format("truetype");
     font-weight: book;
     font-style: normal;
-  }
-  @font-face {
+}
+@font-face {
     font-family: "Futura";
     src: url("../../futura/Futura-Heavy.ttf") format("truetype");
     font-weight: heavy;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: "Futura";
     src: url("../../futura/Futura-Light.ttf") format("truetype");
     font-weight: lighter;
     font-style: normal;
-  } 
+} 
 
 .row {
     margin-top: 2%;
@@ -58,7 +58,8 @@ p.num-attendees{
 
 }
 h5.event-name{
-    font-family: Futura;
+    /* font-family: Futura; */
+    font-family: 'Alata', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -71,7 +72,7 @@ h5.event-name{
 
 }
 p.event-organizer{
-    font-family: Brandon Grotesque;
+    font-family: 'Alata', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -91,7 +92,8 @@ p.event-short-desc {
     color: #373A3C;
 }
 p.event-date{
-    font-family: Futura;
+    /* font-family: Futura; */
+    font-family: 'Alata', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
