@@ -2,7 +2,7 @@
 
 ## Contributions:
 
-**Anya Tralshawala (RCS: tralsa, Github: anya-tralshawala):** 
+### **Anya Tralshawala (RCS: tralsa, Github: anya-tralshawala):** 
 * General Design
     * I worked with Rachel to design our app logo and helped create the Figma wireframes. We worked on the themes/design for all of our slide decks, worked on UI/UX, and styled all of the components in our app using CSS and bootstrap elements.
     
@@ -24,7 +24,7 @@
 * Mobile UX
     * I did mobile UX styling on the landing page, all 4 of our create event form pages, join event page, finish form page, and both views of the event dashboard page. To do this I used chrome developer tools, bootstrap elements, as well as @media queries.
 
-**Rachel Wang (RCS: wangr15, Github: rachel-wg):**
+### **Rachel Wang (RCS: wangr15, Github: rachel-wg):**
 * UX design/general design
 	* I led UX design for our application, sketching wireframes and user flows and making final mockups using Figma (Figma file included in our repo). I worked with Anya to redesign our Campfire logo and favicon, and we also worked together for other design materials like slide deck format and refining the visuals and front-end of our application. 
 	  
@@ -47,13 +47,13 @@
 	* I checked our application using the axe chrome extension for compliance with w3c WAI guidelines and basic keyboard testing, which our app passes. To make sure our app is compliant, I edited semantic markup, hover states, colors, etc. where necessary. Some of our colors do not fully pass the highest level of w3c compliance (such as our use of white text on yellow background), since this color is very rarely used in our application this is not the worst violation, but would be something to look into in addition to further usability and accessibility testing in the future. 
 
 
-**Michael Kokkatt (RCS: kokkam, Github: mkokkatt):**
+### **Michael Kokkatt (RCS: kokkam, Github: mkokkatt):**
 
 
-**Teddy Clark (RCS: clarke4, Github: teddy-clark):**
+### **Teddy Clark (RCS: clarke4, Github: teddy-clark):**
 
 
 ## Challenges:
 
-Scripts issue - 
-Typescript -> node -> mongo - 
+### Scripts issue - 
+### Typescript -> node -> mongo - 
