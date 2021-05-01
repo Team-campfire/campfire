@@ -9,7 +9,7 @@
 * Basic HTML/CSS/JS implementation of all of our pages from the wireframe
     * I worked on converting all of the wireframe design into working code for our midterm presentation This code was primarily in HTML/CSS/JS and used nodes to serve the pages. This code was the framework for all of the angular code we wrote. The majority of the code and style remained the same but we used angular components to sever the many different pages on a singular page.
     
-* Front- end implementation in Node and Angular as well as Angular file structure
+* Front - end implementation in Node and Angular as well as Angular file structure
     * Rachel and I worked on converting all of the initial pages into angular components. We spent a lot of time figuring out the best way to organize our files and making sure the file structure made sense. We used chile components for the multiple create event form pages, and the different views of the dashboards.
 
 * Initial Database set up
@@ -31,15 +31,15 @@
 * User research
 	* I led creating and analyzing a Google Forms survey to scope out our problem space (helping people plan events - questions/results are in the appendix of our midterm and final presentations) and reviewed the questions with our team members. We used the results from our survey to help rebrand our app from weMeet to campfire, ideate new features, and focus on our new target audience, college and university students planning events for clubs. 
 	
-* Front end (basic HTML/CSS/JS) implementation of mockup 
-	* I worked with Anya to implement the mockup screens into a mostly static front-end prototype of our application. I specifically implemented the event feed and join event screens (join event flow). I also did the color changing buttons/labels on click that appear throughout our application. 
+* Front-end (basic HTML/CSS/JS) implementation of mockup 
+	* I worked with Anya to implement the mockup screens into a mostly static front-end prototype of our application. I specifically implemented the event feed and join event screens (join event flow). I also did the color changing buttons/labels on click that appear throughout our application. I did JS/TS functionality for adding friends/cars, dropdowns on event feed.  
 
 * Database schema
 	* Anya and I worked together to devise a database and document schema for Campfire. 
 	
 * Front-end JS, Node and Angular implementation
-	* Anya and I worked together to setup the Node server for our application and implementing our front-end prototype into Angular, breaking up our prior prototype code into components and refining as necessary. I did JS/TS functionality for adding friends/cars, dropdowns on event feed.  
-	
+	* Anya and I worked together to setup the Node server for our application and implementing our front-end prototype into Angular, breaking up our prior prototype code into components and refining as necessary. 
+
 * Some mobile UX
 	* I worked on mobile UX styling for the join event flow (event feed and join event screens) and our lab 6 data viz screen.
 	
@@ -56,4 +56,7 @@
 ## Challenges:
 
 ### Scripts issue - 
+When we were working on the initial front-end prototype for our application, we had some Javascript functions in our script.js file that interacted with the DOM. Once we began Angular integration though, we noticed that some of these functions would not execute or would not execute where expected to (e.g., when buttons with event listeners are clicked, like the add friends/add cars in the create event flow). Some of the functions do execute (e.g., add friends/add cars on the event dashboard), but only on localhost:4200/the Angular development server. We tried rewriting these functions in the relevant TS files for their corresponding components, however, we then ran into issues with TS recognizing jQuery. Fixes like (https://momane.com/how-to-use-jquery-with-typescript) to get Typescript to recognize jQuery failed and the functions would still not execute. In the future, we would like to improve on this and fix these issues. 
+
+
 ### Typescript -> node -> mongo - 
