@@ -2,7 +2,7 @@
 
 # GET requests
 * GET requests are used to go to specific pages that load data from the database.
-    * GET /edit/:eventCode/ownerDashboard
+    * GET /edit/:ownerCode/ownerDashboard
         * This endpoint goes to the owner dashboard and loads the data of the specified event.
     * GET /join/:eventCode/viewerDashboard
         *  This endpoint goes to a view-only dashboard and loads the data  of the specified event.
