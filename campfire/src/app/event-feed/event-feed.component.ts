@@ -20,6 +20,8 @@ export class EventFeedComponent implements OnInit {
     this.clubCategory = "";
     this.eventCategory = "";
     this.location = ""; //online or offline
+    this.date = "";
+    this.time = "";
 
   }
 
@@ -40,6 +42,12 @@ export class EventFeedComponent implements OnInit {
     this.http.get<any>('/getEvents').subscribe((data) => {
       for (let r of data) {
         if ((r.eventCategories[0].eventCategory == this.eventCategory || this.eventCategory == "") && (r.eventCategories[0].clubCategory == this.clubCategory || this.clubCategory == "") /* 
+      	&& (r.eventBasics[0].line || this.location == "" )*/) {
+          this.events.push(r);
+
+        }
+
+        if ((r.eventBasics[0].date == this.date || this.date == "") && (r.eventBasics[0].time == this.time || this.time == "") /* 
       	&& (r.eventBasics[0].line || this.location == "" )*/) {
           this.events.push(r);
 
@@ -75,14 +83,20 @@ export class EventFeedComponent implements OnInit {
 
   }
 
+  setTime(e: string): void {
+    this.time = e;
+  }
+
+  setDate(e: string): void {
+    this.date = e;
+  }
 
 
-  // public date: string;
+  public date: string;
+  public time: string;
   public eventName: string;
   public eventDesc: string;
   public name: string;
-
-
   public clubCategory: string;
   public eventCategory: string;
   public location: string; //online or offline
