@@ -10,14 +10,18 @@ import { HttpService } from '../../http.service';
 export class FinishComponent implements OnInit {
 
   public ecode: string;
+  public ocode: string;
 
   constructor(private http: HttpClient) {
     this.ecode = "";
+    this.ocode = "";
   }
 
   ngOnInit(): void {
 
     this.ecode = this.makeid(8);
+    this.ocode = this.makeid(8);
+
   }
 
 
@@ -42,7 +46,8 @@ export class FinishComponent implements OnInit {
 
     this.http.post<any>('/submitEventCode',
       {
-        eventCode: this.ecode
+        eventCode: this.ecode,
+        ownerCode: this.ocode
       })
       .subscribe(
         (data) => {
