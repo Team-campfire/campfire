@@ -2,7 +2,7 @@
 <div class="background">
     <div class="form">
         <form #submitCategories = "ngForm" (ngSubmit) = "onClickSubmit(submitCategories.value)">
-            <h2 class="form-title">Event/Club Categories</h2>
+            <h2 class="form-title" [innerHTML]="theHtmlString">Event/Club Categories</h2>
             <br />
             <label id="eventCategories">Event Categories:</label>
             <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="eventCategories">

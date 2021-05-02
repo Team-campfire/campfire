@@ -192,8 +192,9 @@ app.post('/submitCategories', function (req, res) {
 	MongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
-
-		dbo.collection("createEvent")
+		db
+			.db("campfireApp")
+			.collection("createEvent")
 			.find({}).project({}).sort({ _id: -1 })
 			.toArray((err, data) => {
 				if (err) throw err;
