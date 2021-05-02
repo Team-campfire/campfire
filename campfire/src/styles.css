@@ -125,7 +125,7 @@ a.bg-orange:hover{
         transform: scale(1.05);
         
     }
-    /* Lanfing Page and General Styling */
+    /* Landing Page and General Styling */
     .topHomePage{
         background-color: #ECEEEF;
         padding: 25px;
@@ -346,7 +346,7 @@ a.bg-orange:hover{
         transform: scale(1.05);
         
     }
-    /* Lanfing Page and General Styling */
+    /* Landing Page and General Styling */
     .topHomePage{
         background-color: #ECEEEF;
         padding: 25px;
@@ -544,6 +544,48 @@ a.bg-orange:hover{
         transform: scale(1.05);
     }
 }
+/*Nav bar styling for small vertical phone orientations (iPhone SE, iPhone 5)*/
+
+
+@media screen and (max-width: 400px) and (min-width: 300px) {
+    #campfire-logo {
+        width: 80%;
+        height: 80%;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+        margin-right: 0rem;
+        font-size: 0rem;
+        width: 200px;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 299px) {
+    #campfire-logo {
+        width: 80%;
+        height: 80%;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+        margin-right: 0rem;
+        font-size: 0rem;
+        width: 175px;
+    }
+}
+
 .btn-save{
     margin-top: 5px;
     margin-right: 25%;
@@ -641,6 +683,7 @@ a.bg-orange:hover{
     border-radius: 5px;
     width: 180px;
 }
+
 
 /*h2.form-title {
     font-family: Futura;

@@ -6,6 +6,7 @@ function myFunction() {
 /*Club and event catgeory dropdowns on public feed */
 // right now: can only have one dropdown open at a time
 function eventDropdown() {
+ // console.log("test!");
   document.getElementById("clubDropdown").classList.remove("show");
   document.getElementById("eventDropdown").classList.toggle("show");
 }
@@ -13,6 +14,17 @@ function eventDropdown() {
 function clubDropdown() {
   document.getElementById("eventDropdown").classList.remove("show");
   document.getElementById("clubDropdown").classList.toggle("show");
+}
+
+function eventDropdownMobile() {
+  //console.log("test!");
+  document.getElementById("clubDropdown-mobile").classList.remove("show");
+  document.getElementById("eventDropdown-mobile").classList.toggle("show");
+}
+
+function clubDropdownMobile() {
+  document.getElementById("eventDropdown-mobile").classList.remove("show");
+  document.getElementById("clubDropdown-mobile").classList.toggle("show");
 }
 
 
