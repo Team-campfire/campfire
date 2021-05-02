@@ -12,13 +12,13 @@
                 <p class="subtext">Share the below code to invite others to your event at: </p>
                 <p class="link"> campfire.com/join</p>
                 <p class="eventCode" id="eventCode" name="eventcode" [innerHTML]="ecode" ngModel></p>
-                <input class="btn-save-finish" type="submit" value="Save Code">
+                <!-- <input class="btn-save-finish" type="submit" value="Save Code"> -->
                 <br>
                 <br>
                 <p class="subtext"><b>Edit</b> your event (make sure to keep this code private) at: </p>
                 <p class="link"> campfire.com/edit</p>
-                <p id="ownerCode" class="eventCode" name="ownerCode">jfUz6HHA</p>
-                <input class="btn-save-finish" type="submit" value="Save Code">
+                <p class="eventCode" id="ownercode" name="ownercode" [innerHTML]="ocode" ngModel></p>
+                <input class="btn-save-finish" type="submit" value="Save Codes">
                 <br>
                 <br>
                 <p>Click the button below to directly go to Event Dashboard and start adding activities and more!</p>
