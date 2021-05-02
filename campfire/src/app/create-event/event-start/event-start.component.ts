@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { HttpService } from '../../http.service';
 
 @Component({
@@ -9,11 +9,11 @@ import { HttpService } from '../../http.service';
 })
 export class EventStartComponent implements OnInit {
 
-  constructor(private http: HttpClient) { 
-  	this.email = "";
-  	this.eName = "";
-  	this.name = "";
-  	this.friend = "";
+  constructor(private http: HttpClient) {
+    this.email = "";
+    this.eName = "";
+    this.name = "";
+    this.friend = "";
 
   }
 
@@ -26,27 +26,27 @@ export class EventStartComponent implements OnInit {
   public friend: string;
 
   //post request
-   onClickSubmit(mi : any): void {
+  onClickSubmit(mi: any): void {
 
-       this.http.post<any>('/submitEventStart',
-{
-yourEmailAddress:  mi.yourEmailAddress,
-eventName:  mi.eventName,
-yourName:  mi.yourName,
-inviteFriends: mi.inviteFriends
-})
-.subscribe(
-(data)  => {
-console.log(data);
-},
-(err) => {
+    this.http.post<any>('/submitEventStart',
+      {
+        yourEmailAddress: mi.yourEmailAddress,
+        eventName: mi.eventName,
+        yourName: mi.yourName,
+        inviteFriends: mi.inviteFriends
+      })
+      .subscribe(
+        (data) => {
+          console.log(data);
+        },
+        (err) => {
 
-console.log("Error", err);
+          console.log("Error", err);
 
-}
+        }
 
-);
-    }
+      );
+  }
 
 
 }
