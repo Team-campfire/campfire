@@ -902,7 +902,7 @@ div.right-align {
     border-color: var(--carnelian); 
 }
 
-#gbm.active, #academicProf.active, .gbm, .academicProf, .gbm-outline:hover, .academicProf-outline:hover{
+#gbm.active, #academicProf.active, #gbm.current, #academicProf.current, .gbm, .academicProf, .gbm-outline:hover, .academicProf-outline:hover{
     background-color: var(--carnelian) !important;
     border-color: var(--carnelian) !important;
     color: white;
@@ -919,7 +919,7 @@ p.gbm-outline, p.academicProf-outline, p.gbm-outline:hover, p.academicProf-outli
     color: var(--cinnabar);
     border-color: var(--cinnabar);
 }
-#casual.active,  .casual, .casual-outline:hover {
+#casual.active, #casual.current,  .casual, .casual-outline:hover {
     background-color: var(--cinnabar) !important;
     border-color: var(--cinnabar) !important;
     color: white;
@@ -938,7 +938,7 @@ p.casual-outline, p.casual-outline:hover {
     border-color: var(--fulvous);
 }
 
-#movie.active, #identity.active, .movie, .identity, .movie-outline:hover, .identity-outline:hover{
+#movie.active, #identity.active, #movie.current, #identity.current, .movie, .identity, .movie-outline:hover, .identity-outline:hover{
     background-color: var(--fulvous) !important;
     border-color: var(--fulvous) !important;
     color: white;
@@ -954,7 +954,7 @@ p.movie-outline, p.identity-outline, p.movie:hover, p.identity-outline:hover {
     border-color: var(--mango);
 }
 
-#games.active, #hobby.active, .games, .hobby, .games-outline:hover, .hobby-outline:hover{
+#games.active, #hobby.active, #games.current, #hobby.current, .games, .hobby, .games-outline:hover, .hobby-outline:hover{
     background-color: var(--mango) !important;
     border-color: var(--mango) !important;
     color: white;
@@ -970,7 +970,7 @@ p.games-outline, p.hobby-outline, p.games-outline:hover, p.hoby-outline:hover {
     border-color: var(--greenPigment);
 }
 
-#info.active, #service.active, .info, .service, .info-outline:hover, .service-outline:hover{
+#info.active, #service.active, #info.current, #service.current,.info, .service, .info-outline:hover, .service-outline:hover{
     background-color: var(--greenPigment) !important;
     border-color: var(--greenPigment) !important;
     color: white;
@@ -987,7 +987,7 @@ p.info-outline, p.service-outline, p.info-outline:hover, p.service-outline:hover
     border-color: var(--dartmouthGreen);
 }
 
-#excursion.active, #greek.active, .excursion, .greek, .excursion-outline:hover, .greek-outline:hover {
+#excursion.active, #greek.active, #excursion.current, #greek.current, .excursion, .greek, .excursion-outline:hover, .greek-outline:hover {
     background-color: var(--dartmouthGreen) !important;
     border-color: var(--dartmouthGreen) !important;
     color: white;
@@ -1004,7 +1004,7 @@ p.excursion-outline, p.greek-outline, p.excursion-outline:hover, p.greek-outline
     border-color: var(--maximumBlue);
 }
 
-#elections.active, #sportsRec.active, .elections, .sportsRec, .elections-outline:hover, .sportsRec-outline:hover {
+#elections.active, #sportsRec.active, #elections.current, #sportsRec.current, .elections, .sportsRec, .elections-outline:hover, .sportsRec-outline:hover {
     background-color: var(--maximumBlue) !important;
     border-color: var(--maximumBlue) !important;
     color: white;
@@ -1020,7 +1020,7 @@ p.elections-outline, p.sportsRec-outline, p.elections-outline:hover, p.sportsRec
     border-color: var(--denim);
 }
 
-#workshop.active, #stuGov.active, .workshop, .stuGov, .workshop-outline:hover, .stuGov-outline:hover {
+#workshop.active, #stuGov.active, #workshop.current, #stuGov.current,  .workshop, .stuGov, .workshop-outline:hover, .stuGov-outline:hover {
     background-color: var(--denim) !important;
     border-color: var(--denim) !important;
     color: white;
@@ -1038,7 +1038,7 @@ p.workshop-outline, p.stuGov-outline, p.workshop-outline:hover, p.stuGov-outline
     border-color: var(--jazzberryJam);
 }
 
-#recruit.active, .recruit, .recruit-outline:hover{
+#recruit.active, #recruit.current, .recruit, .recruit-outline:hover{
     background-color: var(--jazzberryJam) !important;
     border-color: var(--jazzberryJam) !important;
     color: white;
@@ -1050,12 +1050,12 @@ p.recruit-outline, p.recruit-outline:hover {
     font-size: large;
 }
 
-#other, .other-outline {
+#other, #otherClub, #otherEvent, .other-outline {
     color: var(--trypanBlue);
     border-color: var(--trypanBlue);
 }
 
-#other.active, .other, .other-outline:hover{
+#other.active, #otherClub.active, #otherEvent.active, #otherClub.current, #otherEvent.current, .other, .other-outline:hover{
     background-color: var(--trypanBlue) !important;
     border-color: var(--trypanBlue) !important;
     color: white;

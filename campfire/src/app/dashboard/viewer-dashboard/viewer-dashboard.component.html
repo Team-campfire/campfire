@@ -30,19 +30,19 @@
         </div>
     </div>
     <h1 class="form-center">Web Sci Demo</h1>
-    <h3 class="form-center">Team Campfire</h3>
+    <h2 class="form-center">Team Campfire</h2>
     <!-- <input class="form-center" class="form-control" type="text" [value]="eventName" readonly> -->
-    <div id="accordion">
+    <div id="allAccordions">
         <div class="panel-group" id="accordion">
 
              <!--First Panel-->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseBasics">Basics</h4>
+                    <h3 class="panel-title" data-toggle="collapse" data-target="#collapseBasics">Basics</h3>
                 </div>
 
                 <div id="collapseBasics" class="panel-collapse collapse">
-                    <div class="panel-body">
+                    <div class="panel-body" title="Event Basics">
                         <div class="row">
                             <div class="column7">
                                 <!-- <input type="button" (click)="fillForm()" id="coolbutton"> -->
@@ -62,37 +62,43 @@
                                     </label>
                                 </div><br>
                                 <div class="form-check">
-                                    <label for="date">Date:</label>
+                                    <label for="datepicker" id="dateHelp">Date:</label>
                                     <input type="date" class="form-control" id="datepicker" type="text" [value]="date" aria-describedby="dateHelp"
                                         readonly>
                                     <br>
-                                    <label for="time">Time:</label>
-                                    <input type="time" class="form-control" type="text" aria-describedby="timeHelp"
+                                    <label for="time" id="timeHelp">Time:</label>
+                                    <input type="time" id="time" class="form-control" type="text" aria-describedby="timeHelp"
                                     [value]="time" readonly>
                                 </div>
-                                <div class="calendar">
+                                <br>
+                                <label for="calendar">Google Calendar:</label>
+                                <div id="calendar" class="calendar" role="presentation">
                                     <iframe
                                         src="https://calendar.google.com/calendar/embed?src=teamcampfire21%40gmail.com&ctz=America%2FNew_York"
                                         style="border: 0" width="100%" height="400px" frameborder="0"
-                                        scrolling="no"></iframe>
+                                        scrolling="yes" title="Google Calendar" role="presentation"></iframe>
                                 </div>
                             </div>
                             <div class="column8">
                                 <br>
                                 <h4>Location:</h4>
                                 <div class="form-group">
-                                    <h5 for="date">In-Person:</h5>
-                                    <input type="event" class="form-control" id="In-Person" aria-describedby="dateHelp"
+                                    <h5 for="In-Person">In-Person:</h5>
+                                    <input type="event" class="form-control" id="In-Person"
                                         placeholder="Enter Event Address" [value]="addy" readonly>
                                     <br>
-                                    <h5 for="date">Virtual:</h5>
-                                    <input type="event" class="form-control" id="virtual" aria-describedby="dateHelp"
+                                    <h5 for="virtual">Virtual:</h5>
+                                    <input type="event" class="form-control" id="virtual" 
                                         placeholder="Enter Virtual Link" [value]="oaddy" readonly>
                                     <br>
-                                    <iframe
+                                    <br>
+                                    <br>
+                                    <label for="googleMaps">Google Maps:</label>
+                                    <br>
+                                    <iframe id="googleMaps"
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.7698036395595!2d-73.68107708522975!3d42.72976277916387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0f9eebfa097d%3A0xa5592b13db1f5302!2sRensselaer%20Polytechnic%20Institute!5e0!3m2!1sen!2sus!4v1615488659473!5m2!1sen!2sus"
                                         width="100%" height="385px" style="border:0;" allowfullscreen=""
-                                        loading="lazy"></iframe>
+                                        loading="lazy" title="Google Maps of event location" alt="Google Maps of event location (if in person, otherwise shows RPI)"  role="presentation"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -102,108 +108,108 @@
             <!-- Second Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseCategories"> Categories</h4>
+                    <h3 class="panel-title" data-toggle="collapse" data-target="#collapseCategories"> Categories</h3>
                 </div>
                 <div id="collapseCategories" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <label id="eventCategories">Event Categories:</label>
+                        <label for="eventCategories">Event Categories:</label>
                         <div class="btn-group-toggle categories" data-toggle="buttons"
-                            aria-labelledby="eventCategories">
+                            id="eventCategories">
                             <!--<label class="btn btn-orange">
                                 <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
                             </label>-->
-                            <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off" disabled> General Body Meetings (GBM)
+                            <label for="gbmButton" id="gbm" class="btn btn-secondary btns btn-orange btn-category"> 
+                                <input id="gbmButton" type="radio" class="btns btn-orange disabled" autocomplete="off" disabled aria-disabled="true"> General Body Meetings (GBM)
                               </label>
-                            <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="casual" type="radio" class="btns btn-orange btn-category"
-                                    autocomplete="off" disabled>
+                            <label for="casualButton" id="casual" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="casualButton" type="radio" class="btns btn-orange btn-category"
+                                    autocomplete="off">
                                 Casual
                             </label>
-                            <label for="movie" id="movie" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="movie" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="movieButton" id="movie" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="movieButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Movie Showing
                             </label>
-                            <label for="games" id="games" class="btn btn-secondary btns btn-orange btn-category " disabled>
-                                <input id="games" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="gamesButton" id="games" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="gamesButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Games/Trivia
                             </label>
-                            <label for="info" id="info" class="btn btn-secondary btns btn-orange btn-category active">
-                                <input id="info" type="radio" class="btns btn-orange " autocomplete="off" >
+                            <label for="infoButton" id="info" class="btn btn-secondary btns btn-orange btn-category active current">
+                                <input id="infoButton" type="radio" class="btns btn-orange " autocomplete="off" checked disabled>
                                 Informational
                             </label>
-                            <label for="excursion" id="excursion"
-                                class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="excursion" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="excursionButton" id="excursion"
+                                class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="excursionButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Excursion
                             </label>
-                            <label for="elections" id="elections"
-                                class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="elections" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="electionsButton" id="elections"
+                                class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="electionsButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Elections
                             </label>
-                            <label for="workshop" id="workshop" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="workshop" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="workshopButton" id="workshop" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="workshopButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Workshop
                             </label>
-                            <label for="recruit" id="recruit" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="recruit" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="recruitButton" id="recruit" class="btn btn-secondary btns btn-orange btn-category" >
+                                <input id="recruitButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Recruiting (Company)
                             </label>
-                            <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category"disabled >
-                                <input id="other" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="otherEventButton" id="otherEvent" class="btn btn-secondary btns btn-orange btn-category" >
+                                <input id="otherEventButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Other
                             </label>
                         </div>
                         <br />
                         <div class="form-group">
-                            <label for="comment">Event Description:</label>
-                            <textarea class="form-control" name="eventDescription" rows="2" id="description"
+                            <label for="eventDescription">Event Description:</label>
+                            <textarea class="form-control" name="eventDescription" rows="2" id="eventDescription"
                                 placeholder="Please enter an event description." [value]="eventDesc"
                                 readonly></textarea>
                         </div>
                         <br />
-                        <label id="clubCategories">Club/Organization Categories:</label>
-                        <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="clubCategories">
-                            <label for="academicProf" id="academicProf"
-                                class="btn btn-secondary btns btn-orange btn-category active">
-                                <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off">
+                        <label for="clubCategories">Club/Organization Categories:</label>
+                        <div class="btn-group-toggle categories" data-toggle="buttons" id="clubCategories">
+                            <label for="academicProfButton" id="academicProf"
+                                class="btn btn-secondary btns btn-orange btn-category active current">
+                                <input id="academicProfButton" type="radio" class="btns btn-orange" autocomplete="off" checked disabled aria-disabled="true">
                                 Academic & Professional
                             </label>
-                            <label for="identity" id="identity" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="identity" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="identityButton" id="identity" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="identityButton" type="radio" class="btns btn-orange" autocomplete="off" disabled>
                                 Identity Based
                             </label>
-                            <label for="hobby" id="hobby" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="hobby" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="hobbyButton" id="hobby" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="hobbyButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Hobby & Special Interest
                             </label>
-                            <label for="service" id="service" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="service" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="serviceButton" id="service" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="serviceButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Community Service
                             </label>
-                            <label for="greek" id="greek" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="greek" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="greekButton" id="greek" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="greekButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Greek Organization
                             </label>
-                            <label for="sportsRec " id="sportsRec"
-                                class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off" disabled>
+                            <label for="sportsRecButton" id="sportsRec"
+                                class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="sportsRecButton" type="radio" class="btns btn-orange" autocomplete="off" disabled aria-disabled="true">
                                 Sports & Recreation
                             </label>
-                            <label for="stuGov" id="stuGov" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off"disabled>
+                            <label for="stuGovButton" id="stuGov" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="stuGovButton" type="radio" class="btns btn-orange" autocomplete="off"disabled aria-disabled="true">
                                 Student Government & Event Planning
                             </label>
-                            <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category" disabled>
-                                <input id="other" type="radio" class="btns btn-orange " autocomplete="off" disabled>
+                            <label for="otherClubButton" id="otherClub" class="btn btn-secondary btns btn-orange btn-category">
+                                <input id="otherClubButton" type="radio" class="btns btn-orange " autocomplete="off" disabled aria-disabled="true"> 
                                 Other
                             </label>
                         </div>
                         <br />
                         <div class="form-group">
-                            <label for="comment">Club/Organization Description:</label>
-                            <textarea class="form-control" name="clubDescription" rows="2" id="club-org"
+                            <label for="clubDescription">Club/Organization Description:</label>
+                            <textarea class="form-control" name="clubDescription" rows="2" id="clubDescription"
                                 placeholder="Please enter an club/organization description." [value]="clubOrgDesc"
                                 readonly></textarea>
                         </div>
@@ -213,31 +219,31 @@
             <!-- Third Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseActivities">Activities</h4>
+                    <h3 class="panel-title" data-toggle="collapse" data-target="#collapseActivities">Activities</h3>
                 </div>
                 <div id="collapseActivities" class="panel-collapse collapse">
                     <div class="panel-body">
                         <h4>Planned Activities:</h4>
                         <br>
                         <!-- <div class="container"> -->
-                        <table id="myTable" class=" table order-list">
+                        <table id="activitiesTable" class=" table order-list">
                             <thead>
                                 <tr>
-                                    <td>Number</td>
-                                    <td>Activity</td>
-                                    <td>Assignee</td>
+                                    <td id="activityNumberHelp">Number</td>
+                                    <td id="activityHelp">Activity</td>
+                                    <td id="activityAssigneeHelp">Assignee</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="col-sm-4" style="width: 10%;">
-                                        <input type="text" name="number" class="form-control" />
+                                        <input type="text" name="number" class="form-control" aria-labelledby="activityNumberHelp"/>
                                     </td>
                                     <td class="col-sm-4" style="width: 65%;">
-                                        <input type="text" name="activity" class="form-control" />
+                                        <input type="text" name="activity" class="form-control" aria-labelledby="activityHelp" />
                                     </td>
                                     <td class="col-sm-4" style="width: 25%;">
-                                        <input type="text" name="assignee" class="form-control" />
+                                        <input type="text" name="assignee" class="form-control" aria-labelledby="activityAssigneeHelp" />
                                     </td>
                                     <td class="col-sm-2"><a class="deleteRow"></a>
 
@@ -261,24 +267,24 @@
                         <h4>Delagate Tasks:</h4>
                         <br>
                         <!-- <div class="container"> -->
-                        <table id="myTable" class=" table order-list-tasks">
+                        <table id="tasksTable" class=" table order-list-tasks">
                             <thead>
                                 <tr>
-                                    <td>Number</td>
-                                    <td>Task</td>
-                                    <td>Assignee</td>
+                                    <td id="taskNumberHelp">Number</td>
+                                    <td id="taskHelp">Task</td>
+                                    <td id="taskAssigneeHelp">Assignee</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="col-sm-4" style="width: 10%;">
-                                        <input type="text" name="num" class="form-control" />
+                                        <input type="text" name="num" class="form-control" aria-labelledby="taskNumberHelp"/>
                                     </td>
                                     <td class="col-sm-4" style="width: 65%;">
-                                        <input type="text" name="task" class="form-control" />
+                                        <input type="text" name="task" class="form-control" aria-labelledby="taskHelp" />
                                     </td>
                                     <td class="col-sm-4" style="width: 25%;">
-                                        <input type="text" name="assignees" class="form-control" />
+                                        <input type="text" name="assignees" class="form-control" aria-labelledby="taskAssigneeHelp"/>
                                     </td>
                                     <td class="col-sm-2"><a class="deleteRow"></a>
 
@@ -297,10 +303,10 @@
                         </table>
                         <!-- <a type="button" class="bg-add btn-add" href=""> + Add Tasks </a> -->
                         <br>
-                        <h4>Spotify Playlist:</h4>
+                        <h4 id="playlistHelp">Spotify Playlist:</h4>
                         <!-- <iframe src="https://open.spotify.com/embed/playlist/7qV4iT5K3Ivk8FlokZEBR9" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
                         <iframe src="https://open.spotify.com/embed/playlist/6gXbIpaokqIdRKJtYlp7HO" width="100%"
-                            height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" title="Spotify playlist" aria-describedby="playlistHelp"></iframe>
                     </div>
                 </div>
             </div>
@@ -308,31 +314,31 @@
             <!-- Fourth Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTransportation">
-                        Transportation</h4>
+                    <h3 class="panel-title" data-toggle="collapse" data-target="#collapseTransportation">
+                        Transportation</h3>
                 </div>
 
                 <div id="collapseTransportation" class="panel-collapse collapse">
                     <div class="panel-body">
                         <h4>Ride Arrangements:</h4>
-                        <table id="myTable" class=" table order-list-car">
+                        <table id="transportationTable" class=" table order-list-car">
                             <thead>
                                 <tr>
-                                    <td>Number</td>
-                                    <td>Driver Name</td>
-                                    <td>Riders</td>
+                                    <td id="rideNumberHelp">Number</td>
+                                    <td id="driverHelp">Driver Name</td>
+                                    <td id="ridersHelp">Riders</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="col-sm-4" style="width: 10%;">
-                                        <input type="text" name="carNum" class="form-control" />
+                                        <input type="text" name="carNum" class="form-control" aria-labelledby="rideNumberHelp"/>
                                     </td>
                                     <td class="col-sm-4" style="width: 25%;">
-                                        <input type="text" name="car" class="form-control" />
+                                        <input type="text" name="car" class="form-control" aria-labelledby="driverHelp" />
                                     </td>
                                     <td class="col-sm-4" style="width: 65%;">
-                                        <input type="text" name="driver" class="form-control" />
+                                        <input type="text" name="driver" class="form-control" aria-labelledby="ridersHelp"/>
                                     </td>
                                     <td class="col-sm-2"><a class="deleteRow"></a>
 
@@ -357,7 +363,7 @@
             <!-- Fifth Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseNotes">Notes</h4>
+                    <h3 class="panel-title" data-toggle="collapse" data-target="#collapseNotes">Notes</h3>
                 </div>
 
                 <div id="collapseNotes" class="panel-collapse collapse">
@@ -380,7 +386,7 @@
             <!-- Sixth Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
-                    <h4 class="panel-title" data-toggle="collapse" data-target="#collapseJoin">Join</h4>
+                    <h3 class="panel-title" data-toggle="collapse" data-target="#collapseJoin">Join</h3>
                 </div>
 
                 <div id="collapseJoin" class="panel-collapse collapse">
