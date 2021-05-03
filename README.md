@@ -6,23 +6,23 @@
 * General Design
     * I worked with Rachel to design our app logo and helped create the Figma wireframes. We worked on the themes/design for all of our slide decks, worked on UI/UX, and styled all of the components in our app using CSS and bootstrap elements.
     
-* Basic HTML/CSS/JS implementation of all of our pages from the wireframe
-    * I worked on converting all of the wireframe design into working code for our midterm presentation This code was primarily in HTML/CSS/JS and used nodes to serve the pages. This code was the framework for all of the angular code we wrote. The majority of the code and style remained the same but we used angular components to sever the many different pages on a singular page.
+* Vanilla HTML/CSS/JS implementation of all of our pages from the wireframe
+    * I converted the wireframe design into working code for our midterm presentation This code was primarily in HTML/CSS/JS and used nodes to serve the pages. I worked on coding up all four of the create event forms, the finish form page, as well as noth both dashboard view. This code was the starting point for all of the angular code we wrote. The majority of the code I had written and style remained the same but we used angular components to sever the many different pages on a singular page.
     
-* Front - end implementation in Node and Angular as well as Angular file structure
-    * Rachel and I worked on converting all of the initial pages into angular components. We spent a lot of time figuring out the best way to organize our files and making sure the file structure made sense. We used chile components for the multiple create event form pages, and the different views of the dashboards.
+* Front - end implementation in Angular as well as Angular file structure
+    * Rachel and I worked on converting all of the initial pages into angular components. We spent a lot of time figuring out the best way to organize our files and making sure the file structure made sense. We used child components for the multiple create event form pages, and the different views of the dashboards. We converted all of the code housed in the public directory into their respective angular components. I then extensively worked on css and bootsrtap styling to make sure everything lined up properly and was visually appealing
 
-* Initial Database set up
-    * I worked on creating our database and set up all the collections. I also maintained our DB and made sure everyone had access to it.
+* Initial Database set up and database maintenance/management
+    * I worked on creating our database and set up all the collections. I also maintained our DB and made sure everyone had access to it. If anyone ran into issues with the database I was always the person to debug and reset connections strings and such.
 
 * Database Schema
     * Rachel and I worked together to create a general database schema for our application. 
 
-* Worked on all of the POST requests and MongoDB connection
-    * I worked on making all of the create event form POST requests. I secured the connection between angular to node to mongo and thoroughly tested to post requests to make sure it was working. I also set up the mongo connection for the rest of my group members to use.
+* Worked on ALL of the POST requests and set up the MongoDB connection
+    * I worked on making all of the create event form POST requests. I secured the connection between angular to node to mongo and thoroughly tested the post requests to make sure they were working properly. I also set up the mongodb connection for the rest of my group members to use.
 
 * Mobile UX
-    * I did mobile UX styling on the landing page, all 4 of our create event form pages, join event page, finish form page, and both views of the event dashboard page. To do this I used chrome developer tools, bootstrap elements, as well as @media queries.
+    * I did a good portion of the mobile UX styling. I worked extensively on the landing page, all 4 of our create event form pages, join event page, finish form page, and both views of the event dashboard pages. To do this I used chrome developer tools, bootstrap elements, as well as @media queries.
 
 ### **Rachel Wang (RCS: wangr15, Github: rachel-wg):**
 * UX design/general design
@@ -58,5 +58,7 @@
 ### Scripts issue - 
 When we were working on the initial front-end prototype for our application, we had some Javascript functions in our script.js file that interacted with the DOM. Once we began Angular integration though, we noticed that some of these functions would not execute or would not execute where expected to (e.g., when buttons with event listeners are clicked, like the add friends/add cars in the create event flow). Some of the functions do execute (e.g., add friends/add cars on the event dashboard), but only on localhost:4200/the Angular development server. We tried rewriting these functions in the relevant TS files for their corresponding components, however, we then ran into issues with TS recognizing jQuery. Fixes like (https://momane.com/how-to-use-jquery-with-typescript) to get Typescript to recognize jQuery failed and the functions would still not execute. In the future, we would like to improve on this and fix these issues. 
 
+### Updating Dashboard Pages  - 
+The back-end team (Teddy and Michael) were responsible for this. Due to the lack of time they were unable to finish the PUT requests and therefore were not able to dynamically update the owner and viewer dashboard pages based on owner and event code.
 
 ### Typescript -> node -> mongo - 
