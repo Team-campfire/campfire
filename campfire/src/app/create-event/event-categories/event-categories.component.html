@@ -1,104 +1,108 @@
 <!-- <p>event-activities works!</p> -->
 <div class="background">
     <div class="form">
-        <form #submitCategories = "ngForm" (ngSubmit) = "onClickSubmit(submitCategories.value)">
+        <!-- <form #submitCategories = "ngForm" (ngSubmit) = "onClickSubmit(submitCategories.value)"> -->
+        <form [formGroup]="catgeoryForm" (ngSubmit)="onClickSubmit()">
             <h2 class="form-title">Event/Club Categories</h2>
             <br />
             <label id="eventCategories">Event Categories:</label>
-            <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="eventCategories">
+            <!-- <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="eventCategories" formGroupName="eventCategories"> -->
+            <div class="categories" aria-labelledby="eventCategories" formGroupName="eventCategories">
                 <!--<label class="btn btn-orange">
                 <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
             </label>-->
                 <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off" value = "gbm" name="gbm" (click)="setCategory('gbm')" [checked]='true' ngModel>
+                    <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off" value="gbm" formControlName="eventCategory">
                     General Body Meeting (GBM)
                 </label>
                 <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off" name="casual" (click)="setCategory('casual')" ngModel>
+                    <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off" value="casual" formControlName="eventCategory">
                     Casual
                 </label>
                 <label for="movie" id="movie" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="movie" type="radio" class="btns btn-orange" autocomplete="off" name="movie" (click)="setCategory('movie')" ngModel>
+                    <input id="movie" type="radio" class="btns btn-orange" autocomplete="off" value="movie" formControlName="eventCategory">
                     Movie Showing
                 </label>
                 <label for="games" id="games" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="games" type="radio" class="btns btn-orange" autocomplete="off" name="games" (click)="setCategory('games')" ngModel>
+                    <input id="games" type="radio" class="btns btn-orange" autocomplete="off" value="games" formControlName="eventCategory">
                     Games/Trivia
                 </label>
                 <label for="info" id="info" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="info" type="radio" class="btns btn-orange" autocomplete="off" name="info" (click)="setCategory('info')" ngModel>
+                    <input id="info" type="radio" class="btns btn-orange" autocomplete="off" value="info" formControlName="eventCategory">
                     Informational
                 </label>
                 <label for="excursion" id="excursion" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="excursion" type="radio" class="btns btn-orange" autocomplete="off" name="excursion" (click)="setCategory('excursion')" ngModel>
+                    <input id="excursion" type="radio" class="btns btn-orange" autocomplete="off" value="excursion" formControlName="eventCategory">
                     Excursion
                 </label>
                 <label for="elections" id="elections" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="elections" type="radio" class="btns btn-orange" autocomplete="off" name="elections" (click)="setCategory('elections')" ngModel>
+                    <input id="elections" type="radio" class="btns btn-orange" autocomplete="off" value="elections" formControlName="eventCategory">
                     Elections
                 </label>
                 <label for="workshop" id="workshop" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="workshop" type="radio" class="btns btn-orange" autocomplete="off" name="workshop" (click)="setCategory('workshop')" ngModel>
+                    <input id="workshop" type="radio" class="btns btn-orange" autocomplete="off" value="workshop" formControlName="eventCategory">
                     Workshop
                 </label>
                 <label for="recruit" id="recruit" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="recruit" type="radio" class="btns btn-orange" autocomplete="off" name="recruit" (click)="setCategory('recruit')" ngModel>
+                    <input id="recruit" type="radio" class="btns btn-orange" autocomplete="off" value="recruit" formControlName="eventCategory">
                     Recruiting (Company)
                 </label>
                 <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="other" type="radio" class="btns btn-orange" autocomplete="off" name="other" (click)="setCategory('other')" ngModel>
+                    <input id="other" type="radio" class="btns btn-orange" autocomplete="off" value="other" formControlName="eventCategory">
                     Other
                 </label>
             </div>
             <br />
             <div class="form-group">
                 <label for="comment">Event Description:</label>
-                <textarea class="form-control" name="eventDescription" rows="2" id="description"
-                    placeholder="Please enter an event description." ngModel></textarea>
+                <textarea class="form-control" rows="2" id="description"
+                    placeholder="Please enter an event description." formControlName="eventDescription"></textarea>
             </div>
             <br />
             <label id="clubCategories">Club/Organization Categories:</label>
-            <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="clubCategories">
+            <!-- <div class="btn-group-toggle categories" aria-labelledby="clubCategories" formGroupName="clubCategories"> -->
+            <div class="categories" aria-labelledby="clubCategories" formGroupName="clubCategories">
                 <label for="academicProf" id="academicProf" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off" name="academicProf" (click)="setClub('academicProf')" [checked]='true' ngModel>
+                    <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off" value="academicProf" formControlName="clubCategory">
                     Academic & Professional
                 </label>
                 <label for="identity" id="identity" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="identity" type="radio" class="btns btn-orange" autocomplete="off" name="identity" (click)="setClub('identity')" ngModel>
+                    <input id="identity" type="radio" class="btns btn-orange" autocomplete="off" value="identity" formControlName="clubCategory">
                     Identity Based
                 </label>
                 <label for="hobby" id="hobby" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="hobby" type="radio" class="btns btn-orange" autocomplete="off" name="hobby" (click)="setClub('hobby')" ngModel>
+                    <input id="hobby" type="radio" class="btns btn-orange" autocomplete="off" value="hobby" formControlName="clubCategory">
                     Hobby & Special Interest
                 </label>
                 <label for="service" id="service" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="service" type="radio" class="btns btn-orange" autocomplete="off" name="service" (click)="setClub('service')" ngModel>
+                    <input id="service" type="radio" class="btns btn-orange" autocomplete="off" value="service" formControlName="clubCategory">
                     Community Service
                 </label>
                 <label for="greek" id="greek" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="greek" type="radio" class="btns btn-orange" autocomplete="off" name="greek" (click)="setClub('greek')" ngModel>
+                    <input id="greek" type="radio" class="btns btn-orange" autocomplete="off" value="greek" formControlName="clubCategory">
                     Greek Organization
                 </label>
                 <label for="sportsRec " id="sportsRec" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off" name="sportsRec" (click)="setClub('sportsRec')" ngModel>
+                    <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off" value="sportsRec" formControlName="clubCategory">
                     Sports & Recreation
                 </label>
                 <label for="stuGov" id="stuGov" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off" name="stuGov" (click)="setClub('stuGov')" ngModel>
+                    <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off" value="stuGov" formControlName="clubCategory">
                     Student Government & Event Planning
                 </label>
                 <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
-                    <input id="other" type="radio" class="btns btn-orange" autocomplete="off" name="other" (click)="setClub('other')" ngModel>
+                    <input id="other" type="radio" class="btns btn-orange" autocomplete="off" value="other" formControlName="clubCategory">
                     Other
                 </label>
             </div>
             <br />
             <div class="form-group">
                 <label for="comment">Club/Organization Description:</label>
-                <textarea class="form-control" name="clubDescription" rows="2" id="club-org"
-                    placeholder="Please enter an club/organization description." ngModel></textarea>
+                <textarea class="form-control" rows="2" id="club-org"
+                    placeholder="Please enter an club/organization description." formControlName="clubDescription"></textarea>
             </div>
             <input class="btn-save" type="submit" value="Save" />
+            <!-- <button type="submit" [disabled]="!profileForm.valid">Submit</button> -->
         </form>
     </div>
 
@@ -111,6 +115,77 @@
     </div>
     <div class="spacing"></div>
 </div>
+
+<p>{{catgeoryForm.value | json}}</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit1()">
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <div formGroupName="address">
+    <h3>Address</h3>
+
+    <label>
+      Street:
+      <input type="text" formControlName="street">
+    </label>
+
+    <label>
+      City:
+      <input type="text" formControlName="city">
+    </label>
+
+    <label>
+      State:
+      <input type="text" formControlName="state">
+    </label>
+
+    <label>
+      Zip Code:
+      <input type="text" formControlName="zip">
+    </label>
+  </div>
+
+  <div formGroupName="colors">
+    <label>
+      Red:
+      <input type="radio" value="red" formControlName="color">
+    </label>
+    <label>
+      Green:
+      <input type="radio" value="green" formControlName="color">
+    </label>
+    <label>
+      Green:
+      <input type="radio" value="blue" formControlName="color">
+    </label>
+  </div>
+
+  <div formArrayName="aliases">
+    <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
+
+    <div *ngFor="let alias of aliases.controls; let i=index">
+      <!-- The repeated alias template -->
+      <label>
+        Alias:
+        <input type="text" [formControlName]="i">
+      </label>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<p>{{profileForm.value | json}}</p>
+
 <!-- <script>
 $("button").click(function () {
     $("button").removeClass("active");
