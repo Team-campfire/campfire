@@ -25,44 +25,24 @@ export class EventFeedComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
   this.http.get<any>('/getEvents').subscribe((data) => {
-
-
-
-
-
+//filtering work in progress
       for(let r of data) {
       /*
       	if((r.eventCategories[0].eventCategory == "gbm" || this.eventCategory == "") && (r.eventCategories[0].clubCategory == "athletic" || this.clubCategory == "") 
       	&& (r.eventBasics[0].line || this.location == "" )) {
         this.events.push(r);
-
       	} */
       	this.events.push(r);
       }
 
-
-
   })
-
-
 
 }
 
-
-
-
 display(): void {
 
-
-	
   this.http.get<any>('/getEvents').subscribe((data) => {
-
-
-
-
 
       for(let r of data) {
       	if((r.eventCategories[0].eventCategory == this.eventCategory || this.eventCategory == "") && (r.eventCategories[0].clubCategory == this.clubCategory || this.clubCategory == "") /* 
@@ -71,15 +51,9 @@ display(): void {
 
       	} 
       }
-
-
-
   })
 
-
-
 }
-
 
     setCategory(e: string): void   
   {  
@@ -96,10 +70,9 @@ display(): void {
 
 //set club category
         this.clubCategory = e;  
-               //   this.display();
+   //   this.display();
 
   }  
-
 
     setLocation(e: string): void   
   {  
@@ -110,8 +83,6 @@ display(): void {
 
   }  
   
-
-
  // public date: string;
   public eventName: string;
   public eventDesc: string;
