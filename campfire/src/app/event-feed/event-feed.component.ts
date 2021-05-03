@@ -75,16 +75,31 @@ export class EventFeedComponent implements OnInit {
     //     this.display();
   }
 
-  // display(): void {
-  //   this.http.get<any>('/getEvents').subscribe((data) => {
-  //     for(let r of data) {
-  //     	// if((r.eventCategories[0].eventCategory == this.eventCategory || this.eventCategory == "") && (r.eventCategories[0].clubCategory == this.clubCategory || this.clubCategory == "")
-  //       // /* && (r.eventBasics[0].line || this.location == "" )*/) {
-  //       // this.events.push(r);
-  //       //
-  //     	// }
-  //       this.events.push(r);
-  //     }
-  //   })
-  // }
+  eventsByClub(e: string): void {
+    // alert(this.clubCategory = e);
+    // alert("egg");
+
+    this.clubCategory = e;
+    this.events.length = 0;
+
+    this.http.get<any>('/getEvents').subscribe((data) => {
+      for(let r of data) {
+      	if(r.eventCategories[0].clubCategory == this.clubCategory || this.clubCategory == "") {
+        /* && (r.eventBasics[0].line || this.location == "" )*/
+          this.events.push(r);
+      	}
+        // this.events.push(r);
+      }
+    })
+  }
+
+  identify(index: any, item: any){
+     return item.name;
+  }
 }
+
+// sources:
+// https://stackoverflow.com/questions/1232040/how-do-i-empty-an-array-in-javascript
+// https://angular.io/guide/user-input
+// https://stackoverflow.com/questions/53203224/my-view-does-not-update-when-i-change-my-array-in-ngfor/53203848
+// https://stackoverflow.com/questions/45239739/angular2-ngfor-does-not-update-when-array-is-updated

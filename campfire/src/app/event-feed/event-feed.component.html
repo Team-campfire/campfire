@@ -7,10 +7,13 @@
         <button id="dropdownCatButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dropdownCat" aria-controls="dropdownCat" aria-expanded="false" aria-label="Toggle navigation"><span class = "caret"></span>
             Filters
         </button>
+        <div>{{clubCategory}}</div>
+        <button type="button" name="button" (click)="eventsByClub('academicProf')" ngModel>click me</button>
         <div class="collapse navbar-collapse" id="dropdownCat">
+        <!-- <div> -->
                 <div class="dropdown eventDropdown">
                     <button id="eventDropdownBtnMobile" onclick="eventDropdownMobile()"
-                        class="btn-secondary dropdown-toggle bg-orange">Event Category <b class="caret"></b></button>
+                        class="btn-secondary dropdown-toggle bg-orange">Event Category<b class="caret"></b></button>
                     <!--DROPDOWN STYLE ONE: standard drop down menus, different colors for the text depending on the event.
                     Could add some icons to the left of each item's text to better clarify?-->
                     <div id="eventDropdown-mobile" class="dropdown-menu">
@@ -21,7 +24,7 @@
 
                         <!-- </div> -->
                         <!--BUTTON STYLE TWO: Colored text, no fill-->
-                        <button class="dropdown-item casual-outline" type="button"  >
+                        <button class="dropdown-item casual-outline" type="button">
                             Casual
                         </button>
 
@@ -57,15 +60,16 @@
                         </button>
                     </div>
                 </div>
-
-
+                <!-- onclick="clubDropdownMobile()" (click)="clubDropdownMobile()" -->
                 <div class="dropdown">
-                    <button id = "clubDropdownBtnMobile" onclick="clubDropdownMobile()" class="btn-secondary dropdown-toggle bg-orange">Club Category <b
-                            class="caret"></b></button>
+                <!-- <div> -->
+                    <button id = "clubDropdownBtnMobile" class="btn-secondary dropdown-toggle bg-orange">Club Category<b class="caret"></b></button>
+                    <!-- <button class="bg-orange">Club Category<b></b></button> -->
                     <div id="clubDropdown-mobile" class="dropdown-menu">
+                      <!-- <div> -->
                         <!--DROPDOWN STYLE TWO: buttons within each dropdown menu item-->
                         <!--BUTTON STYLE THREE: Buttons the same size as the text-->
-                        <button class="dropdown-item academicProf-outline" type="button">
+                        <button class="academicProf-outline" type="button">
                             Academic & Professional
                         </button>
 
@@ -179,7 +183,7 @@
                     <div id="clubDropdown" class="dropdown-menu">
                         <!--DROPDOWN STYLE TWO: buttons within each dropdown menu item-->
                         <!--BUTTON STYLE THREE: Buttons the same size as the text-->
-                        <button class="dropdown-item academicProf-outline" type="button">
+                        <button class="dropdown-item academicProf-outline" type="button" (click)="eventsByClub('academicProf')" ngModel>
                             Academic & Professional
                         </button>
 
@@ -252,7 +256,7 @@
         </div> -->
 
 
-       <div class="card event-card" style="width: 18rem;" *ngFor="let event of events">
+       <div class="card event-card" style="width: 18rem;" *ngFor="let event of events; trackBy: identify">
             <img src="../../assets/casual-Hangout-rafiki.svg" class="card-img-top"
                 alt="Illustration of two people hanging out.">
             <div class="card-body">
