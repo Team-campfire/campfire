@@ -33,28 +33,29 @@ export class EventFeedComponent implements OnInit {
     this.http.get<any>('/getEvents').subscribe((data) => {
       //filtering work in progress
       for(let r of data) {
-      /*
-      	if((r.eventCategories[0].eventCategory == "gbm" || this.eventCategory == "") && (r.eventCategories[0].clubCategory == "athletic" || this.clubCategory == "")
-      	&& (r.eventBasics[0].line || this.location == "" )) {
-        this.events.push(r);
-      	} */
+
+      	// if((r.eventCategories[0].eventCategory == "gbm" || this.eventCategory == "") && (r.eventCategories[0].clubCategory == "athletic" || this.clubCategory == "")
+        //     && (r.eventBasics[0].line || this.location == "" )) {
+        //   this.events.push(r);
+      	// }
+        // alert(r._id);
       	this.events.push(r);
       }
     })
   }
 
-  display(): void {
-    this.http.get<any>('/getEvents').subscribe((data) => {
-      for(let r of data) {
-      	// if((r.eventCategories[0].eventCategory == this.eventCategory || this.eventCategory == "") && (r.eventCategories[0].clubCategory == this.clubCategory || this.clubCategory == "")
-        // /* && (r.eventBasics[0].line || this.location == "" )*/) {
-        // this.events.push(r);
-        //
-      	// }
-        this.events.push(r);
-      }
-    })
-  }
+  // display(): void {
+  //   this.http.get<any>('/getEvents').subscribe((data) => {
+  //     for(let r of data) {
+  //     	// if((r.eventCategories[0].eventCategory == this.eventCategory || this.eventCategory == "") && (r.eventCategories[0].clubCategory == this.clubCategory || this.clubCategory == "")
+  //       // /* && (r.eventBasics[0].line || this.location == "" )*/) {
+  //       // this.events.push(r);
+  //       //
+  //     	// }
+  //       this.events.push(r);
+  //     }
+  //   })
+  // }
 
   setCategory(e: string): void {
   //set event category
@@ -94,7 +95,7 @@ export class EventFeedComponent implements OnInit {
   }
 
   identify(index: any, item: any){
-     return item.name;
+     return item._id;
   }
 }
 
@@ -103,3 +104,6 @@ export class EventFeedComponent implements OnInit {
 // https://angular.io/guide/user-input
 // https://stackoverflow.com/questions/53203224/my-view-does-not-update-when-i-change-my-array-in-ngfor/53203848
 // https://stackoverflow.com/questions/45239739/angular2-ngfor-does-not-update-when-array-is-updated
+// https://angular.io/api/common/NgForOf
+// https://www.kirupa.com/html5/handling_events_for_many_elements.htm
+// https://stackoverflow.com/questions/44857300/angular4-child-element-not-firing-parent-click-event

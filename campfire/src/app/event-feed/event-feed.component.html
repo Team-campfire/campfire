@@ -183,30 +183,31 @@
                     <div id="clubDropdown" class="dropdown-menu">
                         <!--DROPDOWN STYLE TWO: buttons within each dropdown menu item-->
                         <!--BUTTON STYLE THREE: Buttons the same size as the text-->
-                        <button class="dropdown-item academicProf-outline" type="button" (click)="eventsByClub('academicProf')" ngModel>
+                        <button class="dropdown-item academicProf-outline" type="button">
                             Academic & Professional
                         </button>
 
-                        <button class="dropdown-item identity-outline" type="button" >
+                        <button class="dropdown-item identity-outline" type="button" (click)="eventsByClub('Identity')" ngModel>
                             Identity Based
                         </button>
 
-                        <button class="dropdown-item hobby-outline" type="button" >
+                        <button class="dropdown-item hobby-outline" type="button" (click)="eventsByClub2('Hobby & Special Interest')" ngModel>
                             Hobby & Special Interest
                         </button>
-                        <button class="dropdown-item service-outline" type="button" >
+
+                        <button class="dropdown-item service-outline" type="button">
                             Community Service
                         </button>
 
-                        <button class="dropdown-item greek-outline" type="button" >
+                        <button class="dropdown-item greek-outline" type="button">
                             Greek Organization
                         </button>
 
-                        <button class="dropdown-item sportsRec-outline" type="button" >
+                        <button class="dropdown-item sportsRec-outline" type="button">
                             Sports & Recreation
                         </button>
 
-                        <button class="dropdown-item stuGov-outline" type="button" >
+                        <button class="dropdown-item stuGov-outline" type="button">
                             Student Government & Event Planning
                         </button>
 
@@ -274,6 +275,6 @@
                 <p class="club-category academicProf-outline">{{event.eventCategories[0].clubCategory}}</p>
                 <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
-        </div>
-    </div>
+      </div>
+  </div>
 </div>
