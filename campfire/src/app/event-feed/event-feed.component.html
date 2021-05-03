@@ -6,7 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="dropdownCat">
                 <div class="dropdown eventDropdown">
-                    <button id="eventDropdownBtn" onclick="eventDropdownMobile()"
+                    <button id="eventDropdownBtnMobile" onclick="eventDropdownMobile()"
                         class="btn-secondary dropdown-toggle bg-orange">Event Category <b class="caret"></b></button>
                     <!--DROPDOWN STYLE ONE: standard drop down menus, different colors for the text depending on the event.
                     Could add some icons to the left of each item's text to better clarify?-->
@@ -57,7 +57,7 @@
             
 
                 <div class="dropdown">
-                    <button id = "clubDropdownBtn" onclick="clubDropdownMobile()" class="btn-secondary dropdown-toggle bg-orange">Club Category <b
+                    <button id = "clubDropdownBtnMobile" onclick="clubDropdownMobile()" class="btn-secondary dropdown-toggle bg-orange">Club Category <b
                             class="caret"></b></button>
                     <div id="clubDropdown-mobile" class="dropdown-menu">
                         <!--DROPDOWN STYLE TWO: buttons within each dropdown menu item-->
@@ -103,12 +103,12 @@
                         <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off"> Casual
                     </label> -->
 
-                    <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="online" type="radio" class="btns btn-orange" autocomplete="off" name="online" (click)="setLocation('online')" ngModel> Online
+                    <label for="online-mobile" id="onlineHelpMobile" class="btn btn-secondary btns btn-orange btn-category">
+                        <input id="online-mobile" type="radio" class="btns btn-orange" autocomplete="off" name="online-mobile" (click)="setLocation('online')" ngModel> Online
                     </label>
 
-                    <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
-                        <input id="offline" type="radio" class="btns btn-orange" autocomplete="off"  name="offline" (click)="setLocation('offline')" ngModel> Offline
+                    <label for="offline-mobile" id="offlineHelp-mobile" class="btn btn-secondary btns btn-orange btn-category">
+                        <input id="offline-mobile" type="radio" class="btns btn-orange" autocomplete="off"  name="offline-mobile" (click)="setLocation('offline')" ngModel> Offline
                     </label>
             
                 <!-- <button type="button" class="btns btn-orange event-category" style="width: auto;">Online</button>
@@ -211,11 +211,11 @@
                 </div>
             <div class="right-align onlineOffline btn-group-toggle categories" data-toggle="buttons">
 
-                    <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
+                    <label for="online" id="onlineHelp" class="btn btn-secondary btns btn-orange btn-category">
                         <input id="online" type="radio" class="btns btn-orange" autocomplete="off" name="online" (click)="setLocation('online')" ngModel> Online
                     </label>
 
-                    <label for="online" id="online" class="btn btn-secondary btns btn-orange btn-category">
+                    <label for="offline" id="offlineHelp" class="btn btn-secondary btns btn-orange btn-category">
                         <input id="offline" type="radio" class="btns btn-orange" autocomplete="off"  name="offline" (click)="setLocation('offline')" ngModel> Offline
                     </label>
             
@@ -254,7 +254,7 @@
                 alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">WED, 22 APR, 6:00 PM EDT</p>
-                <h5 class="card-title event-name">Web Sci Demo</h5>
+                <h2 class="card-title event-name">Web Sci Demo</h2>
                 <p class="card-text event-organizer">Team Campfire</p>
                 <button type="button" class="btns event-category info" style="width: auto;"
                     disabled>Informational</button>
@@ -273,7 +273,7 @@
             <img src="../../assets/finding-pana.svg" class="card-img-top" alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">THURS, 29 APR, 5:00 PM EDT</p>
-                <h5 class="card-title event-name">Finding your 'Ninth Path'</h5>
+                <h2 class="card-title event-name">Finding your 'Ninth Path'</h2>
                 <p class="card-text event-organizer">ITWS Leadership</p>
                 <button type="button" class="btns event-category gbm" style="width: auto;" disabled>General Body
                     Meetings (GBM)</button>
@@ -296,7 +296,7 @@
             <img src="../../assets/movie-pana.svg" class="card-img-top" alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">MON, 03 MAY, 6:00 PM EDT</p>
-                <h5 class="card-title event-name">Decolonizing Language: Sky Hopinka</h5>
+                <h2 class="card-title event-name">Decolonizing Language: Sky Hopinka</h2>
                 <p class="card-text event-organizer">EMPAC</p>
                 <button type="button" class="btns event-category other" style="width: auto;" disabled>Other</button>
                 <br>
@@ -326,7 +326,7 @@
                 alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">MON, 26 APR, 9-10:00 AM EDT</p>
-                <h5 class="card-title event-name">Mental Health Mondays</h5>
+                <h2 class="card-title event-name">Mental Health Mondays</h2>
                 <p class="card-text event-organizer">Rensselaer Union</p>
                 <button type="button" class="btns event-category casual" style="width: auto;" disabled>Casual</button>
                 <br>
@@ -350,7 +350,7 @@
             <img src="../../assets/Yoga-pana.svg" class="card-img-top" alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">MON, 26 APR, 9-10:00 AM EDT</p>
-                <h5 class="card-title event-name">Virtual Fitness Class: Cardio & Core</h5>
+                <h2 class="card-title event-name">Virtual Fitness Class: Cardio & Core</h2>
                 <p class="card-text event-organizer">Mueller Center</p>
                 <button type="button" class="btns event-category workshop" style="width: auto;"
                     disabled>Workshop</button>
@@ -376,7 +376,7 @@
                 alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">WED, 28 APR, 4-5:00 PM EDT</p>
-                <h5 class="card-title event-name">Tactical Embodiment: Visiting Artist Lecture with Angela Washko</h5>
+                <h2 class="card-title event-name">Tactical Embodiment: Visiting Artist Lecture with Angela Washko</h2>
                 <p class="card-text event-organizer">Ben Chang, HASS Department</p>
                 <button type="button" class="btns event-category workshop" style="width: auto;"
                     disabled>Workshop</button>

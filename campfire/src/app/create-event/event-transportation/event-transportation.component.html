@@ -4,8 +4,8 @@
             <h2 class="form-title">Event Activities and Transportation</h2>
             <br>
             <div class="form-group">
-                <label for="yourName">Spotify Playlist link:</label>
-                <input type="name" name="spotifyPlaylist" class="form-control" id="yourName" aria-describedby="yourNameHelp"
+                <label for="spotifyPlaylist" id="playlistHelp">Spotify Playlist link:</label>
+                <input type="playlist" name="spotifyPlaylist" class="form-control" id="spotifyPlaylist" aria-describedby="playlistHelp"
                   placeholder="Enter Spotify playlist URL" ngModel>
               </div>
             <label>Does your event require transportation?</label>
@@ -23,8 +23,8 @@
             </div>
             <br>
             <div class="form-group" id="addCars">
-                <label for="addCar">If so, add cars:</label>
-                <input type="car" class="form-control aCar" name="driverName" id="addCar1" aria-describedby="carHelp"
+                <label for="addCar" id="carHelp">If so, add cars:</label>
+                <input type="car" class="form-control aCar" name="driverName" id="addCar" aria-describedby="carHelp"
                     placeholder="Enter name of driver" ngModel>
             </div>
             <a type="button" id="addCarButton" class="bg-add-form btn-add-form"> + Add Car </a>
@@ -36,7 +36,7 @@
     <div class="centerButton">
         <a type="button" class="bg-orange btn-step prev" routerLink='/eventCategories'> &#60; Back </a>
         <a type="button" class="bg-orange btn-step next" routerLink='/finish'>Next &#62;</a>
-        <h6 class="stepCompleted"> Step 4 of 4 </h6>
+        <h3 class="stepCompleted"> Step 4 of 4 </h3>
     </div>
     <div class="spacing"></div>
 </div>

@@ -4,24 +4,24 @@
     <form #eventStart = "ngForm" (ngSubmit) = "onClickSubmit(eventStart.value)">
       <h2 class="form-title">Create New Event</h2>
       <div class="form-group">
-        <label for="emailAddress">Email address:</label>
-        <input type="email" name="yourEmailAddress" class="form-control" id="emailAddress" aria-describedby="emailHelp"
-          placeholder="Enter email" ngModel>
+        <label for="yourEmailAddress" id="emailHelp">Email address:</label>
+        <input type="email" name="yourEmailAddress" class="form-control" id="yourEmailAddress" title="Enter your Email Address" 
+        aria-describedby="emailHelp" placeholder="Enter your email" ngModel>
       </div>
       <div class="form-group">
-        <label for="eventName">Event Name:</label>
+        <label for="eventName" id="eventHelp">Event Name:</label>
         <input type="event" name="eventName" class="form-control" id="eventName" aria-describedby="eventHelp"
-          placeholder="Enter Event Name" ngModel>
+          placeholder="Enter event name" ngModel>
       </div>
       <div class="form-group">
-        <label for="yourName">Your Name (will be displayed as event owner):</label>
+        <label for="yourName" id="yourNameHelp">Your Name (will be displayed as event owner):</label>
         <input type="name" name="yourName" class="form-control" id="yourName" aria-describedby="yourNameHelp"
-          placeholder="Enter Name" ngModel>
+          placeholder="Enter club name" ngModel>
       </div>
       <div class="form-group" id="addFriends">
-        <label for="addFriend">Invite friends (email address):</label>
-        <input type="friend" name="inviteFriends" class="form-control aFriend" id="addFriend1"
-          aria-describedby="friendHelp" placeholder="Enter Email" ngModel>
+        <label for="inviteFriends" id="friendHelp">Invite friends (enter email address):</label>
+        <input type="friend" name="inviteFriends" class="form-control aFriend" title="Friend Email Address" id="inviteFriends"
+        aria-describedby="friendHelp" placeholder="Enter friend email" ngModel>
       </div>
       <a type="button" id="addFriendButton" class="bg-add-form btn-add-form"> + Add Friends </a>
       <br>
@@ -31,7 +31,7 @@
 
   <div class="centerButton">
     <a type="button" class="bg-orange btn-step next" routerLink='/eventBasics'>Next &#62;</a>
-    <h6 class="stepCompleted"> Step 1 of 4 </h6>
+    <h3 class="stepCompleted"> Step 1 of 4 </h3>
   </div>
   <div class="spacing"></div>
 </div>
