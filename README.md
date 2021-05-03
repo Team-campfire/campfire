@@ -26,7 +26,7 @@
 
 ### **Rachel Wang (RCS: wangr15, Github: rachel-wg):**
 * UX design/general design
-	* I led UX design for our application, sketching wireframes and user flows and making final mockups using Figma (Figma file included in our repo under "presentations" directory, final user flow located on slide 10 in our final presentation). I worked with Anya to redesign our Campfire logo and favicon, and we also worked together for other design materials like slide deck format and refining the visuals and front-end of our application. 
+	* I led UX design for our application, sketching wireframes and user flows and making final mockups using Figma (Figma file included in our repo under "presentations" directory, final user flow located on slide 10 in our final presentation). I worked with Anya to redesign our Campfire logo and used this to create the favicon. We also worked together for other design materials like slide deck format and refining the visuals and front-end of our application. 
 	  
 * User research
 	* I led creating and analyzing a Google Forms survey to scope out our problem space (helping people plan events - questions/results are in the appendix of our midterm and final presentations) and reviewed the questions with our team members. We used the results from our survey to help rebrand our app from weMeet to campfire, ideate new features, and focus on our new target audience, college and university students planning events for clubs. 
