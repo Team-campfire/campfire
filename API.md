@@ -1,6 +1,7 @@
 ## Campfire App 
 
 # GET requests
+* Responsibility of the back-end team (Teddy and Michael) to implement, these are currently not implemented.
 * GET requests are used to go to specific pages that load data from the database.
     * GET /edit/:ownerCode/ownerDashboard
         * This endpoint goes to the owner dashboard and loads the data of the specified event.
@@ -25,6 +26,7 @@
 
 
 # PUT requests
+* Responsibility of the back-end team (Teddy and Michael) to implement, these are currently not implemented.
 * PUT requests are mainly used to update the Owner Dashboard when the user clicks the "save changes" button. 
     *  PUT /edit/:ownerCode/ownerDashboard
         * This endpoint updates the event in the database with the new edits the owner has made. These changes should be reflected on both the owner and public dashboard of the event, as well as the event's card in the public event feed if it's a public event.

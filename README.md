@@ -31,7 +31,7 @@
 * User research
 	* I led creating and analyzing a Google Forms survey to scope out our problem space (helping people plan events - questions/results are in the appendix of our midterm and final presentations) and reviewed the questions with our team members. We used the results from our survey to help rebrand our app from weMeet to campfire, ideate new features, and focus on our new target audience, college and university students planning events for clubs. 
 	
-* Front-end (basic HTML/CSS/JS) implementation of mockup 
+* Front-end (vanilla HTML/CSS/JS) implementation of mockup 
 	* I worked with Anya to implement the mockup screens into a mostly static front-end prototype of our application. I specifically implemented the event feed and join event screens (join event flow). I also did the color changing buttons/labels on click that appear throughout our application. I also implemented JS/TS functionality for these screens, such as the dropdowns on event feed.  
 
 * Database schema
