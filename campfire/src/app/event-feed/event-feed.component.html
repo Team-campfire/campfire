@@ -57,7 +57,7 @@
                         </button>
                     </div>
                 </div>
-            
+
 
                 <div class="dropdown">
                     <button id = "clubDropdownBtnMobile" onclick="clubDropdownMobile()" class="btn-secondary dropdown-toggle bg-orange">Club Category <b
@@ -68,7 +68,7 @@
                         <button class="dropdown-item academicProf-outline" type="button">
                             Academic & Professional
                         </button>
-                        
+
                         <button class="dropdown-item identity-outline" type="button" >
                             Identity Based
                         </button>
@@ -96,7 +96,7 @@
                             Other
                         </button>
                     </div>
-             
+
 
             <div class="onlineOffline btn-group-toggle categories" data-toggle="buttons">
                 <!--<label class="btn btn-orange">
@@ -113,12 +113,12 @@
                     <label for="offline-mobile" id="offlineHelp-mobile" class="btn btn-secondary btns btn-orange btn-category">
                         <input id="offline-mobile" type="radio" class="btns btn-orange" autocomplete="off"  name="offline-mobile" (click)="setLocation('offline')" ngModel> Offline
                     </label>
-            
+
                 <!-- <button type="button" class="btns btn-orange event-category" style="width: auto;">Online</button>
                 <button type="button" class="btns btn-orange event-category" style="width: auto;">Offline</button> -->
              </div>
             </div>
-        </div> 
+        </div>
 
         <div id="desktop-tablet-nav" >
             <div class = "left-align"></div>
@@ -171,7 +171,7 @@
                         </button>
                     </div>
                 </div>
-            
+
 
                 <div class="dropdown">
                     <button id = "clubDropdownBtn" onclick="clubDropdown()" class="btn-secondary dropdown-toggle bg-orange">Club Category <b
@@ -182,7 +182,7 @@
                         <button class="dropdown-item academicProf-outline" type="button">
                             Academic & Professional
                         </button>
-                        
+
                         <button class="dropdown-item identity-outline" type="button" >
                             Identity Based
                         </button>
@@ -210,7 +210,7 @@
                             Other
                         </button>
                     </div>
-             
+
                 </div>
             <div class="right-align onlineOffline btn-group-toggle categories" data-toggle="buttons">
 
@@ -221,7 +221,7 @@
                     <label for="offline" id="offlineHelp" class="btn btn-secondary btns btn-orange btn-category">
                         <input id="offline" type="radio" class="btns btn-orange" autocomplete="off"  name="offline" (click)="setLocation('offline')" ngModel> Offline
                     </label>
-            
+
                 <!-- <button type="button" class="btns btn-orange event-category" style="width: auto;">Online</button>
                 <button type="button" class="btns btn-orange event-category" style="width: auto;">Offline</button> -->
              </div>
@@ -257,6 +257,7 @@
                 alt="Illustration of two people hanging out.">
             <div class="card-body">
                 <p class="card-text event-date">{{event.eventBasics[0].date}}</p>
+                <p class="card-text event-time">{{event.eventBasics[0].time}}</p>
                 <h5 class="card-title event-name">{{event.eventName}}</h5>
                 <p class="card-text event-organizer">{{event.yourName}}</p>
                 <button type="button" class="btns event-category info" style="width: auto;">{{event.eventCategories[0].eventCategory}}</button>
@@ -266,8 +267,7 @@
                 <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
             <div class="card-header">
-                <p class="club-category academicProf-outline"
-                    >{{event.eventCategories[0].clubCategory}}</p>
+                <p class="club-category academicProf-outline">{{event.eventCategories[0].clubCategory}}</p>
                 <a type="button" class="bg-add btn-add-small" routerLink="/viewerDashboard">Join Event</a>
             </div>
         </div>
