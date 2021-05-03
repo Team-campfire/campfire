@@ -57,7 +57,7 @@ p.num-attendees{
     display: inline;
 
 }
-h5.event-name{
+h2.event-name{
     /* font-family: Futura; */
     font-family: 'Alata', sans-serif;
     font-style: normal;

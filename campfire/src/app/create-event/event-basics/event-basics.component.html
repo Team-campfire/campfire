@@ -25,36 +25,36 @@
             <br>
             <label>Public or Private?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonPublic" id="publicButton" value="public" (click)="setPrivacy('yes')" [checked]='true' ngModel>
-                <label class="form-check-label" for="publicButton">
+                <input class="form-check-input" type="radio" name="radioButtonPublic" id="publicButton" value="public" aria-describedby="publicHelp"  (click)="setPrivacy('yes')" [checked]='true' ngModel>
+                <label class="form-check-label" for="publicButton" id="publicHelp">
                     Public
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonPrivate" id="privateButton" value="private" (click)="setPrivacy('no')" ngModel>
-                <label class="form-check-label" for="privateButton">
+                <input class="form-check-input" type="radio" name="radioButtonPrivate" id="privateButton" value="private" aria-describedby="privateHelp"  (click)="setPrivacy('no')" ngModel>
+                <label class="form-check-label" for="privateButton" id="privateHelp">
                     Private
                 </label>
             </div>
             <br>
             <div class="form-group">
-                <label for="date">Date:</label>
+                <label for="datepicker" id="dateHelp">Date:</label>
                 <input type="date" name="date" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp" placeholder="Enter date" ngModel>
                 <br>
-                <label for="time">Time:</label>
-                <input type="time" name="time" class="form-control" type="text" aria-describedby="timeHelp" placeholder="Enter time" ngModel>
+                <label for="time" id="timeHelp">Time:</label>
+                <input type="time" name="time" class="form-control" type="text" id="time" aria-describedby="timeHelp" placeholder="Enter time" ngModel>
             </div>
             <br>
             <label>Held online or offline?</label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online" (click)="setLine('yes')" [checked]='true' ngModel>
-                <label class="form-check-label" for="online">
+            <div class="form-check onOff">
+                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online" aria-describedby="onlineHelp" (click)="setLine('yes')" [checked]='true' ngModel>
+                <label class="form-check-label" for="onlineRadio" id="onlineHelp">
                     Online
                 </label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline" (click)="setLine('no')" ngModel>
-                <label class="form-check-label" for="offlineRadio" >
+            <div class="form-check onOff">
+                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline" aria-describedby="offlineHelp" (click)="setLine('no')" ngModel>
+                <label class="form-check-label" for="offlineRadio" id="offlineHelp">
                     Offline
                 </label>
             </div>
@@ -64,7 +64,7 @@
     <div class="centerButton">
         <a type="button" class="bg-orange btn-step prev" routerLink='/eventStart'>&#60; Back</a>
         <a type="button" class="bg-orange btn-step next" routerLink='/eventCategories'>Next &#62;</a>
-        <h6 class="stepCompleted"> Step 2 of 4 </h6>
+        <h3 class="stepCompleted"> Step 2 of 4 </h3>
     </div>
     <div class="spacing"></div>
 </div>
