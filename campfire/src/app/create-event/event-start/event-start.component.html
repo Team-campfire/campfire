@@ -1,12 +1,12 @@
 <!-- <p>event-basics works!</p> -->
 <div class="background">
   <div class="form ">
-    <form #eventStart = "ngForm" (ngSubmit) = "onClickSubmit(eventStart.value)">
+    <form #eventStart="ngForm" (ngSubmit)="onClickSubmit(eventStart.value)">
       <h2 class="form-title">Create New Event</h2>
       <div class="form-group">
         <label for="yourEmailAddress" id="emailHelp">Email address:</label>
-        <input type="email" name="yourEmailAddress" class="form-control" id="yourEmailAddress" title="Enter your Email Address" 
-        aria-describedby="emailHelp" placeholder="Enter your email" ngModel>
+        <input type="email" name="yourEmailAddress" class="form-control" id="yourEmailAddress"
+          title="Enter your Email Address" aria-describedby="emailHelp" placeholder="Enter your email" ngModel>
       </div>
       <div class="form-group">
         <label for="eventName" id="eventHelp">Event Name:</label>
@@ -20,8 +20,8 @@
       </div>
       <div class="form-group" id="addFriends">
         <label for="inviteFriends" id="friendHelp">Invite friends (enter email address):</label>
-        <input type="friend" name="inviteFriends" class="form-control aFriend" title="Friend Email Address" id="inviteFriends"
-        aria-describedby="friendHelp" placeholder="Enter friend email" ngModel>
+        <input type="friend" name="inviteFriends" class="form-control aFriend" title="Friend Email Address"
+          id="inviteFriends" aria-describedby="friendHelp" placeholder="Enter friend email" ngModel>
       </div>
       <a type="button" id="addFriendButton" class="bg-add-form btn-add-form"> + Add Friends </a>
       <br>

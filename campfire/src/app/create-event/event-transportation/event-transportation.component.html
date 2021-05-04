@@ -1,22 +1,24 @@
 <div class="background">
     <div class="form">
-        <form #submitEventTransportation = "ngForm" (ngSubmit) = "onClickSubmit(submitEventTransportation.value)">
+        <form #submitEventTransportation="ngForm" (ngSubmit)="onClickSubmit(submitEventTransportation.value)">
             <h2 class="form-title">Event Activities and Transportation</h2>
             <br>
             <div class="form-group">
                 <label for="spotifyPlaylist" id="playlistHelp">Spotify Playlist link:</label>
-                <input type="playlist" name="spotifyPlaylist" class="form-control" id="spotifyPlaylist" aria-describedby="playlistHelp"
-                  placeholder="Enter Spotify playlist URL" ngModel>
-              </div>
+                <input type="playlist" name="spotifyPlaylist" class="form-control" id="spotifyPlaylist"
+                    aria-describedby="playlistHelp" placeholder="Enter Spotify playlist URL" ngModel>
+            </div>
             <label>Does your event require transportation?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" id="yesButton" value="yes" name="yes" (click)="setTransport('yes')" [checked]='true' ngModel>
+                <input class="form-check-input" type="radio" id="yesButton" value="yes" name="yes"
+                    (click)="setTransport('yes')" [checked]='true' ngModel>
                 <label class="form-check-label" for="yesButton">
                     Yes
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" id="noButton" value="no" name="no" (click)="setTransport('no')" ngModel>
+                <input class="form-check-input" type="radio" id="noButton" value="no" name="no"
+                    (click)="setTransport('no')" ngModel>
                 <label class="form-check-label" for="noButton">
                     No
                 </label>

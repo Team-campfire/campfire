@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { HttpService } from '../../http.service';
 // declare var $: any;
 
@@ -19,7 +19,7 @@ export class ViewerDashboardComponent implements OnInit {
   time = '';
   eventDesc = '';
   clubOrgDesc = '';
-  
+
 
   constructor(private http: HttpClient) {
     this.eventName = "Web Sci Demo";
@@ -39,14 +39,14 @@ export class ViewerDashboardComponent implements OnInit {
   }
   ngOnInit(): void {
 
-  this.http.get<any>('/getEvent').subscribe((data) => {
-//filtering work in progress
-      for(let r of data) {
-      /*
-        if((r.eventCategories[0].eventCategory == "gbm" || this.eventCategory == "") && (r.eventCategories[0].clubCategory == "athletic" || this.clubCategory == "") 
-        && (r.eventBasics[0].line || this.location == "" )) {
-        this.events.push(r);
-        } */
+    this.http.get<any>('/getEvent').subscribe((data) => {
+      //filtering work in progress
+      for (let r of data) {
+        /*
+          if((r.eventCategories[0].eventCategory == "gbm" || this.eventCategory == "") && (r.eventCategories[0].clubCategory == "athletic" || this.clubCategory == "") 
+          && (r.eventBasics[0].line || this.location == "" )) {
+          this.events.push(r);
+          } */
         this.events.push(r);
       }
       this.date = this.events[0].eventBasics[0].date;
@@ -55,7 +55,7 @@ export class ViewerDashboardComponent implements OnInit {
       this.clubOrgDesc = this.events[0].eventCategories[0].clubDescription;
 
 
-  })
+    })
   }
 
   fillForm() {

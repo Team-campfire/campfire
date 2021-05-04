@@ -9,15 +9,16 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script>
-        $('#datepicker').datetimepicker({
-            dateFormat: 'yy-mm-dd',
-            timeFormat: 'HH:mm z',
-            timezoneList: [ 
-            { value: -300, label: 'Eastern'}, 
-            { value: -360, label: 'Central' }, 
-            { value: -420, label: 'Mountain' }, 
-            { value: -480, label: 'Pacific' } 
-        ]});
+    $('#datepicker').datetimepicker({
+        dateFormat: 'yy-mm-dd',
+        timeFormat: 'HH:mm z',
+        timezoneList: [
+            { value: -300, label: 'Eastern' },
+            { value: -360, label: 'Central' },
+            { value: -420, label: 'Mountain' },
+            { value: -480, label: 'Pacific' }
+        ]
+    });
 </script>
 
 <div class="form-dashboard">
@@ -35,7 +36,7 @@
     <div id="accordion">
         <div class="panel-group" id="accordion">
 
-             <!--First Panel-->
+            <!--First Panel-->
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-full">
                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapseBasics">Basics</h4>
@@ -63,12 +64,12 @@
                                 </div><br>
                                 <div class="form-check">
                                     <label for="date">Date:</label>
-                                    <input type="date" class="form-control" id="datepicker" type="text" [value]="date" aria-describedby="dateHelp"
-                                        readonly>
+                                    <input type="date" class="form-control" id="datepicker" type="text" [value]="date"
+                                        aria-describedby="dateHelp" readonly>
                                     <br>
                                     <label for="time">Time:</label>
                                     <input type="time" class="form-control" type="text" aria-describedby="timeHelp"
-                                    [value]="time" readonly>
+                                        [value]="time" readonly>
                                 </div>
                                 <div class="calendar">
                                     <iframe
@@ -388,7 +389,8 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <div class="form-group">
-                                <p style="font-size: xx-large;">Share the below code to invite others to your event at: </p>
+                                <p style="font-size: xx-large;">Share the below code to invite others to your event at:
+                                </p>
                                 <p style="font-size: larger;">campfire.com/join</p>
                                 <p style="font-size: x-large;">Code: {{events[0].eventCode[0].eventCode}}</p>
                             </div>

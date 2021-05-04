@@ -39,9 +39,9 @@ export class EventCategoriesComponent implements OnInit {
       clubCategory: this.catgeoryForm.value.clubCategories.clubCategory,
       clubDescription: this.catgeoryForm.value.clubDescription
     })
-    .subscribe((data)  => { console.log(data); }, (err) => {
-      console.log("Error", err);
-    });
+      .subscribe((data) => { console.log(data); }, (err) => {
+        console.log("Error", err);
+      });
   }
 
   // get aliases() {

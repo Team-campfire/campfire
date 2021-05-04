@@ -5,33 +5,36 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     //$(function () {
-        $("#datepicker").datetimepicker({
-            dateFormat: "yy-mm-dd",
-            timeFormat: 'HH:mm z',
-	        timezoneList: [
-			{ value: -300, label: 'Eastern'},
-			{ value: -360, label: 'Central' },
-			{ value: -420, label: 'Mountain' },
-			{ value: -480, label: 'Pacific' }
-        ]});
+    $("#datepicker").datetimepicker({
+        dateFormat: "yy-mm-dd",
+        timeFormat: 'HH:mm z',
+        timezoneList: [
+            { value: -300, label: 'Eastern' },
+            { value: -360, label: 'Central' },
+            { value: -420, label: 'Mountain' },
+            { value: -480, label: 'Pacific' }
+        ]
+    });
    // });
 </script>
 
 <div class="background">
 
     <div class="form">
-        <form #submitEventBasics = "ngForm" (ngSubmit) = "onClickSubmit(submitEventBasics.value)">
+        <form #submitEventBasics="ngForm" (ngSubmit)="onClickSubmit(submitEventBasics.value)">
             <h2 class="form-title">Event Basics</h2>
             <br>
             <label>Public or Private?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonPublic" id="publicButton" value="public" aria-describedby="publicHelp"  (click)="setPrivacy('yes')" [checked]='true' ngModel>
+                <input class="form-check-input" type="radio" name="radioButtonPublic" id="publicButton" value="public"
+                    aria-describedby="publicHelp" (click)="setPrivacy('yes')" [checked]='true' ngModel>
                 <label class="form-check-label" for="publicButton" id="publicHelp">
                     Public
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioButtonPrivate" id="privateButton" value="private" aria-describedby="privateHelp"  (click)="setPrivacy('no')" ngModel>
+                <input class="form-check-input" type="radio" name="radioButtonPrivate" id="privateButton"
+                    value="private" aria-describedby="privateHelp" (click)="setPrivacy('no')" ngModel>
                 <label class="form-check-label" for="privateButton" id="privateHelp">
                     Private
                 </label>
@@ -39,21 +42,25 @@
             <br>
             <div class="form-group">
                 <label for="datepicker" id="dateHelp">Date:</label>
-                <input type="date" name="date" class="form-control" id="datepicker" type="text" aria-describedby="dateHelp" placeholder="Enter date" ngModel>
+                <input type="date" name="date" class="form-control" id="datepicker" type="text"
+                    aria-describedby="dateHelp" placeholder="Enter date" ngModel>
                 <br>
                 <label for="time" id="timeHelp">Time:</label>
-                <input type="time" name="time" class="form-control" type="text" id="time" aria-describedby="timeHelp" placeholder="Enter time" ngModel>
+                <input type="time" name="time" class="form-control" type="text" id="time" aria-describedby="timeHelp"
+                    placeholder="Enter time" ngModel>
             </div>
             <br>
             <label>Held online or offline?</label>
             <div class="form-check onOff">
-                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online" aria-describedby="onlineHelp" (click)="setLine('yes')" [checked]='true' ngModel>
+                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="onlineRadio" value="online"
+                    aria-describedby="onlineHelp" (click)="setLine('yes')" [checked]='true' ngModel>
                 <label class="form-check-label" for="onlineRadio" id="onlineHelp">
                     Online
                 </label>
             </div>
             <div class="form-check onOff">
-                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline" aria-describedby="offlineHelp" (click)="setLine('no')" ngModel>
+                <input class="form-check-input" type="radio" name="radioButtonOnOff" id="offlineRadio" value="offline"
+                    aria-describedby="offlineHelp" (click)="setLine('no')" ngModel>
                 <label class="form-check-label" for="offlineRadio" id="offlineHelp">
                     Offline
                 </label>

@@ -3,15 +3,15 @@
     <form>
         <h2 class="form-title">Join Event</h2>
         <div class="form-group">
-        <form #eventCode = "ngForm" (ngSubmit) = "onClickSubmit(eventCode.value)">
+            <form #eventCode="ngForm" (ngSubmit)="onClickSubmit(eventCode.value)">
 
-            <label for="emailAddress">Event Code:</label>
-            <input type="email" class="form-control" id="code" name="code" aria-describedby="enterCode"
-                placeholder="Enter event code" ngModel>
-             <input class="btn-save" type="submit" value="Join Event"> 
-        <!-- <a type="submit" class="bg-add btn-add" routerLink="/viewerDashboard">Join Event</a> -->
-            <!--<input type="submit" class="bg-add btn-add" value="Join Event" >-->
-        </form>
+                <label for="emailAddress">Event Code:</label>
+                <input type="email" class="form-control" id="code" name="code" aria-describedby="enterCode"
+                    placeholder="Enter event code" ngModel>
+                <input class="btn-save" type="submit" value="Join Event">
+                <!-- <a type="submit" class="bg-add btn-add" routerLink="/viewerDashboard">Join Event</a> -->
+                <!--<input type="submit" class="bg-add btn-add" value="Join Event" >-->
+            </form>
 
 
 
@@ -25,8 +25,8 @@
             <!--<label class="btn btn-orange">
                 <input type="radio" name="options" id="option1" checked> General Body Meeting (GBM)
             </label>-->
-             <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category">
-              <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off"> General Body Meeting (GBM)
+            <label for="gbm" id="gbm" class="btn btn-secondary btns btn-orange btn-category">
+                <input id="gbm" type="radio" class="btns btn-orange" autocomplete="off"> General Body Meeting (GBM)
             </label>
             <label for="casual" id="casual" class="btn btn-secondary btns btn-orange btn-category">
                 <input id="casual" type="radio" class="btns btn-orange btn-category" autocomplete="off"> Casual
@@ -60,7 +60,8 @@
         <label id="clubCategories">Club/Organization Categories:</label>
         <div class="btn-group-toggle categories" data-toggle="buttons" aria-labelledby="clubCategories">
             <label for="academicProf" id="academicProf" class="btn btn-secondary btns btn-orange btn-category">
-                <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off"> Academic & Professional
+                <input id="academicProf" type="radio" class="btns btn-orange" autocomplete="off"> Academic &
+                Professional
             </label>
             <label for="identity" id="identity" class="btn btn-secondary btns btn-orange btn-category">
                 <input id="identity" type="radio" class="btns btn-orange" autocomplete="off"> Identity Based
@@ -78,7 +79,8 @@
                 <input id="sportsRec" type="radio" class="btns btn-orange" autocomplete="off"> Sports & Recreation
             </label>
             <label for="stuGov" id="stuGov" class="btn btn-secondary btns btn-orange btn-category">
-                <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off"> Student Government & Event Planning
+                <input id="stuGov" type="radio" class="btns btn-orange" autocomplete="off"> Student Government & Event
+                Planning
             </label>
             <label for="other" id="other" class="btn btn-secondary btns btn-orange btn-category">
                 <input id="other" type="radio" class="btns btn-orange" autocomplete="off"> Other
