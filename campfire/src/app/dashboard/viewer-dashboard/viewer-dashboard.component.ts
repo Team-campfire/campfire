@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
 import { HttpService } from '../../http.service';
 // declare var $: any;
 
@@ -9,7 +10,7 @@ import { HttpService } from '../../http.service';
 })
 
 export class ViewerDashboardComponent implements OnInit {
-
+  events: Array<any>;
   desc = '';
   addy = '';
   oaddy = '';
@@ -20,7 +21,7 @@ export class ViewerDashboardComponent implements OnInit {
   clubOrgDesc = '';
   
 
-  constructor(private httpService: HttpService) {
+  constructor(private http: HttpClient) {
     this.eventName = "Web Sci Demo";
     this.addy = "N/A";
     this.oaddy = "https://rensselaer.webex.com/meet/tralsa";
@@ -29,6 +30,7 @@ export class ViewerDashboardComponent implements OnInit {
     this.desc = "This is a really cool event and you should join!"
     this.eventDesc = "This is our final presentation"
     this.clubOrgDesc = "This is an amazing club"
+    this.events = [];
 
     // let btn = document.getElementById("coolbutton");
     // if (btn) {
@@ -36,6 +38,24 @@ export class ViewerDashboardComponent implements OnInit {
     // }
   }
   ngOnInit(): void {
+
+  this.http.get<any>('/getEvent').subscribe((data) => {
+//filtering work in progress
+      for(let r of data) {
+      /*
+        if((r.eventCategories[0].eventCategory == "gbm" || this.eventCategory == "") && (r.eventCategories[0].clubCategory == "athletic" || this.clubCategory == "") 
+        && (r.eventBasics[0].line || this.location == "" )) {
+        this.events.push(r);
+        } */
+        this.events.push(r);
+      }
+      this.date = this.events[0].eventBasics[0].date;
+      this.time = this.events[0].eventBasics[0].time;
+      this.eventDesc = this.events[0].eventCategories[0].eventDescription;
+      this.clubOrgDesc = this.events[0].eventCategories[0].clubDescription;
+
+
+  })
   }
 
   fillForm() {
