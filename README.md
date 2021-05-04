@@ -52,7 +52,15 @@
 
 ### **Teddy Clark (RCS: clarke4, Github: teddy-clark):**
 * Database Schema
-	* I worked with Michael to submit the forms needed to create an event to the respective typescript files then to our server js file and then finally to our MongoDb collection.
+	* I worked with Michael to submit the forms needed to create an event to the respective typescript files then to our server js file and then finally to our MongoDb collection. We chose to submit each form after the submitEventStart API as an array with attributes specified in the forms for simplicity and separation of concerns.
+
+* Writing to the Database and Requests
+	* I finished the implementation for 4 out of 5 post requests which first starts with populating the createEvent collection. After this document is created with the submitEventStart API, the next 3 forms at APIs submitEventBasics, submitCategories, submitEventTransportation, query the database based on the id of the first document and update the document based on data from these 3 forms.
+	* To write to the database, Michael and I converted our forms to angular and sent form data to typescript. For event categories, I needed to learn and implement form groups since we had multiple radio buttons. In the other form pages, we simply assigned a class to our radio button to denote if it was selcted or not. However, with multiple radio buttons, I created a form group so that only a single value for eventCategory and clubCategory would be recieved in our ts file.
+
+* Event Feed and Database Queries
+	* To display created events in our event feed, Michael and I implemented an ngFor div to dynamically display all events. In each event object, we used angular to automsgically display attributes of each event such as date, time, eventName, yourName, eventCategory, eventDescription, and clubCategory. We relied on the getEvents API to get a response from the MongoDB with createEvent documents.
+	* To query the database based on clubCategory, I needed to create an index for the ngFor div so that the form would update after the div was populated with new data. I chose to set the index as the internal schema id from MongoDB so that I would not need to create any new attributes and so that I could rely on this primary key. After a user selected a clubCategory, the events from the getEvents get request were compared based on the clubCategory to determine if the event would be written the the ngFor div.
 
 ## Challenges:
 
