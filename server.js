@@ -158,7 +158,7 @@ app.post("/reqTransportation", (req, res) => {
 app.post('/submitEventStart', function (req, res) {
 
 	MongoClient.connect(url, function (err, db) {
-			//db.db("campfireApp").collection("createEvent").deleteMany({"yourEmailAddress":"dd@dd.com"});
+		//db.db("campfireApp").collection("createEvent").deleteMany({"yourEmailAddress":"dd@dd.com"});
 
 		if (err) throw err;
 		db.db("campfireApp").collection("createEvent").insertOne(req.body, function (err) {
@@ -201,7 +201,7 @@ app.post('/submitCategories', function (req, res) {
 		if (err) throw err;
 		var dbo = db.db("campfireApp");
 
-			dbo.collection("createEvent")
+		dbo.collection("createEvent")
 			.find({}).project({}).sort({ _id: -1 })
 			.toArray((err, data) => {
 				if (err) throw err;
@@ -269,45 +269,45 @@ app.post('/submitEventCode', function (req, res) {
 
 
 app.get('/getEvent', (req, res) => {
-  MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("campfireApp");
-  			//db.db("campfireApp").collection("createEvent").deleteMany({});
+	MongoClient.connect(url, function (err, db) {
+		if (err) throw err;
+		var dbo = db.db("campfireApp");
+		//db.db("campfireApp").collection("createEvent").deleteMany({});
 
-  dbo.collection("eventCodes").find({}).project({}).sort({ _id: -1 }).toArray(function(err, result) {
-    if (err) throw err;
-    var code = result[0].eventCode;
-    console.log(code);
-      dbo.collection("createEvent").find({"eventCode.eventCode" : code}).toArray(function(err, result) {
-      	console.log(result);
-    if (err) throw err;
-    res.send(result);
-    //db.close();
-  });
-    //res.send(result);
-    db.close();
-  });
-});
+		dbo.collection("eventCodes").find({}).project({}).sort({ _id: -1 }).toArray(function (err, result) {
+			if (err) throw err;
+			var code = result[0].eventCode;
+			console.log(code);
+			dbo.collection("createEvent").find({ "eventCode.eventCode": code }).toArray(function (err, result) {
+				console.log(result);
+				if (err) throw err;
+				res.send(result);
+				//db.close();
+			});
+			//res.send(result);
+			db.close();
+		});
+	});
 });
 
 app.get('/getEvents', (req, res) => {
-  MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("campfireApp");
-  			//db.db("campfireApp").collection("createEvent").deleteMany({});
+	MongoClient.connect(url, function (err, db) {
+		if (err) throw err;
+		var dbo = db.db("campfireApp");
+		//db.db("campfireApp").collection("createEvent").deleteMany({});
 
-  dbo.collection("createEvent").find({}).toArray(function(err, result) {
+		dbo.collection("createEvent").find({}).toArray(function (err, result) {
 
-    if (err) throw err;
-    res.send(result);
-    db.close();
-  });
-});
+			if (err) throw err;
+			res.send(result);
+			db.close();
+		});
+	});
 });
 
 app.post('/saveEventCode', function (req, res) {
-		MongoClient.connect(url, function (err, db) {
-			//db.db("campfireApp").collection("createEvent").deleteMany({"yourEmailAddress":"dd@dd.com"});
+	MongoClient.connect(url, function (err, db) {
+		//db.db("campfireApp").collection("createEvent").deleteMany({"yourEmailAddress":"dd@dd.com"});
 
 		if (err) throw err;
 		db.db("campfireApp").collection("eventCodes").insertOne(req.body, function (err) {
