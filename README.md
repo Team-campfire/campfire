@@ -71,3 +71,6 @@ When we were working on the initial front-end prototype for our application, we 
 The back-end team (Teddy and Michael) were responsible for this. Due to the lack of time they were unable to finish the PUT requests and therefore were not able to dynamically update the owner and viewer dashboard pages based on owner and event code.
 
 ### Typescript -> node -> mongo - 
+
+### Querying the Database by Category -
+In order to determine which category was selected for event or club categories, I created an angular on click event (click) to call a function with the value of the specific catgeory. Unfortunately, this approach required many (click) events so the the page could not load after writing all these functions. I looked into creating a single event for clubCategory and eventCategory on the parent div element, however, I could not find a way to call this function with the category that was clicked on from the child buttons. Therefore, the current application only queries the database, based on 'Identity' and 'Hobby & Special Interest' for club category.
