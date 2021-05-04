@@ -13,15 +13,15 @@
 
 # POST requests
 * POST requests are used to post create form data to the database.
-    *   POST /createEvent/eventStart
+    *   POST /createEvent/submitEventStart
         * This endpoint posts the email address, owner name, and friend email addresses to the database.
     *   POST /createEvent/eventBasics
         * This endpoint posts whether or not the event is public or private, event date and time, and whether or not the event is online. or offline to the database.
-    *   POST /createEvent/eventCategories  
+    *   POST /createEvent/submitEventCategories  
         * This endpoint posts the event category, event description, club category, and club description to the database. 
-    *   POST /createEvent/eventTransportation
+    *   POST /createEvent/submitEventTransportation
         * This endpoint posts the spotify URL, whether you require transportation or not, and name of drivers.
-    *   POST /createEvent/eventCode
+    *   POST /createEvent/submitEventCode
         * This endpoint posts the event code and owner code to the database in an arrav called eventCode.
 
 
