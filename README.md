@@ -52,7 +52,7 @@
 
 ### **Teddy Clark (RCS: clarke4, Github: teddy-clark):**
 * Database Schema
-	* I worked with Michael to submit the forms needed to create an event to the respective typescript files to our server js file and then finally to our MongoDb collection.
+	* I worked with Michael to submit the forms needed to create an event to the respective typescript files then to our server js file and then finally to our MongoDb collection.
 
 ## Challenges:
 
