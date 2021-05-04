@@ -48,6 +48,8 @@
 
 
 ### **Michael Kokkatt (RCS: kokkam, Github: mkokkatt):**
+I worked primarily with Teddy on backend of this web app. We spent a much of our time researching, testing and figuring out how to work certain aspects of the backend. We worked primarily on our locals and spent a lot of time figuring out the flow from angular to node to mongo and back. More recently, we finally got this process working. I changed the forms to use angular and automagically pull data from all of the create-event forms to the typescript. I also added endpoints in server.js to get database data and update the event feed and viewer event dashboards. I also added code to post events to the database from create-event and get the event code working as well. Users are now able to join an event with event codes. I added a new collection called eventCodes to store the event codes as well. I didn't commit as often as I should've been to my personal branch but moving forward I know to commit work more periodically to my branch even if it may be a bit buggy.
+
 
 
 ### **Teddy Clark (RCS: clarke4, Github: teddy-clark):**
@@ -71,6 +73,7 @@ When we were working on the initial front-end prototype for our application, we 
 The back-end team (Teddy and Michael) were responsible for this. Due to the lack of time they were unable to finish the PUT requests and therefore were not able to dynamically update the owner and viewer dashboard pages based on owner and event code.
 
 ### Typescript -> node -> mongo - 
+We spent a lot of time trying to figure out this flow from typescript to node to mongo. It wasn't working for us for the longest time and we had many bugs and conflicting articles on the way to figuring it out. We set up meetings in office hours and did some more research and eventually got this to work more recently. After getting this to work we were able to move away from just testing on local and actually pushing code to github. This was one of the biggest roadblocks for our project.
 
 ### Querying the Database by Category -
 In order to determine which category was selected for event or club categories, I created an angular on click event (click) to call a function with the value of the specific catgeory. Unfortunately, this approach required many (click) events so the the page could not load after writing all these functions. I looked into creating a single event for clubCategory and eventCategory on the parent div element, however, I could not find a way to call this function with the category that was clicked on from the child buttons. Therefore, the current application only queries the database, based on 'Identity' and 'Hobby & Special Interest' for club category.
