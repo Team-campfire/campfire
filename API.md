@@ -9,6 +9,9 @@
         *  This endpoint goes to a view-only dashboard and loads the data  of the specified event.
     * GET /getEvents
         * This endpoint queries the database to get the events and load them into the Public Event Feed.
+  * GET /getEvent
+        * This endpoint queries the database to get the latest event and load it into the viewer dashboard based on entered event code.
+        
 
 
 # POST requests
@@ -23,7 +26,8 @@
         * This endpoint posts the spotify URL, whether you require transportation or not, and name of drivers.
     *   POST /createEvent/submitEventCode
         * This endpoint posts the event code and owner code to the database in an arrav called eventCode.
-
+*   POST /saveEventCode
+        * This endpoint posts the event code to the eventCodes collection of the database as a result of joining an event.
 
 # PUT requests
 * Responsibility of the back-end team (Teddy and Michael) to implement, these are currently not implemented.
