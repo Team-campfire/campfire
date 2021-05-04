@@ -64,6 +64,8 @@
 	* To display created events in our event feed, Michael and I implemented an ngFor div to dynamically display all events. In each event object, we used angular to automsgically display attributes of each event such as date, time, eventName, yourName, eventCategory, eventDescription, and clubCategory. We relied on the getEvents API to get a response from the MongoDB with createEvent documents.
 	* To query the database based on clubCategory, I needed to create an index for the ngFor div so that the form would update after the div was populated with new data. I chose to set the index as the internal schema id from MongoDB so that I would not need to create any new attributes and so that I could rely on this primary key. After a user selected a clubCategory, the events from the getEvents get request were compared based on the clubCategory to determine if the event would be written the the ngFor div.
 
+Note: to view more of my work please look at the typescript_to_node repository
+
 ## Challenges:
 
 ### Scripts issue - 
