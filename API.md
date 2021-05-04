@@ -1,7 +1,7 @@
 ## Campfire App 
 
 # GET requests
-* Responsibility of the back-end team (Teddy and Michael) to implement
+* The back-end team (Teddy and Michael) was responsible for implementing:
 * GET requests are used to go to specific pages that load data from the database.
     * GET /edit/:ownerCode/ownerDashboard
         * This endpoint goes to the owner dashboard and loads the data of the specified event.
